@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dokm217xdapjf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rq5mp"]
+size = Vector3(5, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bgr2o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_015s0"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.0540788, 0.605102, -0.794309, 0, 0.795474, 0.605988, 0.998537, -0.0327712, 0.0430183, -7.76931, 2.07142, 0.520049)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+mesh = SubResource("BoxMesh_rq5mp")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGMesh3D"]
+transform = Transform3D(1.40691, 0, 0, 0, 0.896587, 0, 0, 0, 0.920048, 0, 0, 0)
+operation = 2
+mesh = SubResource("BoxMesh_bgr2o")
+material = SubResource("StandardMaterial3D_015s0")
