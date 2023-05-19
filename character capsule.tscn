@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0o7tufesfmq7"]
+
+[ext_resource type="Script" path="res://CharacterBody3Dscript.gd" id="1_tjq66"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kfu8q"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nxivi"]
+radius = 0.503096
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.3, 0, 7.54979e-08, 0, -0.5, 0.364047, 0.116487, 0.00996151)
+script = ExtResource("1_tjq66")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00142145, -0.105236, -0.0862828)
+mesh = SubResource("CapsuleMesh_kfu8q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.114179, -0.0923674)
+shape = SubResource("CapsuleShape3D_nxivi")
+
+[node name="Neck" type="Node3D" parent="."]
+
+[node name="Camera3d" type="Camera3D" parent="Neck"]
+transform = Transform3D(-2, 0, -1.74845e-07, 0, 3.33333, 0, 1.74845e-07, 0, -2, 0.16518, 0.200194, -2.60536)
+fov = 75.2306

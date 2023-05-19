@@ -1,6 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://dokm217xdapjf"]
+[gd_scene load_steps=13 format=3 uid="uid://dokm217xdapjf"]
 
-[ext_resource type="Script" path="res://CharacterBody3Dscript.gd" id="1_lmcyu"]
+[ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character capsule.tscn" id="1_biemy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g2tgj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_25dwf"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -31,15 +33,17 @@ size = Vector3(4.86747, 1.00833, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_dvt2n"]
 size = Vector3(15.7388, 0.001, 25.1235)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_8xcei"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_abp6s"]
-radius = 0.503096
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_1hvwt"]
-size = Vector3(33.456, 0.01, 11.297)
+size = Vector3(40.6246, 0.01, 11.297)
 
 [node name="Node3D" type="Node3D"]
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20218, 0.00644124, 3.37727)
+operation = 2
+mesh = SubResource("BoxMesh_g2tgj")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_biemy")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xneor")
@@ -73,24 +77,6 @@ shape = SubResource("WorldBoundaryShape3D_1d74w")
 transform = Transform3D(-0.25, -8.74228e-09, 1.71962e-16, 0, -4.37114e-09, -0.045, 2.18557e-08, -0.1, 1.96701e-09, -0.859347, 0.135589, 9.81561)
 shape = SubResource("BoxShape3D_dvt2n")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="CSGMesh3D"]
-transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0.364047, 0.116487, 0.00996151)
-script = ExtResource("1_lmcyu")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CSGMesh3D/CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00142145, -0.105236, -0.0862828)
-mesh = SubResource("CapsuleMesh_8xcei")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGMesh3D/CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.114179, -0.0923674)
-shape = SubResource("CapsuleShape3D_abp6s")
-
-[node name="Neck" type="Node3D" parent="CSGMesh3D/CharacterBody3D"]
-
-[node name="Camera3d" type="Camera3D" parent="CSGMesh3D/CharacterBody3D/Neck"]
-transform = Transform3D(-2, -8.28922e-08, 1.53948e-07, 0, 1.76095, 0.948176, -1.74846e-07, 0.948176, -1.76095, -1.30689, 1.52124, -2.27395)
-fov = 111.798
-
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.36985, -0.00185767, 2.01755)
 mesh = SubResource("BoxMesh_rq5mp")
@@ -109,9 +95,34 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355
 shape = SubResource("BoxShape3D_vub8m")
 
 [node name="SC - wall" type="CollisionShape3D" parent="CSGMesh3D2/StaticBody3D"]
-transform = Transform3D(9.55343e-17, 4.37114e-08, 0.25, 0.05, -4.37114e-08, 0, 2.18557e-09, 1, -1.09278e-08, -0.325609, 0.194097, 9.01585)
+transform = Transform3D(9.55343e-17, 4.37114e-08, 0.25, 0.05, -4.37114e-08, 0, 2.18557e-09, 1, -1.09278e-08, -2.44519, 0.194097, 9.01585)
 shape = SubResource("WorldBoundaryShape3D_1d74w")
 
 [node name="SC - wall2" type="CollisionShape3D" parent="CSGMesh3D2/StaticBody3D"]
-transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, -0.215076, 0.252683, 9.93287)
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, 0.136909, 0.240475, 9.90502)
+shape = SubResource("BoxShape3D_1hvwt")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="."]
+transform = Transform3D(-1, 0, -2.26494e-07, 0, 1, 0, 1.50996e-07, 0, -1.5, 4.23001, -0.0228381, 3.32894)
+mesh = SubResource("BoxMesh_rq5mp")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGMesh3D3"]
+transform = Transform3D(1.143, 0, -1.42109e-14, 0, 1.198, 0, 0, 0, 0.8, -0.336559, 0.156611, -0.0380025)
+operation = 2
+mesh = SubResource("BoxMesh_bgr2o")
+material = SubResource("StandardMaterial3D_015s0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CSGMesh3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.402738, -0.115874, -9.41786)
+
+[node name="SC - floor" type="CollisionShape3D" parent="CSGMesh3D3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355449, -0.834198, 9.38596)
+shape = SubResource("BoxShape3D_vub8m")
+
+[node name="SC - wall" type="CollisionShape3D" parent="CSGMesh3D3/StaticBody3D"]
+transform = Transform3D(9.55343e-17, 4.37114e-08, 0.25, 0.05, -4.37114e-08, 0, 2.18557e-09, 1, -1.09278e-08, -0.628024, 0.194097, 9.01585)
+shape = SubResource("WorldBoundaryShape3D_1d74w")
+
+[node name="SC - wall2" type="CollisionShape3D" parent="CSGMesh3D3/StaticBody3D"]
+transform = Transform3D(0.1, -1.77636e-15, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, -0.248577, 0.240475, 9.90502)
 shape = SubResource("BoxShape3D_1hvwt")
