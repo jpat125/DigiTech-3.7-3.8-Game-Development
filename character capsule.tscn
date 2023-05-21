@@ -22,5 +22,5 @@ shape = SubResource("CapsuleShape3D_nxivi")
 [node name="Neck" type="Node3D" parent="."]
 
 [node name="Camera3d" type="Camera3D" parent="Neck"]
-transform = Transform3D(-2, 0, -1.74845e-07, 0, 3.33333, 0, 1.74845e-07, 0, -2, 0.16518, 0.200194, -2.60536)
+transform = Transform3D(-1.59306, -0.845334, 1.09768, 0, 3.02592, 0.838904, -1.2092, 1.11369, -1.44614, 1.87768, 3.56236, -2.60536)
 fov = 75.2306
