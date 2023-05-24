@@ -13,10 +13,10 @@ radius = 0.503096
 transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.3, 0, 7.54979e-08, 0, -0.5, 0.364047, 0.116487, 0.00996151)
 script = ExtResource("1_tjq66")
 
-[node name="capsule hitbox a3d" type="Area3D" parent="."]
+[node name="capsule_hitbox_a3d" type="Area3D" parent="."]
 transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, 0, 0, 0)
 
-[node name="capsule_hitbox" type="CollisionShape3D" parent="capsule hitbox a3d"]
+[node name="capsule_hitbox" type="CollisionShape3D" parent="capsule_hitbox_a3d"]
 shape = SubResource("CapsuleShape3D_tbpsg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

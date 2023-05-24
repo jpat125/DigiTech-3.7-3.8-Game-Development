@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dokm217xdapjf"]
+[gd_scene load_steps=19 format=3 uid="uid://dokm217xdapjf"]
 
 [ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character capsule.tscn" id="1_biemy"]
 [ext_resource type="PackedScene" uid="uid://b7bmirpy5hk7o" path="res://rnzaf patch.tscn" id="1_c23d6"]
@@ -41,14 +41,21 @@ size = Vector3(1.00281, 0.152418, 0.794918)
 [sub_resource type="BoxShape3D" id="BoxShape3D_1hvwt"]
 size = Vector3(40.6246, 0.01, 11.297)
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1d74w"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_41cum"]
+size = Vector3(1, 1, 0.001)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rd1le"]
+size = Vector3(16.7125, 0.001, 20.0903)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lbvrq"]
+size = Vector3(0.001, 1, 0.767669)
 
 [node name="Node3D" type="Node3D"]
 
+[node name="RNZAF patch node" parent="." instance=ExtResource("1_c23d6")]
+
 [node name="Wall of balls" parent="." instance=ExtResource("1_np275")]
 transform = Transform3D(-1.41656e-08, 0, -0.4, 0, 0.4, 0, 0.324072, 0, -1.74846e-08, 2.05692, -0.221638, 3.60739)
-
-[node name="patch" parent="." instance=ExtResource("1_c23d6")]
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_biemy")]
 
@@ -114,8 +121,12 @@ shape = SubResource("BoxShape3D_dmrm0")
 transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, 0.136909, 0.240475, 9.90502)
 shape = SubResource("BoxShape3D_1hvwt")
 
+[node name="SC - wall 3" type="CollisionShape3D" parent="CSGMesh3D2/StaticBody3D"]
+transform = Transform3D(1.94707e-07, 3.10588e-22, -1.5, -7.10543e-15, 1, 0, 1, 7.10543e-15, 2.92061e-07, 1.97953, -0.0220812, 9.49894)
+shape = SubResource("BoxShape3D_41cum")
+
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="."]
-transform = Transform3D(-1, 0, -2.26494e-07, 0, 1, 0, 1.50996e-07, 0, -1.5, 4.23001, -0.0228381, 3.32894)
+transform = Transform3D(-1, 0, -2.26494e-07, 0, 1, 0, 1.50996e-07, 0, -1.5, 4.33387, -0.0228381, 3.32894)
 mesh = SubResource("BoxMesh_rq5mp")
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGMesh3D3"]
@@ -132,9 +143,13 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355
 shape = SubResource("BoxShape3D_vub8m")
 
 [node name="SC - wall" type="CollisionShape3D" parent="CSGMesh3D3/StaticBody3D"]
-transform = Transform3D(9.55343e-17, 4.37114e-08, 0.25, 0.05, -4.37114e-08, 0, 2.18557e-09, 1, -1.09278e-08, -0.628024, 0.194097, 9.01585)
-shape = SubResource("WorldBoundaryShape3D_1d74w")
+transform = Transform3D(9.55343e-17, 4.37114e-08, 0.25, 0.05, -4.37114e-08, 0, 2.18557e-09, 1, -1.09278e-08, -0.471452, 0.230937, 8.95432)
+shape = SubResource("BoxShape3D_rd1le")
 
 [node name="SC - wall2" type="CollisionShape3D" parent="CSGMesh3D3/StaticBody3D"]
-transform = Transform3D(0.1, -1.77636e-15, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, -0.248577, 0.240475, 9.90502)
+transform = Transform3D(0.124798, 1.77636e-14, 0, 0, -4.37114e-09, -0.1, -2.66454e-15, 0.1, -4.37114e-09, -0.65147, 0.240475, 9.90502)
 shape = SubResource("BoxShape3D_1hvwt")
+
+[node name="SC - wall3" type="CollisionShape3D" parent="CSGMesh3D3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95901, 0.111291, 9.38397)
+shape = SubResource("BoxShape3D_lbvrq")
