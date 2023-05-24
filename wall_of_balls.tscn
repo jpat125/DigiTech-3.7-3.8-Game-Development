@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://kdbcw130eych"]
+
+[ext_resource type="Script" path="res://Wall of balls.gd" id="1_b3x33"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4vgqq"]
+size = Vector3(3.699, 1.812, 1.09)
+
+[sub_resource type="SphereMesh" id="SphereMesh_fgc0y"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_l4dbo"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_hciu5"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_iu361"]
+
+[node name="Wall of balls" type="Node3D"]
+script = ExtResource("1_b3x33")
+
+[node name="StaticBody" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.478513, 0.978888, -0.0644954)
+shape = SubResource("BoxShape3D_4vgqq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody"]
+mesh = SubResource("SphereMesh_fgc0y")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.739265, 0.292293, 0.0181995)
+mesh = SubResource("SphereMesh_l4dbo")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.770648, 0.420239, -0.167395)
+mesh = SubResource("SphereMesh_hciu5")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="StaticBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.860829, 1.30098, 0.00862741)
+mesh = SubResource("SphereMesh_iu361")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="StaticBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.809595, 0.118742)
+mesh = SubResource("SphereMesh_iu361")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="StaticBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.89391, 0.562799, -0.0176371)
+mesh = SubResource("SphereMesh_iu361")
+skeleton = NodePath("../..")

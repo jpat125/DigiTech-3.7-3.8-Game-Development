@@ -1,8 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://dokm217xdapjf"]
+[gd_scene load_steps=17 format=3 uid="uid://dokm217xdapjf"]
 
 [ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character capsule.tscn" id="1_biemy"]
-[ext_resource type="Script" path="res://RNZAFpatch.gd" id="2_njx5m"]
-[ext_resource type="Texture2D" uid="uid://dmon702vjpdxg" path="res://assets/MUS_crest-small.webp" id="3_ojgtk"]
+[ext_resource type="PackedScene" uid="uid://b7bmirpy5hk7o" path="res://rnzaf patch.tscn" id="1_c23d6"]
+[ext_resource type="PackedScene" uid="uid://kdbcw130eych" path="res://wall_of_balls.tscn" id="1_np275"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_25dwf"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -43,15 +43,12 @@ size = Vector3(40.6246, 0.01, 11.297)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1d74w"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_yw0wl"]
-size = Vector3(2, 0, 2)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_rylbm"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5tbdt"]
-albedo_texture = ExtResource("3_ojgtk")
-
 [node name="Node3D" type="Node3D"]
+
+[node name="Wall of balls" parent="." instance=ExtResource("1_np275")]
+transform = Transform3D(-1.41656e-08, 0, -0.4, 0, 0.4, 0, 0.324072, 0, -1.74846e-08, 2.05692, -0.221638, 3.60739)
+
+[node name="patch" parent="." instance=ExtResource("1_c23d6")]
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_biemy")]
 
@@ -141,17 +138,3 @@ shape = SubResource("WorldBoundaryShape3D_1d74w")
 [node name="SC - wall2" type="CollisionShape3D" parent="CSGMesh3D3/StaticBody3D"]
 transform = Transform3D(0.1, -1.77636e-15, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, -0.248577, 0.240475, 9.90502)
 shape = SubResource("BoxShape3D_1hvwt")
-
-[node name="Area3D" type="Area3D" parent="."]
-script = ExtResource("2_njx5m")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(-0.1417, 0, 1.23878e-08, 0, 0.1417, 0, -1.23878e-08, 0, -0.1417, 1.59891, -0.417366, 1.80239)
-shape = SubResource("BoxShape3D_yw0wl")
-
-[node name="CSGMesh3D4" type="CSGMesh3D" parent="Area3D"]
-transform = Transform3D(-0.1417, 0, 2.13961e-08, 0, 0.1417, 0, -2.13961e-08, 0, -0.1417, 1.59748, -0.416859, 1.8052)
-mesh = SubResource("PlaneMesh_rylbm")
-material = SubResource("StandardMaterial3D_5tbdt")
-
-[connection signal="area_entered" from="Area3D" to="CharacterBody3D" method="_on_area_3d_area_entered"]

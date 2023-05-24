@@ -1,5 +1,6 @@
 extends CharacterBody3D
-
+func _ready():
+	set_meta("player", 1)
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -42,7 +43,4 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
-
-
-func _on_area_3d_area_entered(area):
-	set opact
+	
