@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dokm217xdapjf"]
+[gd_scene load_steps=20 format=3 uid="uid://dokm217xdapjf"]
 
 [ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character capsule.tscn" id="1_biemy"]
 [ext_resource type="PackedScene" uid="uid://b7bmirpy5hk7o" path="res://rnzaf patch.tscn" id="1_c23d6"]
@@ -14,6 +14,8 @@ sky_material = SubResource("ProceduralSkyMaterial_25dwf")
 [sub_resource type="Environment" id="Environment_xneor"]
 background_mode = 2
 sky = SubResource("Sky_s28fr")
+ambient_light_source = 3
+ambient_light_energy = 16.0
 tonemap_mode = 2
 glow_enabled = true
 
@@ -32,6 +34,9 @@ size = Vector3(4.86747, 1.00833, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dvt2n"]
 size = Vector3(15.7388, 0.001, 25.1235)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kql3b"]
+size = Vector3(0.001, 1, 0.919018)
 
 [sub_resource type="BoxMesh" id="BoxMesh_g2tgj"]
 
@@ -63,7 +68,8 @@ transform = Transform3D(-1.41656e-08, 0, -0.4, 0, 0.4, 0, 0.324072, 0, -1.74846e
 environment = SubResource("Environment_xneor")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.821149, 0.570714, 0, -0.570714, 0.821149, -0.478992, 2.6701, 2.99021)
+transform = Transform3D(0.485161, 0.499047, -0.718033, -9.16858e-09, 0.821149, 0.570714, 0.874425, -0.276888, 0.398389, -0.478992, 2.6701, 2.99021)
+visible = false
 shadow_enabled = true
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
@@ -90,6 +96,10 @@ shape = SubResource("BoxShape3D_buo7j")
 [node name="MC - wall2" type="CollisionShape3D" parent="CSGMesh3D/StaticBody3D"]
 transform = Transform3D(-0.25, -8.74228e-09, 1.71962e-16, 0, -4.37114e-09, -0.045, 2.18557e-08, -0.1, 1.96701e-09, -0.859347, 0.135589, 9.81561)
 shape = SubResource("BoxShape3D_dvt2n")
+
+[node name="MC - wall3" type="CollisionShape3D" parent="CSGMesh3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.91094, 0.108297, 9.32333)
+shape = SubResource("BoxShape3D_kql3b")
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.36985, -0.00185767, 2.01755)
@@ -130,7 +140,7 @@ transform = Transform3D(-1, 0, -2.26494e-07, 0, 1, 0, 1.50996e-07, 0, -1.5, 4.33
 mesh = SubResource("BoxMesh_rq5mp")
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGMesh3D3"]
-transform = Transform3D(1.143, 0, 0, 0, 1.198, 0, 1.42109e-14, 0, 0.8, -0.336559, 0.156611, -0.0380025)
+transform = Transform3D(1.143, 0, 1.42109e-14, 0, 1.198, 0, 2.13163e-14, 0, 0.8, -0.336559, 0.156611, -0.138615)
 operation = 2
 mesh = SubResource("BoxMesh_bgr2o")
 material = SubResource("StandardMaterial3D_015s0")
