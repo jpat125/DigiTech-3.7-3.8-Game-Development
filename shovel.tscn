@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://dd8d8ijh75bnv"]
+[gd_scene load_steps=4 format=3 uid="uid://dd8d8ijh75bnv"]
 
-[ext_resource type="PackedScene" path="res://assets/TrenchShovel.glb" id="1_cdhur"]
+[ext_resource type="PackedScene" uid="uid://c2itf4fmc4dtc" path="res://assets/TrenchShovel.glb" id="1_cdhur"]
+[ext_resource type="Script" path="res://assets/TrenchShovel.gd" id="2_2qaw7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_by10l"]
+size = Vector3(1.67364, 1.81948, 1)
 
 [node name="Node3D" type="Node3D"]
 
 [node name="TrenchShovel" parent="." instance=ExtResource("1_cdhur")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.100565, -0.0932631, 0.0121253)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.100565, -0.0932631, 0.0121253)
+script = ExtResource("2_2qaw7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TrenchShovel"]
+transform = Transform3D(2.72551, 0, 0, 0, 2.88101, 0, 0, 0, 2.64678, 0, 0, 0)
+shape = SubResource("BoxShape3D_by10l")

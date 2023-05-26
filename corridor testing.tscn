@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://dokm217xdapjf"]
+[gd_scene load_steps=21 format=3 uid="uid://dokm217xdapjf"]
 
 [ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character capsule.tscn" id="1_biemy"]
 [ext_resource type="PackedScene" uid="uid://b7bmirpy5hk7o" path="res://rnzaf patch.tscn" id="1_c23d6"]
 [ext_resource type="PackedScene" uid="uid://kdbcw130eych" path="res://wall_of_balls.tscn" id="1_np275"]
+[ext_resource type="PackedScene" uid="uid://dd8d8ijh75bnv" path="res://shovel.tscn" id="2_wsrin"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_25dwf"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -58,6 +59,8 @@ size = Vector3(0.001, 1, 0.767669)
 [node name="Node3D" type="Node3D"]
 
 [node name="RNZAF patch node" parent="." instance=ExtResource("1_c23d6")]
+
+[node name="Node3D" parent="." instance=ExtResource("2_wsrin")]
 
 [node name="Wall of balls" parent="." instance=ExtResource("1_np275")]
 transform = Transform3D(-1.41656e-08, 0, -0.4, 0, 0.4, 0, 0.324072, 0, -1.74846e-08, 2.05692, -0.221638, 3.60739)
