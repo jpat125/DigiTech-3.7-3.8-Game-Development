@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://cguipij426wgf"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qve4y"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(1, 6.4)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 2
+offset_left = 12.0
+offset_right = 1012.0
+offset_bottom = 1000.0
+texture = SubResource("ViewportTexture_qve4y")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 100.0
+offset_bottom = 100.0
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="ColorRect" type="ColorRect" parent="GridContainer"]
+layout_mode = 2
+color = Color(0.454902, 0.458824, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GridContainer"]
+layout_mode = 2
+color = Color(0.454902, 0.458824, 1, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GridContainer"]
+layout_mode = 2
+color = Color(0.454902, 0.458824, 1, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GridContainer"]
+layout_mode = 2
+color = Color(0.454902, 0.458824, 1, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GridContainer"]
+layout_mode = 2
+color = Color(0.454902, 0.458824, 1, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GridContainer"]
+layout_mode = 2
+color = Color(0.454902, 0.458824, 1, 1)

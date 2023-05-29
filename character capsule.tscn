@@ -32,7 +32,3 @@ shape = SubResource("CapsuleShape3D_nxivi")
 [node name="Camera3d" type="Camera3D" parent="Neck"]
 transform = Transform3D(-1.59306, -0.845334, 1.09768, 0, 3.02592, 0.838904, -1.2092, 1.11369, -1.44614, 1.87768, 3.56236, -2.60536)
 fov = 75.2306
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Neck"]
-transform = Transform3D(0.485161, 0.499047, -0.718033, -9.16858e-09, 0.821149, 0.570714, 0.874425, -0.276888, 0.398389, -0.478992, 2.6701, 2.99021)
-shadow_enabled = true
