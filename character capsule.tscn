@@ -32,7 +32,6 @@ shape = SubResource("CapsuleShape3D_nxivi")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Neck"]
 transform = Transform3D(0.086075, -1.50821, 1.31069, -0.00170615, 2.18645, 2.51606, -1.99815, -0.0656418, 0.0556876, 3.78014, 5.83701, -0.0908047)
 light_color = Color(1, 0.768627, 0.482353, 1)
-light_energy = 0.192
 shadow_enabled = true
 
 [node name="Camera3d" type="Camera3D" parent="Neck"]
