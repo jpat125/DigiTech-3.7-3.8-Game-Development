@@ -17,6 +17,7 @@ texture = SubResource("ViewportTexture_qve4y")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
 offset_right = 100.0
 offset_bottom = 100.0
 theme_override_constants/v_separation = 0
