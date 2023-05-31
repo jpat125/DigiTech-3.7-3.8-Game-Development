@@ -1,7 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://dokm217xdapjf"]
+[gd_scene load_steps=21 format=3 uid="uid://dokm217xdapjf"]
 
 [ext_resource type="PackedScene" uid="uid://b7bmirpy5hk7o" path="res://rnzaf patch.tscn" id="1_c23d6"]
 [ext_resource type="PackedScene" uid="uid://kdbcw130eych" path="res://wall_of_balls.tscn" id="1_np275"]
+[ext_resource type="PackedScene" uid="uid://ceag3mcth4pwn" path="res://shovel.tscn" id="2_ldleg"]
+[ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character capsule.tscn" id="4_6w6rx"]
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="4_165jc"]
 [ext_resource type="PackedScene" uid="uid://bi12il5qa1olt" path="res://assets/WallLamp.glb" id="6_ih2tt"]
 
@@ -48,6 +50,9 @@ size = Vector3(0.001, 1, 0.767669)
 
 [node name="RNZAF patch node" parent="." instance=ExtResource("1_c23d6")]
 
+[node name="Node3D" parent="." instance=ExtResource("2_ldleg")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
 [node name="Inventory" parent="." instance=ExtResource("4_165jc")]
 visible = false
 
@@ -62,6 +67,9 @@ omni_attenuation = 1.23114
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_bi05y")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("4_6w6rx")]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.3, 0, 7.54979e-08, 0, -0.5, -1.08491, 0.116487, 0.00996151)
 
 [node name="WallLamp" parent="." instance=ExtResource("6_ih2tt")]
 transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, -2.37355, 0.0873391, -0.376378)

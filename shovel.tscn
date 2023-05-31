@@ -1,9 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://ceag3mcth4pwn"]
+[gd_scene load_steps=4 format=3 uid="uid://ceag3mcth4pwn"]
 
 [ext_resource type="PackedScene" uid="uid://ba8pwpetbn4y" path="res://assets/TrenchShovel.glb" id="1_sg7ly"]
+[ext_resource type="Script" path="res://shovelscript.gd" id="1_vw8oo"]
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_pmfrt"]
+size = Vector3(4.01112, 6.49454, 0.851602)
+
+[node name="Area3D" type="Area3D"]
+script = ExtResource("1_vw8oo")
 
 [node name="TrenchShovel" parent="." instance=ExtResource("1_sg7ly")]
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0290349, -1.44847, -0.206686)
+shape = SubResource("BoxShape3D_pmfrt")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
