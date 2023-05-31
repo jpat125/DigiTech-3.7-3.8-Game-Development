@@ -1,19 +1,12 @@
-[gd_scene load_steps=22 format=3 uid="uid://dokm217xdapjf"]
+[gd_scene load_steps=19 format=3 uid="uid://dokm217xdapjf"]
 
-[ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character capsule.tscn" id="1_biemy"]
 [ext_resource type="PackedScene" uid="uid://b7bmirpy5hk7o" path="res://rnzaf patch.tscn" id="1_c23d6"]
 [ext_resource type="PackedScene" uid="uid://kdbcw130eych" path="res://wall_of_balls.tscn" id="1_np275"]
-[ext_resource type="PackedScene" uid="uid://dd8d8ijh75bnv" path="res://shovel.tscn" id="2_wsrin"]
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="4_165jc"]
 [ext_resource type="PackedScene" uid="uid://bi12il5qa1olt" path="res://assets/WallLamp.glb" id="6_ih2tt"]
 
-[sub_resource type="Sky" id="Sky_dsjc1"]
-
-[sub_resource type="Environment" id="Environment_okibg"]
+[sub_resource type="Environment" id="Environment_bi05y"]
 background_mode = 2
-sky = SubResource("Sky_dsjc1")
-ambient_light_source = 3
-reflected_light_source = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_rq5mp"]
 size = Vector3(5, 1, 1)
@@ -55,19 +48,8 @@ size = Vector3(0.001, 1, 0.767669)
 
 [node name="RNZAF patch node" parent="." instance=ExtResource("1_c23d6")]
 
-[node name="Shovel" parent="." instance=ExtResource("2_wsrin")]
-transform = Transform3D(0.295982, 0, 0, 0, 0.295982, 0, 0, 0, 0.295982, 0.872269, 0.20544, 0.0412601)
-
-[node name="Wall of balls" parent="." instance=ExtResource("1_np275")]
-transform = Transform3D(-1.41656e-08, 0, -0.4, 0, 0.4, 0, 0.324072, 0, -1.74846e-08, 2.05692, -0.221638, 3.60739)
-
 [node name="Inventory" parent="." instance=ExtResource("4_165jc")]
 visible = false
-
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_biemy")]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_okibg")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27812, 0.124667, 0.387284)
@@ -77,6 +59,9 @@ light_size = 0.656
 shadow_enabled = true
 omni_range = 1.0
 omni_attenuation = 1.23114
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_bi05y")
 
 [node name="WallLamp" parent="." instance=ExtResource("6_ih2tt")]
 transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, -2.37355, 0.0873391, -0.376378)
@@ -242,8 +227,11 @@ transform = Transform3D(1.94707e-07, 3.10588e-22, -1.5, -7.10543e-15, 1, 0, 1, 7
 shape = SubResource("BoxShape3D_41cum")
 
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="."]
-transform = Transform3D(-1, 0, -2.26494e-07, 0, 1, 0, 1.50996e-07, 0, -1.5, 4.33387, -0.0228381, 3.32894)
+transform = Transform3D(-1, 0, -2.26494e-07, 0, 1, 0, 1.50996e-07, 0, -1.5, 4.2802, 0.00115998, 3.32894)
 mesh = SubResource("BoxMesh_rq5mp")
+
+[node name="Wall of balls" parent="CSGMesh3D3" instance=ExtResource("1_np275")]
+transform = Transform3D(6.30992e-08, 0, 0.4, 0, 0.4, 0, -0.216048, 0, 5.1922e-08, 2.37597, -0.222798, -0.185633)
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGMesh3D3"]
 transform = Transform3D(1.143, 0, 1.42109e-14, 0, 1.198, 0, 2.13163e-14, 0, 0.8, -0.336559, 0.156611, -0.138615)
