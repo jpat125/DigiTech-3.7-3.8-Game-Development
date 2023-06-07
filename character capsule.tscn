@@ -28,13 +28,13 @@ mesh = SubResource("CapsuleMesh_kfu8q")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.114179, -0.0923674)
 shape = SubResource("CapsuleShape3D_nxivi")
 
-[node name="Neck" type="Node3D" parent="."]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Neck"]
-transform = Transform3D(0.086075, -1.50821, 1.31069, -0.00170615, 2.18645, 2.51606, -1.99815, -0.0656418, 0.0556876, 3.78014, 5.83701, -0.0908047)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.0860749, -1.50821, 1.31069, -0.00170615, 2.18645, 2.51606, -1.99815, -0.0656417, 0.0556875, 3.78014, 5.83701, -0.0908047)
 light_color = Color(1, 0.768627, 0.482353, 1)
 shadow_enabled = true
 
-[node name="Camera3d" type="Camera3D" parent="Neck"]
-transform = Transform3D(-1.59306, -0.845334, 1.09768, 0, 3.02592, 0.838904, -1.2092, 1.11369, -1.44614, 1.87768, 3.56236, -2.60536)
+[node name="Camera3d" type="Camera3D" parent="."]
+transform = Transform3D(-1.59306, -0.737791, 0.958033, 0, 2.64096, 2.03383, -1.2092, 0.972003, -1.26216, 1.87768, 3.56236, -2.60536)
 fov = 75.2306
+
+[connection signal="area_entered" from="capsule_hitbox_a3d" to="." method="_on_capsule_hitbox_a_3d_area_entered"]

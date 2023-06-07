@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dokm217xdapjf"]
+[gd_scene load_steps=22 format=3 uid="uid://dokm217xdapjf"]
 
 [ext_resource type="PackedScene" uid="uid://b7bmirpy5hk7o" path="res://rnzaf patch.tscn" id="1_c23d6"]
 [ext_resource type="PackedScene" uid="uid://kdbcw130eych" path="res://wall_of_balls.tscn" id="1_np275"]
@@ -6,6 +6,20 @@
 [ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character capsule.tscn" id="4_6w6rx"]
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="4_165jc"]
 [ext_resource type="PackedScene" uid="uid://bi12il5qa1olt" path="res://assets/WallLamp.glb" id="6_ih2tt"]
+
+[sub_resource type="GDScript" id="GDScript_c3o1s"]
+script/source = "extends Node3D
+#Player.shovel -= false
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [sub_resource type="Environment" id="Environment_bi05y"]
 background_mode = 2
@@ -46,7 +60,8 @@ size = Vector3(16.7125, 0.001, 20.0903)
 [sub_resource type="BoxShape3D" id="BoxShape3D_lbvrq"]
 size = Vector3(0.001, 1, 0.767669)
 
-[node name="Node3D" type="Node3D"]
+[node name="Mainnode" type="Node3D"]
+script = SubResource("GDScript_c3o1s")
 
 [node name="RNZAF patch node" parent="." instance=ExtResource("1_c23d6")]
 
