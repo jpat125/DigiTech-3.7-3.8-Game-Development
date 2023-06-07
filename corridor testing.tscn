@@ -50,8 +50,8 @@ size = Vector3(0.001, 1, 0.767669)
 
 [node name="RNZAF patch node" parent="." instance=ExtResource("1_c23d6")]
 
-[node name="Node3D" parent="." instance=ExtResource("2_ldleg")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+[node name="shovel" parent="." instance=ExtResource("2_ldleg")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -2.44485, 0, 0)
 
 [node name="Inventory" parent="." instance=ExtResource("4_165jc")]
 visible = false
