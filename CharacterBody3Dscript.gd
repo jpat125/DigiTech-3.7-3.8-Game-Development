@@ -7,8 +7,8 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
-@onready var neck = get_node("/root/Mainnode/Player/Neck")
-@onready var camera = get_node("/root/Mainnode/Player/Neck/Camera3d")
+@onready var neck = $Neck
+@onready var camera = $Neck/Camera3d
 #func _unhandled_input(event: InputEvent) -> void:
 #	if event is InputEventMouseButton:
 #		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -36,3 +36,5 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+	
+	move_and_slide()
