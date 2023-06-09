@@ -1,10 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://dokm217xdapjf"]
+[gd_scene load_steps=20 format=3 uid="uid://dokm217xdapjf"]
 
 [ext_resource type="PackedScene" uid="uid://b7bmirpy5hk7o" path="res://rnzaf patch.tscn" id="1_c23d6"]
 [ext_resource type="PackedScene" uid="uid://kdbcw130eych" path="res://wall_of_balls.tscn" id="1_np275"]
 [ext_resource type="PackedScene" uid="uid://ceag3mcth4pwn" path="res://shovel.tscn" id="2_ldleg"]
 [ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character capsule.tscn" id="4_6w6rx"]
-[ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="4_165jc"]
 [ext_resource type="PackedScene" uid="uid://bi12il5qa1olt" path="res://assets/WallLamp.glb" id="6_ih2tt"]
 
 [sub_resource type="Environment" id="Environment_bi05y"]
@@ -48,12 +47,13 @@ size = Vector3(0.001, 1, 0.767669)
 
 [node name="Mainnode" type="Node3D"]
 
+[node name="CharacterBody3D" parent="." instance=ExtResource("4_6w6rx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.797825, 0)
+
 [node name="RNZAF patch node" parent="." instance=ExtResource("1_c23d6")]
 
 [node name="shovel" parent="." instance=ExtResource("2_ldleg")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -2.44485, 0, 0)
-
-[node name="Inventory" parent="." instance=ExtResource("4_165jc")]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27812, 0.124667, 0.387284)
@@ -66,8 +66,6 @@ omni_attenuation = 1.23114
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_bi05y")
-
-[node name="CharacterBody3D" parent="." instance=ExtResource("4_6w6rx")]
 
 [node name="WallLamp" parent="." instance=ExtResource("6_ih2tt")]
 transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, -2.37355, 0.0873391, -0.376378)
@@ -263,3 +261,5 @@ shape = SubResource("BoxShape3D_1hvwt")
 [node name="SC - wall3" type="CollisionShape3D" parent="CSGMesh3D3/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95901, 0.111291, 9.38397)
 shape = SubResource("BoxShape3D_lbvrq")
+
+[editable path="CharacterBody3D"]
