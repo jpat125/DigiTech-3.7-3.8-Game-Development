@@ -3,6 +3,7 @@
 [sub_resource type="ViewportTexture" id="ViewportTexture_qve4y"]
 
 [node name="Inventory" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 scale = Vector2(1, 6.4)

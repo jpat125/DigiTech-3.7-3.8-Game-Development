@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dokm217xdapjf"]
+[gd_scene load_steps=21 format=3 uid="uid://dokm217xdapjf"]
 
 [ext_resource type="PackedScene" uid="uid://b7bmirpy5hk7o" path="res://rnzaf patch.tscn" id="1_c23d6"]
 [ext_resource type="PackedScene" uid="uid://kdbcw130eych" path="res://wall_of_balls.tscn" id="1_np275"]
@@ -6,20 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character capsule.tscn" id="4_6w6rx"]
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="4_165jc"]
 [ext_resource type="PackedScene" uid="uid://bi12il5qa1olt" path="res://assets/WallLamp.glb" id="6_ih2tt"]
-
-[sub_resource type="GDScript" id="GDScript_c3o1s"]
-script/source = "extends Node3D
-#Player.shovel -= false
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
 
 [sub_resource type="Environment" id="Environment_bi05y"]
 background_mode = 2
@@ -61,7 +47,6 @@ size = Vector3(16.7125, 0.001, 20.0903)
 size = Vector3(0.001, 1, 0.767669)
 
 [node name="Mainnode" type="Node3D"]
-script = SubResource("GDScript_c3o1s")
 
 [node name="RNZAF patch node" parent="." instance=ExtResource("1_c23d6")]
 
@@ -69,7 +54,6 @@ script = SubResource("GDScript_c3o1s")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -2.44485, 0, 0)
 
 [node name="Inventory" parent="." instance=ExtResource("4_165jc")]
-visible = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27812, 0.124667, 0.387284)
@@ -84,7 +68,6 @@ omni_attenuation = 1.23114
 environment = SubResource("Environment_bi05y")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("4_6w6rx")]
-transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.3, 0, 7.54979e-08, 0, -0.5, -1.08491, 0.116487, 0.00996151)
 
 [node name="WallLamp" parent="." instance=ExtResource("6_ih2tt")]
 transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, -2.37355, 0.0873391, -0.376378)

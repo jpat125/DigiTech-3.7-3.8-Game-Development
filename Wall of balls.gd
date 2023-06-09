@@ -9,6 +9,6 @@ func _process(delta):
 	pass
 
 func _on_area_entered(Area3D):
-	if Area3D.name == "capsule_hitbox_a3d" and Player.shovel:
+	if Area3D.name == "capsule_hitbox_a3d":
 		set_meta("broken_wall", 1)
 		queue_free()
