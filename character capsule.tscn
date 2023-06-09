@@ -9,7 +9,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vw84e"]
 radius = 0.503096
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_tjq66")
 
 [node name="capsule_hitbox_a3d" type="Area3D" parent="."]

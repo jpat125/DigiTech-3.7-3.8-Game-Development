@@ -7,8 +7,8 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
-@onready var neck := $Neck
-@onready var camera := $Neck/Camera3d
+@onready var neck = get_node("/root/Mainnode/Player/Neck")
+@onready var camera = get_node("/root/Mainnode/Player/Neck/Camera3d")
 #func _unhandled_input(event: InputEvent) -> void:
 #	if event is InputEventMouseButton:
 #		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := Input.get_vector("left", "right", "forward", "back")
+	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED

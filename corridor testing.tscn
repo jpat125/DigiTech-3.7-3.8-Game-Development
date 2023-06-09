@@ -47,8 +47,8 @@ size = Vector3(0.001, 1, 0.767669)
 
 [node name="Mainnode" type="Node3D"]
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("4_6w6rx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.797825, 0)
+[node name="Player" parent="." instance=ExtResource("4_6w6rx")]
+transform = Transform3D(-0.445799, -0.0017444, -0.226401, -0.00179815, 0.349995, -0.00196275, 0.226407, -0.000655045, -0.445801, 0, 0.116423, 0.12883)
 
 [node name="RNZAF patch node" parent="." instance=ExtResource("1_c23d6")]
 
@@ -262,4 +262,4 @@ shape = SubResource("BoxShape3D_1hvwt")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95901, 0.111291, 9.38397)
 shape = SubResource("BoxShape3D_lbvrq")
 
-[editable path="CharacterBody3D"]
+[editable path="Player"]
