@@ -1,5 +1,16 @@
 extends CharacterBody3D
 #var has_shovel = false
+
+enum Tools {
+	Shovel
+}
+
+var inventory = []
+
+func pick_up_item(item: int):
+	if item not in inventory:
+		inventory.push_front(item)
+
 func _ready():
 	set_meta("CharacterBody3D", 1)
 	
@@ -36,5 +47,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-	
+		
 	move_and_slide()
+	
+

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://gfvdoo5u6nkl"]
+
+[ext_resource type="Script" path="res://Bootleg_global_variable.gd" id="1_xjg1o"]
+
+[node name="Bootleg_global_variable" type="Node3D"]
+script = ExtResource("1_xjg1o")

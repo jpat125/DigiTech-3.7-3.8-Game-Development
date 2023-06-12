@@ -1,15 +1,12 @@
-extends Area3D
+extends Node3D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	set_meta("Patch", 1)
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-
-func _on_area_entered(Area3D):
-	if Area3D.name == "capsule_hitbox_a3d": 
-		queue_free()
+	var shovel_status = get_node("/root/PlayerVariables")
+player_vars.health -= 10
