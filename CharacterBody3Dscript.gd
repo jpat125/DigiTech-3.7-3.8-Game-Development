@@ -40,8 +40,3 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 	
-
-
-
-func _on_capsule_hitbox_a_3d_area_entered(area):
-	pass # Replace with function body.
