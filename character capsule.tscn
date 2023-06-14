@@ -16,7 +16,7 @@ script = ExtResource("1_tjq66")
 transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, 0, 0, 0)
 
 [node name="capsule_hitbox" type="CollisionShape3D" parent="capsule_hitbox_a3d"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000665784, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000665784, -0.128015, -0.0617756)
 shape = SubResource("CapsuleShape3D_2txfy")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

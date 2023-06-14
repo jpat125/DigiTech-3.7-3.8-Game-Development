@@ -54,7 +54,7 @@ transform = Transform3D(-0.445799, -0.0017444, -0.226401, -0.00179815, 0.349995,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0690984, 0)
 
 [node name="shovel" parent="." instance=ExtResource("2_ldleg")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.39709, 0.0423417, 0.909258)
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -1.85421, 0.0423417, 0.0167653)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27812, 0.124667, 0.387284)
