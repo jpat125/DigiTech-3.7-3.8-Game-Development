@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Wall of balls.gd" id="1_b3x33"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_86n2x"]
-size = Vector3(3.76843, 2.19636, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_67vqu"]
+size = Vector3(2.1939, 1.31386, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4vgqq"]
 size = Vector3(4, 1.812, 0.739942)
@@ -20,7 +20,7 @@ size = Vector3(4, 1.812, 0.739942)
 
 [node name="blocking" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.343759, 0.749737, 7.45058e-09)
-shape = SubResource("BoxShape3D_86n2x")
+shape = SubResource("BoxShape3D_67vqu")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96046e-08, 1.19209e-07, 0)

@@ -15,4 +15,3 @@ func _on_area_entered(Area3D):
 	if Area3D.name == "capsule_hitbox_a3d" and BootlegGlobalVariable._shovel_status == 1:
 		print (BootlegGlobalVariable._shovel_status)
 		
-		queue_free()
