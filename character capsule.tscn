@@ -38,5 +38,3 @@ fov = 75.2306
 transform = Transform3D(0.0860747, -1.50821, 1.31069, -0.00170615, 2.18645, 2.51606, -1.99815, -0.0656416, 0.0556874, 3.78014, 5.83701, -0.0908047)
 light_color = Color(1, 0.768627, 0.482353, 1)
 shadow_enabled = true
-
-[connection signal="area_entered" from="capsule_hitbox_a3d" to="." method="_on_capsule_hitbox_a_3d_area_entered"]

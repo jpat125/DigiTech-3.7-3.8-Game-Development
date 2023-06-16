@@ -17,6 +17,3 @@ func _on_area_entered(StaticBody3D):
 		print (BootlegGlobalVariable._shovel_status)
 		
 		queue_free()
-
-
-
