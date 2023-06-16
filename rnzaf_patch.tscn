@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7bmirpy5hk7o"]
+
+[ext_resource type="Script" path="res://RNZAFpatch.gd" id="1_7wypd"]
+[ext_resource type="Texture2D" uid="uid://dmon702vjpdxg" path="res://assets/MUS_crest-small.webp" id="2_qc3k6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_11lg5"]
+size = Vector3(2, 0, 2)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2ee0n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6606c"]
+albedo_texture = ExtResource("2_qc3k6")
+
+[node name="RNZAF patch node" type="Node3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000718355, 0.003149, 9.26256e-05)
+script = ExtResource("1_7wypd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(-0.1417, 0, 1.23878e-08, 0, 0.1417, 0, -1.23878e-08, 0, -0.1417, 1.59891, -0.417366, 1.80239)
+shape = SubResource("BoxShape3D_11lg5")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="Area3D"]
+transform = Transform3D(-0.1417, 0, 2.13961e-08, 0, 0.1417, 0, -2.13961e-08, 0, -0.1417, 1.59748, -0.416859, 1.8052)
+mesh = SubResource("PlaneMesh_2ee0n")
+material = SubResource("StandardMaterial3D_6606c")
+
+[connection signal="area_entered" from="Area3D" to="Area3D" method="_on_area_entered"]
