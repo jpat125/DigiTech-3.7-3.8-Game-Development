@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://du3ndmdshrlo7"]
+[gd_scene load_steps=23 format=3 uid="uid://du3ndmdshrlo7"]
 
 [ext_resource type="PackedScene" uid="uid://kdbcw130eych" path="res://wall_of_balls.tscn" id="1_np275"]
 [ext_resource type="PackedScene" uid="uid://ceag3mcth4pwn" path="res://shovel.tscn" id="2_ldleg"]
 [ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character_capsule.tscn" id="4_6w6rx"]
+[ext_resource type="Texture2D" uid="uid://c3225yx84xvi4" path="res://assets/ripoff_rock_wall.jpg" id="5_2yt61"]
 [ext_resource type="PackedScene" uid="uid://b7bmirpy5hk7o" path="res://rnzaf_patch.tscn" id="5_wygqj"]
 [ext_resource type="PackedScene" uid="uid://bi12il5qa1olt" path="res://assets/WallLamp.glb" id="6_ih2tt"]
 
@@ -16,6 +17,11 @@ size = Vector3(5, 1, 1)
 size = Vector3(5, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_015s0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wcpuc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vvgma"]
+albedo_texture = ExtResource("5_2yt61")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vub8m"]
 size = Vector3(4.86747, 1.00833, 1)
@@ -48,7 +54,7 @@ size = Vector3(0.001, 1, 0.767669)
 [node name="Mainnode" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("4_6w6rx")]
-transform = Transform3D(-0.445799, -0.0017444, -0.226401, -0.00179815, 0.349995, -0.00196275, 0.226407, -0.000655045, -0.445801, 0, 0.116423, 0.12883)
+transform = Transform3D(-0.445799, -0.0017444, -0.2264, -0.00179815, 0.349995, -0.00196275, 0.226407, -0.000655047, -0.445801, 0, 0.116423, 0.12883)
 
 [node name="RNZAF patch node" parent="." instance=ExtResource("5_wygqj")]
 
@@ -176,6 +182,26 @@ transform = Transform3D(1, 0, 0, 0, 1.048, 0, 0, 0, 1.429, 0, 0.077, 0.306)
 operation = 2
 mesh = SubResource("BoxMesh_bgr2o")
 material = SubResource("StandardMaterial3D_015s0")
+
+[node name="Rock_texture" type="CSGMesh3D" parent="CSGMesh3D/CSGMesh3D2"]
+transform = Transform3D(1.32385, 0, 0, 0, 0.8963, 0, 0, 0, 0.0694755, -1.83792, -0.0428638, -0.528002)
+mesh = SubResource("BoxMesh_wcpuc")
+material = SubResource("StandardMaterial3D_vvgma")
+
+[node name="Rock_texture2" type="CSGMesh3D" parent="CSGMesh3D/CSGMesh3D2"]
+transform = Transform3D(1.32385, 0, 0, 0, 0.8963, 0, 0, 0, 0.0694755, -0.531256, -0.0428638, -0.528002)
+mesh = SubResource("BoxMesh_wcpuc")
+material = SubResource("StandardMaterial3D_vvgma")
+
+[node name="Rock_texture3" type="CSGMesh3D" parent="CSGMesh3D/CSGMesh3D2"]
+transform = Transform3D(1.32385, 0, 0, 0, 0.8963, 0, 0, 0, 0.0694755, 0.781176, -0.0428638, -0.528002)
+mesh = SubResource("BoxMesh_wcpuc")
+material = SubResource("StandardMaterial3D_vvgma")
+
+[node name="Rock_texture4" type="CSGMesh3D" parent="CSGMesh3D/CSGMesh3D2"]
+transform = Transform3D(1.32385, 0, 0, 0, 0.8963, 0, 0, 0, 0.0694755, 1.7987, -0.0428638, -0.528002)
+mesh = SubResource("BoxMesh_wcpuc")
+material = SubResource("StandardMaterial3D_vvgma")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="CSGMesh3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.402738, -0.115874, -9.30383)
