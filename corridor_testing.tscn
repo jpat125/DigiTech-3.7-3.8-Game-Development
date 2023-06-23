@@ -43,7 +43,7 @@ size = Vector3(1.00281, 0.152418, 0.794918)
 size = Vector3(40.6246, 0.01, 11.297)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_41cum"]
-size = Vector3(1, 1, 0.001)
+size = Vector3(0.651755, 1, 0.001)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rd1le"]
 size = Vector3(16.7125, 0.001, 20.0903)
@@ -54,12 +54,12 @@ size = Vector3(0.001, 1, 0.767669)
 [node name="Mainnode" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("4_6w6rx")]
-transform = Transform3D(-0.445799, -0.0017444, -0.2264, -0.00179815, 0.349995, -0.00196275, 0.226407, -0.000655048, -0.445801, 0, 0.116423, 0.12883)
+transform = Transform3D(-0.267479, -0.00104664, -0.13584, -0.00107889, 0.209997, -0.00117765, 0.135844, -0.000393029, -0.267481, 0, 0.116423, 0.12883)
 
 [node name="RNZAF patch node" parent="." instance=ExtResource("5_wygqj")]
 
 [node name="shovel" parent="." instance=ExtResource("2_ldleg")]
-transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -1.85421, 0.0423417, 0.0167653)
+transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, -1.85421, 0.0423417, 0.0167653)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27812, 0.124667, 0.387284)
@@ -74,7 +74,7 @@ omni_attenuation = 1.23114
 environment = SubResource("Environment_bi05y")
 
 [node name="WallLamp" parent="." instance=ExtResource("6_ih2tt")]
-transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, -2.37355, 0.0873391, -0.376378)
+transform = Transform3D(-0.09, 0, -1.35896e-08, 0, 0.09, 0, 1.35896e-08, 0, -0.09, -2.37355, 0.0873391, -0.469824)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="WallLamp"]
 transform = Transform3D(-2.63866e-07, 10, 5.224e-07, 5.97555, -2.612e-07, 8.01828, 8.01828, 5.23738e-07, -5.97555, -0.40532, 3.36208, -5.05371)
@@ -84,7 +84,7 @@ spot_range = 2.0
 spot_angle = 60.0
 
 [node name="WallLamp2" parent="." instance=ExtResource("6_ih2tt")]
-transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, -0.817775, 0.0873391, -0.376378)
+transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, -0.817775, 0.0873391, -0.470647)
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="WallLamp2"]
 transform = Transform3D(-2.63866e-07, 10, 5.224e-07, 5.97555, -2.612e-07, 8.01828, 8.01828, 5.23738e-07, -5.97555, -0.40532, 3.36208, -5.05371)
@@ -94,7 +94,7 @@ spot_range = 2.0
 spot_angle = 60.0
 
 [node name="WallLamp3" parent="." instance=ExtResource("6_ih2tt")]
-transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, 0.758842, 0.0873391, -0.376378)
+transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, 0.758842, 0.0873391, -0.469122)
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="WallLamp3"]
 transform = Transform3D(-2.63866e-07, 10, 5.224e-07, 5.97555, -2.612e-07, 8.01828, 8.01828, 5.23738e-07, -5.97555, -0.40532, 3.36208, -5.05371)
@@ -183,6 +183,8 @@ operation = 2
 mesh = SubResource("BoxMesh_bgr2o")
 material = SubResource("StandardMaterial3D_015s0")
 
+[node name="CSGMesh3D" type="CSGMesh3D" parent="CSGMesh3D/CSGMesh3D2"]
+
 [node name="Rock_texture" type="CSGMesh3D" parent="CSGMesh3D/CSGMesh3D2"]
 transform = Transform3D(1.32385, 0, 0, 0, 0.8963, 0, 0, 0, 0.0694755, -1.83792, -0.0428638, -0.528002)
 mesh = SubResource("BoxMesh_wcpuc")
@@ -261,7 +263,7 @@ material = SubResource("StandardMaterial3D_vvgma")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.402738, -0.115874, -9.41786)
 
 [node name="SC - floor" type="CollisionShape3D" parent="CSGMesh3D2/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355449, -0.834198, 9.38596)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355449, -0.834198, 9.44105)
 shape = SubResource("BoxShape3D_vub8m")
 
 [node name="SC - wall" type="CollisionShape3D" parent="CSGMesh3D2/StaticBody3D"]
@@ -274,6 +276,10 @@ shape = SubResource("BoxShape3D_1hvwt")
 
 [node name="SC - wall 3" type="CollisionShape3D" parent="CSGMesh3D2/StaticBody3D"]
 transform = Transform3D(1.94707e-07, 3.10588e-22, -1.5, -7.10543e-15, 1, 0, 1, 7.10543e-15, 2.92061e-07, 1.97953, -0.0220812, 9.49894)
+shape = SubResource("BoxShape3D_41cum")
+
+[node name="SC - wall 4" type="CollisionShape3D" parent="CSGMesh3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5, 1.78404, 0.108482, 9.02831)
 shape = SubResource("BoxShape3D_41cum")
 
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="."]
@@ -332,7 +338,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355
 shape = SubResource("BoxShape3D_vub8m")
 
 [node name="SC - wall" type="CollisionShape3D" parent="CSGMesh3D3/StaticBody3D"]
-transform = Transform3D(9.55343e-17, 4.37114e-08, 0.25, 0.05, -4.37114e-08, 0, 2.18557e-09, 1, -1.09278e-08, -0.471452, 0.230937, 8.95432)
+transform = Transform3D(9.55343e-17, 4.37114e-08, 0.25, 0.05, -4.37114e-08, 0, 2.18557e-09, 1, -1.09278e-08, -0.471452, 0.230937, 8.9349)
 shape = SubResource("BoxShape3D_rd1le")
 
 [node name="SC - wall2" type="CollisionShape3D" parent="CSGMesh3D3/StaticBody3D"]

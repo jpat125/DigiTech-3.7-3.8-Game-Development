@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://kdbcw130eych"]
+[gd_scene load_steps=15 format=3 uid="uid://kdbcw130eych"]
 
 [ext_resource type="Script" path="res://Wall of balls.gd" id="1_b3x33"]
+[ext_resource type="Texture2D" uid="uid://c3225yx84xvi4" path="res://assets/ripoff_rock_wall.jpg" id="2_dcwef"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_67vqu"]
 size = Vector3(2.1939, 1.31386, 1)
@@ -10,11 +11,29 @@ size = Vector3(4, 1.812, 0.739942)
 
 [sub_resource type="SphereMesh" id="SphereMesh_fgc0y"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y1snf"]
+albedo_texture = ExtResource("2_dcwef")
+
 [sub_resource type="SphereMesh" id="SphereMesh_l4dbo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66a20"]
+albedo_texture = ExtResource("2_dcwef")
 
 [sub_resource type="SphereMesh" id="SphereMesh_hciu5"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ff0q"]
+albedo_texture = ExtResource("2_dcwef")
+
 [sub_resource type="SphereMesh" id="SphereMesh_iu361"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ccwvc"]
+albedo_texture = ExtResource("2_dcwef")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i0c6a"]
+albedo_texture = ExtResource("2_dcwef")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dp76"]
+albedo_texture = ExtResource("2_dcwef")
 
 [node name="Wall_of_balls" type="StaticBody3D"]
 script = ExtResource("1_b3x33")
@@ -30,33 +49,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96046e-08, 1.19209e-07, 0)
 transform = Transform3D(1.07744, 0, 0, 0, 1.2889, 0, 0, 0, 1.44199, -0.500098, 0.88893, 0.0754254)
 shape = SubResource("BoxShape3D_4vgqq")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+[node name="MeshInstance3D" type="CSGMesh3D" parent="Area3D"]
 mesh = SubResource("SphereMesh_fgc0y")
-skeleton = NodePath("../..")
+material = SubResource("StandardMaterial3D_y1snf")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D"]
+[node name="MeshInstance3D2" type="CSGMesh3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.739265, 0.292293, 0.0181995)
 mesh = SubResource("SphereMesh_l4dbo")
-skeleton = NodePath("../..")
+material = SubResource("StandardMaterial3D_66a20")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Area3D"]
+[node name="MeshInstance3D3" type="CSGMesh3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.770648, 0.420239, -0.167395)
 mesh = SubResource("SphereMesh_hciu5")
-skeleton = NodePath("../..")
+material = SubResource("StandardMaterial3D_5ff0q")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Area3D"]
+[node name="MeshInstance3D4" type="CSGMesh3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.860829, 1.30098, 0.00862741)
 mesh = SubResource("SphereMesh_iu361")
-skeleton = NodePath("../..")
+material = SubResource("StandardMaterial3D_ccwvc")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Area3D"]
+[node name="MeshInstance3D5" type="CSGMesh3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.809595, 0.118742)
 mesh = SubResource("SphereMesh_iu361")
-skeleton = NodePath("../..")
+material = SubResource("StandardMaterial3D_i0c6a")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="Area3D"]
+[node name="MeshInstance3D6" type="CSGMesh3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.89391, 0.562799, -0.0176371)
 mesh = SubResource("SphereMesh_iu361")
-skeleton = NodePath("../..")
+material = SubResource("StandardMaterial3D_4dp76")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_entered"]
