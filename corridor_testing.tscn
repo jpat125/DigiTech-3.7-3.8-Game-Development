@@ -54,12 +54,16 @@ size = Vector3(0.001, 1, 0.767669)
 [node name="Mainnode" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("4_6w6rx")]
-transform = Transform3D(-0.267479, -0.00104664, -0.13584, -0.00107889, 0.209997, -0.00117765, 0.135844, -0.000393029, -0.267481, 0, 0.116423, 0.12883)
+transform = Transform3D(-0.445799, -0.0017444, -0.2264, -0.00179815, 0.349995, -0.00196276, 0.226407, -0.000655048, -0.445802, -0.0171244, 0.0256624, 0.0589116)
 
 [node name="RNZAF patch node" parent="." instance=ExtResource("5_wygqj")]
 
 [node name="shovel" parent="." instance=ExtResource("2_ldleg")]
-transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, -1.85421, 0.0423417, 0.0167653)
+transform = Transform3D(-0.05, -1.05879e-23, -4.37114e-09, 1.89105e-09, 0.0450788, -0.021631, 3.94091e-09, -0.021631, -0.0450788, -1.85421, -0.23239, -0.388704)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="shovel"]
+transform = Transform3D(1, 0, 0, 0, -0.98626, 0.165202, 0, -0.165202, -0.98626, 0, 1.16778, -3.21774)
+light_color = Color(1, 0.768627, 0.482353, 1)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27812, 0.124667, 0.387284)
@@ -209,11 +213,11 @@ material = SubResource("StandardMaterial3D_vvgma")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.402738, -0.115874, -9.30383)
 
 [node name="MC - floor" type="CollisionShape3D" parent="CSGMesh3D/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.793428, -0.830258, 9.39869)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.793428, -0.830258, 9.34409)
 shape = SubResource("BoxShape3D_vub8m")
 
 [node name="MC - wall" type="CollisionShape3D" parent="CSGMesh3D/StaticBody3D"]
-transform = Transform3D(1.72763e-15, 5.41869e-09, 4.8015, 0.904196, -5.41869e-09, 0, 3.95237e-08, 0.123965, -2.09879e-07, -0.409479, 0.194097, 8.96962)
+transform = Transform3D(1.72763e-15, 5.41869e-09, 4.8015, 0.904196, -5.41869e-09, 0, 3.95237e-08, 0.123965, -2.09879e-07, -0.512371, 0.111784, 8.8329)
 shape = SubResource("BoxShape3D_buo7j")
 
 [node name="MC - wall2" type="CollisionShape3D" parent="CSGMesh3D/StaticBody3D"]

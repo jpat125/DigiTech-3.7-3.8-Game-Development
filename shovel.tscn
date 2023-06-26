@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://shovelscript.gd" id="1_vw8oo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pmfrt"]
-size = Vector3(4.01112, 6.49454, 0.851602)
+size = Vector3(4.01112, 6.49454, 1.35219)
 
 [node name="Shovel" type="Node3D"]
 
@@ -14,7 +14,7 @@ script = ExtResource("1_vw8oo")
 [node name="TrenchShovel" parent="Area3D" instance=ExtResource("1_sg7ly")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0290349, -1.44847, -0.206686)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0290349, -1.44847, -0.0139341)
 shape = SubResource("BoxShape3D_pmfrt")
 
 [connection signal="area_entered" from="Area3D" to="Area3D" method="_on_area_entered"]
