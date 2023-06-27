@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm442fo2egyei"]
+
+[ext_resource type="PackedScene" uid="uid://cjok4oagxoitu" path="res://assets/processed_models/stone_granite_xs_001_LOD0.gltf" id="1_w80ld"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="stone_granite_xs_001_LOD0" parent="." instance=ExtResource("1_w80ld")]
+transform = Transform3D(-7.33402e-09, 4.55954e-10, 0.15, 0.101095, 0.110814, 4.60605e-09, -0.110814, 0.101095, -5.72539e-09, 1.73267, -0.226048, -1.38977)
+
+[node name="stone_granite_xs_001_LOD1" parent="." instance=ExtResource("1_w80ld")]
+transform = Transform3D(-1.12894e-08, 4.71125e-09, 0.15, -0.105825, -0.106306, -4.62576e-09, 0.106306, -0.105825, 1.13247e-08, 1.72139, -0.201434, -0.928537)
+
+[node name="stone_granite_xs_001_LOD2" parent="." instance=ExtResource("1_w80ld")]
+transform = Transform3D(-1.13518e-08, 8.70716e-10, 0.15, -0.0267997, -0.147587, -1.17145e-09, 0.147587, -0.0267997, 1.13247e-08, 1.70975, 0.195648, -1.22525)
