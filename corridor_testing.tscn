@@ -334,7 +334,7 @@ transform = Transform3D(-1, 0, -2.26494e-07, 0, 1, 0, 1.50996e-07, 0, -1.5, 4.28
 mesh = SubResource("BoxMesh_rq5mp")
 
 [node name="Wall of balls" parent="CSGMesh3D3" instance=ExtResource("1_np275")]
-transform = Transform3D(6.30992e-08, 0, 0.4, 0, 0.4, 0, -0.216048, 0, 5.1922e-08, 0.281375, -0.222798, -0.16927)
+transform = Transform3D(6.30992e-08, 0, 0.4, 0, 0.4, 0, -0.216048, 0, 5.1922e-08, 2.16425, -0.319585, -0.243805)
 
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGMesh3D3"]
 transform = Transform3D(2.22551e-07, 0, 1.2, 0, 1.198, 0, -0.762, 0, 1.55766e-07, -0.909463, 0.156611, 2.15155)
