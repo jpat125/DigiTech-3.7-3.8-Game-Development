@@ -1,5 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://dv1s4k2voe3et"]
+[gd_scene load_steps=25 format=3 uid="uid://dv1s4k2voe3et"]
 
+[ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="1_fk46q"]
 [ext_resource type="PackedScene" uid="uid://kdbcw130eych" path="res://wall_of_balls.tscn" id="1_np275"]
 [ext_resource type="PackedScene" uid="uid://ceag3mcth4pwn" path="res://shovel.tscn" id="2_ldleg"]
 [ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character_capsule.tscn" id="4_6w6rx"]
@@ -55,6 +56,8 @@ size = Vector3(21.8322, 0.376378, 8.54942)
 size = Vector3(0.001, 1, 0.767669)
 
 [node name="Mainnode" type="Node3D"]
+
+[node name="Inventory" parent="." instance=ExtResource("1_fk46q")]
 
 [node name="Player" parent="." instance=ExtResource("4_6w6rx")]
 transform = Transform3D(-0.445799, -0.0017444, -0.2264, -0.00179815, 0.349995, -0.00196276, 0.226407, -0.000655048, -0.445802, -0.0171244, 0.0256624, 0.0589116)

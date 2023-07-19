@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b20axddx6nkg4"]
+
+[ext_resource type="Texture2D" uid="uid://gmlb0dt6hij1" path="res://assets/item_slot_PS.png" id="1_4ausq"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 1152.0
+offset_bottom = 648.0
+scale = Vector2(0.115867, 0.194743)
+texture = ExtResource("1_4ausq")
