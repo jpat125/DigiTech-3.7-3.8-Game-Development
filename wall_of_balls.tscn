@@ -74,6 +74,11 @@ transform = Transform3D(0.3, 4.47035e-09, -1.95405e-16, 0, -1.31134e-08, -0.3, -
 mesh = SubResource("ArrayMesh_eisns")
 skeleton = NodePath("")
 
+[node name="stone_granite_xs_001_LOD5" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(0.218952, -5.70191e-09, -0.205085, -0.205085, -1.26267e-08, -0.218952, -4.47035e-09, 0.3, -1.31134e-08, -0.814074, 1.00454, -0.00237894)
+mesh = SubResource("ArrayMesh_eisns")
+skeleton = NodePath("")
+
 [node name="stone_granite_xs_001_LOD1" type="MeshInstance3D" parent="Area3D"]
 transform = Transform3D(-0.206956, -0.20743, -0.064359, -0.207131, 0.215246, -0.0276791, 0.0653149, 0.0253411, -0.291705, -1.33713, 0.871926, 0.301973)
 mesh = SubResource("ArrayMesh_eisns")

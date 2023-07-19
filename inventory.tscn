@@ -2,35 +2,39 @@
 
 [ext_resource type="PackedScene" uid="uid://b20axddx6nkg4" path="res://item_slot.tscn" id="1_x7p6r"]
 
-[node name="Inventory" type="Control"]
+[node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-scale = Vector2(1, 6.4)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -953.0
+offset_bottom = -517.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2(2.56726, 0.331164)
 
 [node name="GridContainer" type="GridContainer" parent="PanelContainer"]
 layout_mode = 2
 columns = 3
 
-[node name="Control" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
+[node name="TextureRect" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="Control2" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
+[node name="TextureRect2" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="Control3" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
+[node name="TextureRect3" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="Control4" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
+[node name="TextureRect4" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="Control5" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
+[node name="TextureRect5" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="Control6" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
+[node name="TextureRect6" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
 layout_mode = 2

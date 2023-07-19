@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0o7tufesfmq7"]
+[gd_scene load_steps=5 format=3 uid="uid://d0o7tufesfmq7"]
 
 [ext_resource type="Script" path="res://CharacterBody3Dscript.gd" id="1_tjq66"]
-[ext_resource type="Texture2D" uid="uid://gmlb0dt6hij1" path="res://assets/item_slot_PS.png" id="2_ttl6j"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2txfy"]
 
@@ -9,11 +8,6 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vw84e"]
 radius = 0.503096
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_kev4b"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a22es"]
-albedo_texture = ExtResource("2_ttl6j")
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_tjq66")
@@ -39,11 +33,6 @@ transform = Transform3D(1, 0, -2.84217e-14, 0, 1, 0, 2.84217e-14, 0, 1, 0, 0, 0)
 [node name="Camera3d" type="Camera3D" parent="Neck"]
 transform = Transform3D(-1.59306, -0.737791, 0.958033, 0, 2.64096, 2.03383, -1.2092, 0.972002, -1.26216, 1.87768, 3.56236, -2.60536)
 fov = 75.2306
-
-[node name="CSGMesh3D" type="CSGMesh3D" parent="Neck/Camera3d"]
-transform = Transform3D(0.999772, -0.0156722, 0.0144919, 0.0106586, -0.221675, -0.975062, 0.0184943, 0.974995, -0.221457, -1.00504, -0.44968, -2.10662)
-mesh = SubResource("PlaneMesh_kev4b")
-material = SubResource("StandardMaterial3D_a22es")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Neck"]
 transform = Transform3D(0.0860747, -1.50821, 1.31069, -0.00170615, 2.18645, 2.51606, -1.99815, -0.0656416, 0.0556874, 3.78014, 5.83701, -0.0908047)
