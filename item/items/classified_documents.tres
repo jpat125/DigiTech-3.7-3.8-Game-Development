@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bqt40skmatbp6"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_3tin1"]
+[ext_resource type="Texture2D" uid="uid://cp75i3285bmxn" path="res://item/item_atlas.tres" id="2_v6e7b"]
+
+[resource]
+script = ExtResource("1_3tin1")
+name = "Classified Documents"
+description = "Classified documents, someone doesn't want these to get out... "
+stackable = false
+texture = ExtResource("2_v6e7b")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bcxi0u8f5576g"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_k34c6"]
+[ext_resource type="Texture2D" uid="uid://bjhxk5botwa7j" path="res://item/#2 - Transparent Icons & Drop Shadow.png" id="2_5qyl3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jtne"]
+atlas = ExtResource("2_5qyl3")
+region = Rect2(64, 320, 32, 32)
+
+[resource]
+script = ExtResource("1_k34c6")
+name = "Pickaxe"
+description = "A pickaxe can be used to clear cave-ins."
+stackable = true
+texture = SubResource("AtlasTexture_0jtne")
