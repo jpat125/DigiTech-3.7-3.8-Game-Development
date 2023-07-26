@@ -1,8 +1,8 @@
-extends Control
+extends PanelContainer
 
-const Slot= preload("res://inventory.tscn")
+const Slot = preload("res://item_slot.tscn")
 
-@onready var item_grid: GridContainer = $PanelContainer/GridContainer
+@onready var item_grid: GridContainer = $MarginContainer/ItemGrid
 
 func _ready() -> void:
 	var inv_data = preload("res://test_inv.tres")
@@ -14,7 +14,7 @@ func populate_item_grid(slot_datas: Array[SlotData]) -> void:
 	
 	for slot_data in slot_datas:
 		var slot = Slot.instantiate()
-		item_grid.add_children(slot)
+		item_grid.add_child(slot)
 		
 		if slot_data:
 			slot.set_slot_data(slot_data)

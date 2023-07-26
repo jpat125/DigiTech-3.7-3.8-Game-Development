@@ -1,40 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://cguipij426wgf"]
+[gd_scene load_steps=3 format=3 uid="uid://cguipij426wgf"]
 
+[ext_resource type="Script" path="res://inventory.gd" id="1_oj2b8"]
 [ext_resource type="PackedScene" uid="uid://b20axddx6nkg4" path="res://item_slot.tscn" id="1_x7p6r"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
+[node name="Control" type="PanelContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -953.0
-offset_bottom = -517.0
+offset_right = -950.0
+offset_bottom = -515.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
+script = ExtResource("1_oj2b8")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="GridContainer" type="GridContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="TextEdit" parent="."]
 layout_mode = 2
+
+[node name="ItemGrid" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+offset_right = 202.0
+offset_bottom = 133.0
 columns = 3
 
-[node name="TextureRect" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
+[node name="TextureRect" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="TextureRect2" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
+[node name="TextureRect2" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="TextureRect3" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
+[node name="TextureRect3" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="TextureRect4" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
+[node name="TextureRect4" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="TextureRect5" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
+[node name="TextureRect5" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="TextureRect6" parent="PanelContainer/GridContainer" instance=ExtResource("1_x7p6r")]
+[node name="TextureRect6" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
