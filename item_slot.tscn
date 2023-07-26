@@ -15,7 +15,8 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Quantity Label" type="Label" parent="."]
+[node name="QuantityLabel" type="Label" parent="."]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
 text = "99
