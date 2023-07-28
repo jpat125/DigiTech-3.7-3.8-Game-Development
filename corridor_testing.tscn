@@ -60,22 +60,7 @@ size = Vector3(0.001, 1, 0.767669)
 [node name="Player" parent="." instance=ExtResource("4_6w6rx")]
 transform = Transform3D(-0.445799, -0.0017444, -0.2264, -0.00179815, 0.349995, -0.00196276, 0.226407, -0.000655048, -0.445802, -0.0171244, 0.0256624, 0.0589116)
 
-[node name="PlayerInventory" parent="." instance=ExtResource("1_fk46q")]
-offset_left = 2.0
-offset_top = 2.0
-offset_right = -951.0
-offset_bottom = -510.0
-scale = Vector2(1, 1)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="InvetoryInterface" type="Control" parent="CanvasLayer"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Control" parent="." instance=ExtResource("1_fk46q")]
 
 [node name="RNZAF patch node" parent="." instance=ExtResource("5_wygqj")]
 

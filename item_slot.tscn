@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b20axddx6nkg4"]
+[gd_scene load_steps=3 format=3 uid="uid://b20axddx6nkg4"]
 
 [ext_resource type="Script" path="res://inventory/slot.gd" id="2_8xuxu"]
+[ext_resource type="Texture2D" uid="uid://gmlb0dt6hij1" path="res://assets/item_slot_PS.png" id="2_vhmpt"]
 
 [node name="Slot" type="PanelContainer"]
 custom_minimum_size = Vector2(64, 64)
@@ -11,20 +12,19 @@ script = ExtResource("2_8xuxu")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
+texture = ExtResource("2_vhmpt")
 
 [node name="QuantityLabel" type="Label" parent="."]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "
-
-
-
-99
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 15
+text = "x99
 "
-horizontal_alignment = 2
-vertical_alignment = 1
-visible_characters = -2
-visible_ratio = -0.333333

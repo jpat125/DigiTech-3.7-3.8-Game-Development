@@ -4,39 +4,42 @@
 [ext_resource type="PackedScene" uid="uid://b20axddx6nkg4" path="res://item_slot.tscn" id="1_x7p6r"]
 
 [node name="Control" type="PanelContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -950.0
-offset_bottom = -515.0
+anchors_preset = -1
+anchor_right = 0.180306
+anchor_bottom = 0.202
+offset_right = -95.712
+offset_bottom = -56.896
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
 script = ExtResource("1_oj2b8")
+metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="TextEdit" parent="."]
 layout_mode = 2
 
 [node name="ItemGrid" type="GridContainer" parent="MarginContainer"]
 layout_mode = 2
-offset_right = 202.0
-offset_bottom = 133.0
+offset_right = 224.0
+offset_bottom = 148.0
+scale = Vector2(0.5, 0.5)
 columns = 3
 
-[node name="TextureRect" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
+[node name="Slot" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="TextureRect2" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
+[node name="Slot2" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="TextureRect3" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
+[node name="Slot3" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="TextureRect4" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
+[node name="Slot4" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="TextureRect5" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
+[node name="Slot5" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
 layout_mode = 2
 
-[node name="TextureRect6" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
+[node name="Slot6" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
