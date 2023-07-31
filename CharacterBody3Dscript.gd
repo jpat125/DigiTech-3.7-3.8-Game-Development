@@ -1,6 +1,11 @@
 extends CharacterBody3D
 #var has_shovel = false
 
+
+@export var inventory_data: InventoryData
+
+
+
 func _ready():
 	set_meta("CharacterBody3D", 1)
 	

@@ -28,3 +28,5 @@ size_flags_vertical = 8
 theme_override_font_sizes/font_size = 15
 text = "x99
 "
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

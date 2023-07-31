@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_3tin1")
 name = "Classified Documents"
-description = "Classified documents, someone doesn't want these to get out... "
-stackable = false
+description = "Classified documents... someone doesn't want these to get out... "
+stackable = true
 texture = ExtResource("2_v6e7b")

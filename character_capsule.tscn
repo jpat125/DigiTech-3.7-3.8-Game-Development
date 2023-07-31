@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0o7tufesfmq7"]
+[gd_scene load_steps=6 format=3 uid="uid://d0o7tufesfmq7"]
 
 [ext_resource type="Script" path="res://CharacterBody3Dscript.gd" id="1_tjq66"]
+[ext_resource type="Resource" uid="uid://boirxuijtvpnf" path="res://test_inv.tres" id="2_6507n"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2txfy"]
 
@@ -11,6 +12,7 @@ radius = 0.503096
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_tjq66")
+inventory_data = ExtResource("2_6507n")
 
 [node name="capsule_hitbox_a3d" type="Area3D" parent="."]
 transform = Transform3D(1, 0, -1.64863e-14, 0, 1, 0, 1.42109e-14, 0, 1.16012, 0, 0, 0)
