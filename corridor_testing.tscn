@@ -63,14 +63,16 @@ script = ExtResource("1_hc3ky")
 [node name="Player" parent="." instance=ExtResource("4_6w6rx")]
 transform = Transform3D(-0.445799, -0.0017444, -0.2264, -0.00179815, 0.349995, -0.00196276, 0.226407, -0.000655048, -0.445802, -0.0171244, 0.0256624, 0.0589116)
 
-[node name="InventoryInterface" type="Control" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="InventoryInterface" type="Control" parent="UI"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("3_aibsu")
 
-[node name="Control" parent="InventoryInterface" instance=ExtResource("1_fk46q")]
+[node name="PlayerInventory" parent="UI/InventoryInterface" instance=ExtResource("1_fk46q")]
 layout_mode = 1
 offset_right = 0.78776
 offset_bottom = -0.0799999
