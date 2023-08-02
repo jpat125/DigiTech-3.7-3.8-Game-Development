@@ -1,6 +1,6 @@
 extends PanelContainer
 
-signal  slot_clicked(index: int, button: int)
+signal slot_clicked(index: int, button: int)
 
 @onready var texture_rect = $MarginContainer/TextureRect
 @onready var quantity_label = $QuantityLabel

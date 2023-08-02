@@ -66,6 +66,7 @@ transform = Transform3D(-0.445799, -0.0017444, -0.2264, -0.00179815, 0.349995, -
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="InventoryInterface" type="Control" parent="UI"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -74,6 +75,8 @@ script = ExtResource("3_aibsu")
 
 [node name="PlayerInventory" parent="UI/InventoryInterface" instance=ExtResource("1_fk46q")]
 layout_mode = 1
+anchor_right = 2.80531
+anchor_bottom = 1.877
 offset_right = 0.78776
 offset_bottom = -0.0799999
 
