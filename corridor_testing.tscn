@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dv1s4k2voe3et"]
+[gd_scene load_steps=28 format=3 uid="uid://dv1s4k2voe3et"]
 
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="1_fk46q"]
 [ext_resource type="Script" path="res://main.gd" id="1_hc3ky"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://inventory/Inventory_Interface.gd" id="3_aibsu"]
 [ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character_capsule.tscn" id="4_6w6rx"]
 [ext_resource type="Texture2D" uid="uid://c3225yx84xvi4" path="res://assets/ripoff_rock_wall.jpg" id="5_2yt61"]
+[ext_resource type="PackedScene" uid="uid://b20axddx6nkg4" path="res://item_slot.tscn" id="5_ufssb"]
 [ext_resource type="PackedScene" uid="uid://xu3pr6ubdf61" path="res://rnzaf_patch.tscn" id="5_wygqj"]
 [ext_resource type="PackedScene" uid="uid://bi12il5qa1olt" path="res://assets/WallLamp.glb" id="6_ih2tt"]
 
@@ -66,7 +67,6 @@ transform = Transform3D(-0.445799, -0.0017444, -0.2264, -0.00179815, 0.349995, -
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="InventoryInterface" type="Control" parent="UI"]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -79,6 +79,12 @@ anchor_right = 2.80531
 anchor_bottom = 1.877
 offset_right = 0.78776
 offset_bottom = -0.0799999
+
+[node name="GrabbedSlot" parent="UI/InventoryInterface" instance=ExtResource("5_ufssb")]
+visible = false
+modulate = Color(1, 1, 1, 0.458824)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 
 [node name="RNZAF patch node" parent="." instance=ExtResource("5_wygqj")]
 
