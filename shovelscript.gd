@@ -17,10 +17,6 @@ func _on_area_entered(Area):
 	if Area.name == "capsule_hitbox_a3d":
 		BootlegGlobalVariable._shovel_status = 1
 		print(BootlegGlobalVariable._shovel_status)
-		body.inventory_data.pick
-
-		
-		
 		
 		queue_free()
 

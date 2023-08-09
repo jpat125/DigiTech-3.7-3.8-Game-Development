@@ -411,7 +411,7 @@ transform = Transform3D(-1, 0, -2.26494e-07, 0, 1, 0, 1.50996e-07, 0, -1.5, 4.28
 mesh = SubResource("BoxMesh_rq5mp")
 
 [node name="Wall of balls" parent="CSGMesh3D3" instance=ExtResource("1_np275")]
-transform = Transform3D(6.30992e-08, 0, 0.4, 0, 0.4, 0, -0.216048, 0, 5.1922e-08, 2.16425, -0.319585, -0.243805)
+transform = Transform3D(6.30992e-08, 0, 0.4, 0, 0.4, 0, -0.216048, 0, 5.1922e-08, 2.16425, -0.442088, -0.243805)
 
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGMesh3D3"]
 transform = Transform3D(2.22551e-07, 0, 1.2, 0, 1.198, 0, -0.762, 0, 1.55766e-07, -0.909463, 0.156611, 2.15155)
@@ -441,7 +441,7 @@ mesh = SubResource("BoxMesh_wcpuc")
 material = SubResource("StandardMaterial3D_vvgma")
 
 [node name="Rock_texture13" type="CSGMesh3D" parent="CSGMesh3D3"]
-transform = Transform3D(0.882566, 0, -1.06581e-14, 0, 0.939322, 0, -2.13163e-14, 0, 0.243216, -1.87396, 0.0309194, 0.378064)
+transform = Transform3D(0.882566, 0, -1.42109e-14, 0, 0.939322, 0, -2.13163e-14, 0, 0.243216, -1.87396, 0.0309194, 0.38208)
 mesh = SubResource("BoxMesh_wcpuc")
 material = SubResource("StandardMaterial3D_vvgma")
 
@@ -480,12 +480,12 @@ mesh = SubResource("BoxMesh_bgr2o")
 material = SubResource("StandardMaterial3D_015s0")
 
 [node name="Rock_texture8" type="CSGMesh3D" parent="CSGMesh3D4"]
-transform = Transform3D(0.882566, 0, -3.55271e-15, 0, 0.939322, 0, -1.42109e-14, 0, 0.243216, 1.97299, 0.0309194, 0.378064)
+transform = Transform3D(0.882566, 0, -3.55271e-15, 0, 0.939322, 0, -1.42109e-14, 0, 0.243216, 1.97299, 0.0309194, 0.379951)
 mesh = SubResource("BoxMesh_wcpuc")
 material = SubResource("StandardMaterial3D_vvgma")
 
 [node name="Rock_texture9" type="CSGMesh3D" parent="CSGMesh3D4"]
-transform = Transform3D(0.882566, 0, -7.10543e-15, 0, 0.939322, 0, -1.42109e-14, 0, 0.243216, 1.10166, 0.0309194, 0.378064)
+transform = Transform3D(0.882566, 0, -7.10543e-15, 0, 0.939322, 0, -1.42109e-14, 0, 0.243216, 1.10166, 0.0309194, 0.38046)
 mesh = SubResource("BoxMesh_wcpuc")
 material = SubResource("StandardMaterial3D_vvgma")
 
@@ -540,7 +540,7 @@ mesh = SubResource("BoxMesh_wcpuc")
 material = SubResource("StandardMaterial3D_vvgma")
 
 [node name="Rock_texture20" type="CSGMesh3D" parent="CSGMesh3D4"]
-transform = Transform3D(-0.639791, 8.34499e-08, 2.66454e-15, -5.59323e-08, -0.954556, 0, 0, 7.41154e-22, 0.0517582, -0.295976, 0.0179071, -0.473596)
+transform = Transform3D(-0.639791, 8.34499e-08, 2.66454e-15, -5.59323e-08, -0.954556, 0, 0, 7.41154e-22, 0.0517582, -0.295976, 0.0277862, -0.473596)
 mesh = SubResource("BoxMesh_wcpuc")
 material = SubResource("StandardMaterial3D_vvgma")
 
