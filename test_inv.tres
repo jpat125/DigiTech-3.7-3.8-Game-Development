@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InventoryData" load_steps=7 format=3 uid="uid://boirxuijtvpnf"]
+[gd_resource type="Resource" load_steps=7 format=3 uid="uid://boirxuijtvpnf"]
 
 [ext_resource type="Script" path="res://inventory/inventory_data.gd" id="1_urws1"]
 [ext_resource type="Resource" uid="uid://bcxi0u8f5576g" path="res://item/items/pickaxe.tres" id="2_bq6yv"]
