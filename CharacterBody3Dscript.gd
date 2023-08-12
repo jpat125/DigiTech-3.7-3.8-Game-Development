@@ -15,6 +15,8 @@ const JUMP_VELOCITY = 3
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck = $Neck
 @onready var camera = $Neck/Camera3d
+@onready var interact_ray = $Neck/Camera3d/InteractRay
+
 #func _unhandled_input(event: InputEvent) -> void:
 #	if event is InputEventMouseButton:
 #		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -32,6 +34,8 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("inventory"):
 		toggle_inventory.emit()
+	if Input.is_action_just_pressed("interact"):
+		interact()
 		
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -49,3 +53,9 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 	
+	
+func interact() -> void:
+	if interact_ray.is_colliding():
+		print("interact with ", interact_ray.get_collider())
+			
+		

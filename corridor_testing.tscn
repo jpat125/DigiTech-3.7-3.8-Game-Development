@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dv1s4k2voe3et"]
+[gd_scene load_steps=29 format=3 uid="uid://dv1s4k2voe3et"]
 
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="1_fk46q"]
 [ext_resource type="Script" path="res://main.gd" id="1_hc3ky"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b20axddx6nkg4" path="res://item_slot.tscn" id="5_ufssb"]
 [ext_resource type="PackedScene" uid="uid://xu3pr6ubdf61" path="res://rnzaf_patch.tscn" id="5_wygqj"]
 [ext_resource type="PackedScene" uid="uid://bi12il5qa1olt" path="res://assets/WallLamp.glb" id="6_ih2tt"]
+[ext_resource type="PackedScene" uid="uid://b7i30yrkwt7jn" path="res://interactable/chest.tscn" id="11_x4340"]
 
 [sub_resource type="Environment" id="Environment_bi05y"]
 background_mode = 2
@@ -62,7 +63,7 @@ size = Vector3(0.001, 1, 0.767669)
 script = ExtResource("1_hc3ky")
 
 [node name="Player" parent="." instance=ExtResource("4_6w6rx")]
-transform = Transform3D(-0.445799, -0.0017444, -0.2264, -0.00179815, 0.349995, -0.00196276, 0.226407, -0.000655048, -0.445802, -0.0171244, 0.0256624, 0.0589116)
+transform = Transform3D(-0.445799, -0.0017444, -0.2264, -0.00179815, 0.349995, -0.00196276, 0.226407, -0.000655049, -0.445802, -0.0171244, 0.0256624, 0.0589116)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -582,5 +583,8 @@ shape = SubResource("BoxShape3D_1hvwt")
 [node name="SC - wall3" type="CollisionShape3D" parent="CSGMesh3D4/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95901, 0.111291, 9.38397)
 shape = SubResource("BoxShape3D_lbvrq")
+
+[node name="Chest" parent="." instance=ExtResource("11_x4340")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.5077, -0.280866, 0.0869755)
 
 [editable path="Player"]
