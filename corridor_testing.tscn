@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dv1s4k2voe3et"]
+[gd_scene load_steps=34 format=3 uid="uid://dv1s4k2voe3et"]
 
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="1_fk46q"]
 [ext_resource type="Script" path="res://main.gd" id="1_hc3ky"]
@@ -11,6 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://xu3pr6ubdf61" path="res://rnzaf_patch.tscn" id="5_wygqj"]
 [ext_resource type="PackedScene" uid="uid://bi12il5qa1olt" path="res://assets/WallLamp.glb" id="6_ih2tt"]
 [ext_resource type="PackedScene" uid="uid://b7i30yrkwt7jn" path="res://interactable/chest.tscn" id="11_x4340"]
+[ext_resource type="Script" path="res://inventory/inventory_data.gd" id="12_3u83w"]
+[ext_resource type="Resource" uid="uid://bqt40skmatbp6" path="res://item/items/classified_documents.tres" id="13_pi4kk"]
+[ext_resource type="Script" path="res://inventory/slot_data.gd" id="14_eqms8"]
 
 [sub_resource type="Environment" id="Environment_bi05y"]
 background_mode = 2
@@ -59,6 +62,15 @@ size = Vector3(21.8322, 0.376378, 8.54942)
 [sub_resource type="BoxShape3D" id="BoxShape3D_lbvrq"]
 size = Vector3(0.001, 1, 0.767669)
 
+[sub_resource type="Resource" id="Resource_p3r28"]
+script = ExtResource("14_eqms8")
+item_data = ExtResource("13_pi4kk")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_t2b5b"]
+script = ExtResource("12_3u83w")
+slot_datas = Array[ExtResource("14_eqms8")]([SubResource("Resource_p3r28"), null, null, null, null])
+
 [node name="Mainnode" type="Node3D"]
 script = ExtResource("1_hc3ky")
 
@@ -78,6 +90,15 @@ script = ExtResource("3_aibsu")
 layout_mode = 1
 anchor_right = 2.80531
 anchor_bottom = 1.877
+offset_right = 0.78776
+offset_bottom = -0.0799999
+
+[node name="ExternalInventory" parent="UI/InventoryInterface" instance=ExtResource("1_fk46q")]
+layout_mode = 1
+anchor_left = 14.275
+anchor_top = 3.95
+anchor_right = 17.0803
+anchor_bottom = 5.827
 offset_right = 0.78776
 offset_bottom = -0.0799999
 
@@ -586,5 +607,6 @@ shape = SubResource("BoxShape3D_lbvrq")
 
 [node name="Chest" parent="." instance=ExtResource("11_x4340")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.5077, -0.280866, 0.0869755)
+inventory_data = SubResource("Resource_t2b5b")
 
 [editable path="Player"]

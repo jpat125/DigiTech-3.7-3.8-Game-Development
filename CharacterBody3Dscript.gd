@@ -56,6 +56,6 @@ func _physics_process(delta: float) -> void:
 	
 func interact() -> void:
 	if interact_ray.is_colliding():
-		print("interact with ", interact_ray.get_collider())
+		interact_ray.get_collider().player_interact()
 			
 		
