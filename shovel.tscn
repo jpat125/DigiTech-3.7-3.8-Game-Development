@@ -9,6 +9,7 @@ size = Vector3(4.01112, 6.49454, 1.35219)
 [node name="Shovel" type="Node3D"]
 
 [node name="Area3D" type="Area3D" parent="."]
+collision_layer = 2
 script = ExtResource("1_vw8oo")
 
 [node name="TrenchShovel" parent="Area3D" instance=ExtResource("1_sg7ly")]

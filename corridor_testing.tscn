@@ -1,8 +1,9 @@
-[gd_scene load_steps=36 format=3 uid="uid://dv1s4k2voe3et"]
+[gd_scene load_steps=37 format=3 uid="uid://dv1s4k2voe3et"]
 
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="1_fk46q"]
 [ext_resource type="Script" path="res://main.gd" id="1_hc3ky"]
 [ext_resource type="PackedScene" uid="uid://kdbcw130eych" path="res://wall_of_balls.tscn" id="1_np275"]
+[ext_resource type="PackedScene" uid="uid://ogu5kc2dkpuk" path="res://pick_up/pick_up.tscn" id="2_cedom"]
 [ext_resource type="PackedScene" uid="uid://ceag3mcth4pwn" path="res://shovel.tscn" id="2_ldleg"]
 [ext_resource type="Script" path="res://inventory/Inventory_Interface.gd" id="3_aibsu"]
 [ext_resource type="Resource" uid="uid://boirxuijtvpnf" path="res://test_inv.tres" id="3_ownfw"]
@@ -75,6 +76,9 @@ slot_datas = Array[ExtResource("14_eqms8")]([SubResource("Resource_p3r28"), null
 
 [node name="Mainnode" type="Node3D"]
 script = ExtResource("1_hc3ky")
+
+[node name="Pickup" parent="." instance=ExtResource("2_cedom")]
+transform = Transform3D(0.141421, 0, 0.141421, 0, 0.2, 0, -0.141421, 0, 0.141421, 0.712336, -0.103614, 0.0959482)
 
 [node name="Player" parent="." instance=ExtResource("4_6w6rx")]
 transform = Transform3D(-0.445993, -0.0114477, -0.225439, -0.0183219, 0.349765, 0, 0.225288, 0.00578264, -0.446293, -0.0133077, 0.446035, 0.132879)

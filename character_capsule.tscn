@@ -10,6 +10,7 @@ radius = 0.503096
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.253122, 0)
+collision_layer = 2
 script = ExtResource("1_tjq66")
 
 [node name="capsule_hitbox_a3d" type="Area3D" parent="."]
