@@ -77,8 +77,21 @@ slot_datas = Array[ExtResource("14_eqms8")]([SubResource("Resource_p3r28"), null
 script = ExtResource("1_hc3ky")
 
 [node name="Player" parent="." instance=ExtResource("4_6w6rx")]
-transform = Transform3D(-0.445799, -0.0017444, -0.2264, -0.00179815, 0.349995, -0.00196276, 0.226407, -0.000655049, -0.445802, -0.0171244, 0.0256624, 0.0589116)
+transform = Transform3D(-0.445993, -0.0114477, -0.225439, -0.0183219, 0.349765, 0, 0.225288, 0.00578264, -0.446293, -0.0133077, 0.446035, 0.132879)
 inventory_data = ExtResource("3_ownfw")
+metadata/_edit_group_ = true
+
+[node name="capsule_hitbox" parent="Player/capsule_hitbox_a3d" index="0"]
+transform = Transform3D(1, -3.53903e-08, 0, 1.86265e-08, 0.999998, 0, 2.98023e-08, 3.53903e-08, 1, -0.0404197, -1.57635, -0.0540121)
+
+[node name="soldier" parent="Player" index="1"]
+transform = Transform3D(-0.00907044, 0.000168969, -0.00420697, 0, 0.00999195, 0.000401318, 0.00421036, 0.000364013, -0.00906314, 0.0586153, -2.52103, -0.0676305)
+
+[node name="CollisionShape3D" parent="Player" index="2"]
+transform = Transform3D(1, -5.82077e-11, -5.96046e-08, -9.31323e-10, 1, -2.32831e-10, 1.19209e-07, 0, 1, 0.00352859, -1.51583, -0.0885158)
+
+[node name="Camera3d" parent="Player/Neck" index="0"]
+transform = Transform3D(-1.59306, -0.666143, 1.00916, 2.14204e-08, 2.3845, 1.57399, -1.2092, 0.877611, -1.32952, 2.15229, 0.775117, -2.25722)
 
 [node name="UI" type="CanvasLayer" parent="."]
 

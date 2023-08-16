@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmcepmu66pfv2"]
+
+[ext_resource type="PackedScene" uid="uid://dowijgvy0m68m" path="res://assets/solideranimations_v1.glb" id="1_wdwqf"]
+
+[node name="solideranimations_v1" instance=ExtResource("1_wdwqf")]
