@@ -1,10 +1,11 @@
-[gd_scene load_steps=35 format=3 uid="uid://dv1s4k2voe3et"]
+[gd_scene load_steps=36 format=3 uid="uid://dv1s4k2voe3et"]
 
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="1_fk46q"]
 [ext_resource type="Script" path="res://main.gd" id="1_hc3ky"]
 [ext_resource type="PackedScene" uid="uid://kdbcw130eych" path="res://wall_of_balls.tscn" id="1_np275"]
 [ext_resource type="PackedScene" uid="uid://ceag3mcth4pwn" path="res://shovel.tscn" id="2_ldleg"]
 [ext_resource type="Script" path="res://inventory/Inventory_Interface.gd" id="3_aibsu"]
+[ext_resource type="Resource" uid="uid://boirxuijtvpnf" path="res://test_inv.tres" id="3_ownfw"]
 [ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character_capsule.tscn" id="4_6w6rx"]
 [ext_resource type="Texture2D" uid="uid://c3225yx84xvi4" path="res://assets/ripoff_rock_wall.jpg" id="5_2yt61"]
 [ext_resource type="PackedScene" uid="uid://b20axddx6nkg4" path="res://item_slot.tscn" id="5_ufssb"]
@@ -77,6 +78,7 @@ script = ExtResource("1_hc3ky")
 
 [node name="Player" parent="." instance=ExtResource("4_6w6rx")]
 transform = Transform3D(-0.445799, -0.0017444, -0.2264, -0.00179815, 0.349995, -0.00196276, 0.226407, -0.000655049, -0.445802, -0.0171244, 0.0256624, 0.0589116)
+inventory_data = ExtResource("3_ownfw")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
