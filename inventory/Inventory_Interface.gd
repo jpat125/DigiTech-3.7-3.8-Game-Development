@@ -18,11 +18,12 @@ func set_player_inventory_data(inventory_data: InventoryData) -> void:
 func set_external_inventory(_external_inventory_owner) -> void:
 	external_inventory_owner =  _external_inventory_owner
 	var inventory_data = external_inventory_owner.inventory_data
-
+	
 	inventory_data.inventory_interact.connect(on_inventory_interact)
 	external_inventory.set_inventory_data(inventory_data)
 
 	external_inventory.show()
+	
 	
 func clear_external_inventory() -> void:
 	if external_inventory_owner:
@@ -34,10 +35,7 @@ func clear_external_inventory() -> void:
 		external_inventory.hide()
 		external_inventory_owner =  null
 		
-
-func on_inventory_interact(inventory_data: InventoryData, 
-		index: int, button: int) -> void:
-
+func on_inventory_interact(inventory_data: InventoryData, index: int, button: int) -> void:
 	match [grabbed_slot_data, button]:
 		[null, MOUSE_BUTTON_LEFT]:
 			grabbed_slot_data=inventory_data.grab_slot_data(index)

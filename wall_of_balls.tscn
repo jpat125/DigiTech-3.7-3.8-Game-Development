@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://kdbcw130eych"]
+[gd_scene load_steps=9 format=3 uid="uid://kdbcw130eych"]
 
 [ext_resource type="Script" path="res://Wall of balls.gd" id="1_b3x33"]
-[ext_resource type="Texture2D" uid="uid://bygv0dyos62jh" path="res://assets/Rock_LOD0 (1)_stone_granite_xs_001_LOD0_albedo.png" id="2_tfrd8"]
 [ext_resource type="Texture2D" uid="uid://bdmgjr7dnnbqd" path="res://assets/Rock_LOD0 (1)_stone_granite_xs_001_LOD0_roughness.png" id="3_m8aj7"]
 [ext_resource type="Texture2D" uid="uid://c7qt5w5ww6xjc" path="res://assets/Rock_LOD0 (1)_stone_granite_xs_001_LOD0_normal.png" id="4_16cql"]
 
@@ -15,7 +14,6 @@ size = Vector3(4, 1.812, 0.739942)
 resource_name = "Material.001"
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("2_tfrd8")
 metallic_texture = ExtResource("3_m8aj7")
 metallic_texture_channel = 2
 roughness_texture = ExtResource("3_m8aj7")

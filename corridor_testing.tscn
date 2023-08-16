@@ -104,7 +104,6 @@ offset_right = 0.78776
 offset_bottom = -0.0799999
 
 [node name="GrabbedSlot" parent="UI/InventoryInterface" instance=ExtResource("5_ufssb")]
-visible = false
 modulate = Color(1, 1, 1, 0.458824)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
@@ -210,7 +209,7 @@ spot_range = 2.0
 spot_angle = 60.0
 
 [node name="WallLamp8" parent="." instance=ExtResource("6_ih2tt")]
-transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, 2.63355, 0.0873391, 2.95027)
+transform = Transform3D(-0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, 3.3948, 0.0873391, 2.95027)
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="WallLamp8"]
 transform = Transform3D(-2.63866e-07, 10, 5.224e-07, 5.97555, -2.612e-07, 8.01828, 8.01828, 5.23737e-07, -5.97555, -0.405319, 3.36208, -5.05371)
@@ -463,7 +462,7 @@ transform = Transform3D(-1, 0, -2.26494e-07, 0, 1, 0, 1.50996e-07, 0, -1.5, 4.28
 mesh = SubResource("BoxMesh_rq5mp")
 
 [node name="Wall of balls" parent="CSGMesh3D3" instance=ExtResource("1_np275")]
-transform = Transform3D(6.30992e-08, 0, 0.4, 0, 0.4, 0, -0.216048, 0, 5.1922e-08, 2.16425, -0.442088, -0.243805)
+transform = Transform3D(6.30992e-08, 0, 0.4, 0, 0.4, 0, -0.216048, 0, 5.1922e-08, 2.16425, -0.3056, -0.243805)
 
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGMesh3D3"]
 transform = Transform3D(2.22551e-07, 0, 1.2, 0, 1.198, 0, -0.762, 0, 1.55766e-07, -0.909463, 0.156611, 2.15155)
