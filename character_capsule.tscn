@@ -21,9 +21,6 @@ transform = Transform3D(1, 0, -1.64863e-14, 0, 1, 0, 1.42109e-14, 0, 1.16012, 0,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000665784, 0.860391, -0.0617756)
 shape = SubResource("CapsuleShape3D_2txfy")
 
-[node name="soldier" parent="." instance=ExtResource("2_2efh2")]
-transform = Transform3D(0.008, 0, 0, 0, 0.008, 0, 0, 0, 0.008, 0, -0.0669903, 0)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.845349, -0.129722)
 shape = SubResource("CapsuleShape3D_vw84e")
@@ -38,7 +35,7 @@ fov = 75.2306
 [node name="InteractRay" type="RayCast3D" parent="Neck/Camera3d"]
 transform = Transform3D(1, 0, 2.98023e-08, -1.49012e-08, 1, -1.49012e-08, 2.98023e-08, -5.96046e-08, 1, 0.353598, -6.48884, -3.29393)
 target_position = Vector3(0, 0, -2.5)
-collision_mask = 4
+collision_mask = 6
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Neck"]
 transform = Transform3D(0.0860747, -1.50821, 1.31069, -0.00170615, 2.18645, 2.51606, -1.99815, -0.0656416, 0.0556874, 3.78014, 5.83701, -0.0908047)
@@ -60,3 +57,6 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 2
+
+[node name="soldier" parent="." instance=ExtResource("2_2efh2")]
+transform = Transform3D(0.008, 0, 1.05879e-22, 0, 0.008, 0, -2.64698e-23, 0, 0.008, 0, -0.940681, 0)

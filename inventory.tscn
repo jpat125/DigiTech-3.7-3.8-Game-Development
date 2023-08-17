@@ -43,7 +43,3 @@ layout_mode = 2
 [node name="Slot6" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-
-[node name="Slot7" parent="MarginContainer/ItemGrid" instance=ExtResource("1_x7p6r")]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
