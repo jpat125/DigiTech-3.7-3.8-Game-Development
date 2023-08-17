@@ -24,6 +24,20 @@ script = ExtResource("14_eqms8")
 item_data = ExtResource("13_pi4kk")
 quantity = 5
 
+[sub_resource type="Resource" id="Resource_p3r28"]
+script = ExtResource("14_eqms8")
+item_data = ExtResource("13_pi4kk")
+quantity = 3
+
+[sub_resource type="Resource" id="Resource_xrvjk"]
+script = ExtResource("14_eqms8")
+item_data = ExtResource("7_lsebl")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_t2b5b"]
+script = ExtResource("12_3u83w")
+slot_datas = Array[ExtResource("14_eqms8")]([SubResource("Resource_p3r28"), SubResource("Resource_xrvjk"), null, null, null])
+
 [sub_resource type="Environment" id="Environment_bi05y"]
 background_mode = 2
 
@@ -71,20 +85,6 @@ size = Vector3(21.8322, 0.376378, 8.54942)
 [sub_resource type="BoxShape3D" id="BoxShape3D_lbvrq"]
 size = Vector3(0.001, 1, 0.767669)
 
-[sub_resource type="Resource" id="Resource_p3r28"]
-script = ExtResource("14_eqms8")
-item_data = ExtResource("13_pi4kk")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_xrvjk"]
-script = ExtResource("14_eqms8")
-item_data = ExtResource("7_lsebl")
-quantity = 2
-
-[sub_resource type="Resource" id="Resource_t2b5b"]
-script = ExtResource("12_3u83w")
-slot_datas = Array[ExtResource("14_eqms8")]([SubResource("Resource_p3r28"), SubResource("Resource_xrvjk"), null, null, null])
-
 [node name="Mainnode" type="Node3D"]
 script = ExtResource("1_hc3ky")
 
@@ -102,17 +102,22 @@ transform = Transform3D(1, -3.53903e-08, 0, 1.86265e-08, 0.999998, 0, 2.98023e-0
 [node name="CollisionShape3D" parent="Player" index="1"]
 transform = Transform3D(1, -5.82077e-11, -5.96046e-08, -9.31323e-10, 1, -2.32831e-10, 1.19209e-07, 0, 1, 0.00352859, -1.51583, -0.0885158)
 
+[node name="soldier" parent="Player" index="2"]
+transform = Transform3D(0.008, -1.16415e-10, -4.65661e-10, 4.36557e-11, 0.008, 8.73115e-11, 2.32831e-10, 2.91038e-11, 0.00800001, 0.00394967, -2.21594, -0.11457)
+
 [node name="Camera3d" parent="Player/Neck" index="0"]
 transform = Transform3D(-1.59306, -0.666143, 1.00916, 2.14204e-08, 2.3845, 1.57399, -1.2092, 0.877611, -1.32952, 2.15229, 0.775117, -2.25722)
 
-[node name="ColorRect" parent="Player" index="3"]
+[node name="ColorRect" parent="Player" index="4"]
 offset_left = -6.0
 offset_top = -91.0
 offset_right = -4.0
 offset_bottom = -89.0
 
-[node name="soldier" parent="Player" index="4"]
-transform = Transform3D(0.008, -1.16415e-10, -4.65661e-10, 4.36557e-11, 0.008, 8.73115e-11, 2.32831e-10, 2.91038e-11, 0.00800001, 0.00394967, -2.21594, -0.11457)
+[node name="Chest" parent="." instance=ExtResource("11_x4340")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.5077, -0.280866, 0.0869755)
+collision_mask = 7
+inventory_data = SubResource("Resource_t2b5b")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -140,6 +145,7 @@ offset_right = -113.0
 offset_bottom = -75.0
 
 [node name="GrabbedSlot" parent="UI/InventoryInterface" instance=ExtResource("5_ufssb")]
+visible = false
 modulate = Color(1, 1, 1, 0.458824)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
@@ -673,9 +679,5 @@ shape = SubResource("BoxShape3D_1hvwt")
 [node name="SC - wall3" type="CollisionShape3D" parent="CSGMesh3D4/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95901, 0.111291, 9.38397)
 shape = SubResource("BoxShape3D_lbvrq")
-
-[node name="Chest" parent="." instance=ExtResource("11_x4340")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.5077, -0.280866, 0.0869755)
-inventory_data = SubResource("Resource_t2b5b")
 
 [editable path="Player"]

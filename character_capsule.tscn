@@ -25,6 +25,9 @@ shape = SubResource("CapsuleShape3D_2txfy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.845349, -0.129722)
 shape = SubResource("CapsuleShape3D_vw84e")
 
+[node name="soldier" parent="." instance=ExtResource("2_2efh2")]
+transform = Transform3D(0.008, 0, 1.05879e-22, 0, 0.008, 0, -2.64698e-23, 0, 0.008, 0, -0.940681, 0)
+
 [node name="Neck" type="Node3D" parent="."]
 transform = Transform3D(1, 0, -2.84217e-14, 0, 1, 0, 2.84217e-14, 0, 1, 0, 0, 0)
 
@@ -57,6 +60,3 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 2
-
-[node name="soldier" parent="." instance=ExtResource("2_2efh2")]
-transform = Transform3D(0.008, 0, 1.05879e-22, 0, 0.008, 0, -2.64698e-23, 0, 0.008, 0, -0.940681, 0)
