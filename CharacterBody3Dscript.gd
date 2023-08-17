@@ -13,9 +13,9 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 3
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
-@onready var neck = $Neck
-@onready var camera = $Neck/Camera3d
-@onready var interact_ray = $Neck/Camera3d/InteractRay
+@onready var neck: Node3D = $Neck
+@onready var camera: Camera3D = $Neck/Camera3d
+@onready var interact_ray: RayCast3D = $Neck/Camera3d/InteractRay
 
 #func _unhandled_input(event: InputEvent) -> void:
 #	if event is InputEventMouseButton:
@@ -35,7 +35,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("inventory"):
 		toggle_inventory.emit()
 	if Input.is_action_just_pressed("interact"):
+		print ("interacted w/ chest")
 		interact()
+		
 		
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():

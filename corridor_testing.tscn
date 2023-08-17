@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dv1s4k2voe3et"]
+[gd_scene load_steps=40 format=3 uid="uid://dv1s4k2voe3et"]
 
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="1_fk46q"]
 [ext_resource type="Script" path="res://main.gd" id="1_hc3ky"]
@@ -13,10 +13,16 @@
 [ext_resource type="PackedScene" uid="uid://xu3pr6ubdf61" path="res://rnzaf_patch.tscn" id="5_wygqj"]
 [ext_resource type="PackedScene" uid="uid://bi12il5qa1olt" path="res://assets/WallLamp.glb" id="6_ih2tt"]
 [ext_resource type="PackedScene" uid="uid://dddtnpn0julk7" path="res://top_secret_document.tscn" id="7_dyjy4"]
+[ext_resource type="Resource" uid="uid://bcxi0u8f5576g" path="res://item/items/pickaxe.tres" id="7_lsebl"]
 [ext_resource type="PackedScene" uid="uid://b7i30yrkwt7jn" path="res://interactable/chest.tscn" id="11_x4340"]
 [ext_resource type="Script" path="res://inventory/inventory_data.gd" id="12_3u83w"]
 [ext_resource type="Resource" uid="uid://bqt40skmatbp6" path="res://item/items/classified_documents.tres" id="13_pi4kk"]
 [ext_resource type="Script" path="res://inventory/slot_data.gd" id="14_eqms8"]
+
+[sub_resource type="Resource" id="Resource_h4h8f"]
+script = ExtResource("14_eqms8")
+item_data = ExtResource("13_pi4kk")
+quantity = 5
 
 [sub_resource type="Environment" id="Environment_bi05y"]
 background_mode = 2
@@ -70,15 +76,21 @@ script = ExtResource("14_eqms8")
 item_data = ExtResource("13_pi4kk")
 quantity = 1
 
+[sub_resource type="Resource" id="Resource_xrvjk"]
+script = ExtResource("14_eqms8")
+item_data = ExtResource("7_lsebl")
+quantity = 2
+
 [sub_resource type="Resource" id="Resource_t2b5b"]
 script = ExtResource("12_3u83w")
-slot_datas = Array[ExtResource("14_eqms8")]([SubResource("Resource_p3r28"), null, null, null, null])
+slot_datas = Array[ExtResource("14_eqms8")]([SubResource("Resource_p3r28"), SubResource("Resource_xrvjk"), null, null, null])
 
 [node name="Mainnode" type="Node3D"]
 script = ExtResource("1_hc3ky")
 
 [node name="Pickup" parent="." instance=ExtResource("2_cedom")]
-transform = Transform3D(0.141421, 0, 0.141421, 0, 0.2, 0, -0.141421, 0, 0.141421, 0.712336, -0.103614, 0.0959482)
+transform = Transform3D(0.0353553, 0, 0.0353553, 0, 0.05, 0, -0.0353553, 0, 0.0353553, 1.41022, -0.0673574, 2.45736)
+slot_data = SubResource("Resource_h4h8f")
 
 [node name="Player" parent="." instance=ExtResource("4_6w6rx")]
 transform = Transform3D(-0.445993, -0.0114477, -0.225439, -0.0183219, 0.349765, 0, 0.225288, 0.00578264, -0.446293, -0.0133077, 0.446035, 0.132879)
@@ -96,6 +108,12 @@ transform = Transform3D(1, -5.82077e-11, -5.96046e-08, -9.31323e-10, 1, -2.32831
 
 [node name="Camera3d" parent="Player/Neck" index="0"]
 transform = Transform3D(-1.59306, -0.666143, 1.00916, 2.14204e-08, 2.3845, 1.57399, -1.2092, 0.877611, -1.32952, 2.15229, 0.775117, -2.25722)
+
+[node name="ColorRect" parent="Player" index="4"]
+offset_left = -6.0
+offset_top = -91.0
+offset_right = -4.0
+offset_bottom = -89.0
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -115,10 +133,10 @@ offset_bottom = -0.0799999
 
 [node name="ExternalInventory" parent="UI/InventoryInterface" instance=ExtResource("1_fk46q")]
 layout_mode = 1
-anchor_left = 14.275
-anchor_top = 3.95
-anchor_right = 17.0803
-anchor_bottom = 5.827
+anchor_left = 17.0
+anchor_top = 6.925
+anchor_right = 19.8053
+anchor_bottom = 8.802
 offset_right = 0.78776
 offset_bottom = -0.0799999
 
@@ -126,6 +144,10 @@ offset_bottom = -0.0799999
 modulate = Color(1, 1, 1, 0.458824)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
+offset_left = -119.0
+offset_top = -108.0
+offset_right = 255.0
+offset_bottom = 103.0
 
 [node name="RNZAF patch node" parent="." instance=ExtResource("5_wygqj")]
 

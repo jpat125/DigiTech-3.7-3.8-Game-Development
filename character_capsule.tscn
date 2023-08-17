@@ -4,9 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://dowijgvy0m68m" path="res://assets/solideranimations_v1.glb" id="2_2efh2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2txfy"]
+radius = 0.263323
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vw84e"]
-radius = 0.503096
+radius = 0.286012
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.253122, 0)
@@ -56,4 +57,6 @@ offset_right = 1.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 2

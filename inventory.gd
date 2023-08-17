@@ -25,7 +25,5 @@ func populate_item_grid(inventory_data: InventoryData) -> void:
 		
 		slot.slot_clicked.connect(inventory_data.on_slot_clicked)
 		
-#		slot.slot_clicked.connect(inventory_data.on_slot_clicked)
-		
 		if slot_data:
 			slot.set_slot_data(slot_data)

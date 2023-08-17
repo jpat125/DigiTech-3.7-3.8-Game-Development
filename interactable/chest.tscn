@@ -1,6 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7i30yrkwt7jn"]
+[gd_scene load_steps=10 format=3 uid="uid://b7i30yrkwt7jn"]
 
 [ext_resource type="Script" path="res://interactable/chest.gd" id="1_876o0"]
+[ext_resource type="Script" path="res://inventory/inventory_data.gd" id="2_g2qnb"]
+[ext_resource type="Script" path="res://inventory/slot_data.gd" id="4_lh72j"]
+[ext_resource type="Resource" uid="uid://bqt40skmatbp6" path="res://item/items/classified_documents.tres" id="5_ggglu"]
+
+[sub_resource type="Resource" id="Resource_rosd6"]
+script = ExtResource("4_lh72j")
+item_data = ExtResource("5_ggglu")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_2rumo"]
+script = ExtResource("2_g2qnb")
+slot_datas = Array[ExtResource("4_lh72j")]([null, SubResource("Resource_rosd6")])
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m63cj"]
 albedo_color = Color(0.0862745, 1, 0, 1)
@@ -16,6 +28,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 collision_layer = 5
 collision_mask = 0
 script = ExtResource("1_876o0")
+inventory_data = SubResource("Resource_2rumo")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
