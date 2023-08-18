@@ -17,6 +17,7 @@ func set_player_inventory_data(inventory_data: InventoryData) -> void:
 	player_inventory.set_inventory_data(inventory_data)
 
 func set_external_inventory(_external_inventory_owner) -> void:
+	print (external_inventory_owner)
 	external_inventory_owner =  _external_inventory_owner
 	var inventory_data = external_inventory_owner.inventory_data
 	

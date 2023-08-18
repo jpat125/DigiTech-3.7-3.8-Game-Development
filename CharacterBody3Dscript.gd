@@ -9,7 +9,7 @@ signal toggle_inventory()
 func _ready():
 	set_meta("CharacterBody3D", 1)
 	
-const SPEED = 5.0
+const SPEED = 5
 const JUMP_VELOCITY = 3
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
