@@ -54,13 +54,12 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		$soldier/AnimationPlayer.play("idle")
-		
-	move_and_slide()
 	
-func interact() -> void:
+	move_and_slide()
+
+func interact()-> void:
+	print("Hey")
 	if interact_ray.is_colliding():
+		interact_ray.get_collider().player_interact
 		print ("collider")
-		interact_ray.get_collider().player_interact()
-		
-			
 		
