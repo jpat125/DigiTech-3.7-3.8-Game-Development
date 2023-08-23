@@ -99,7 +99,7 @@ transform = Transform3D(1.41421, 0, 1.41421, 0, 2, 0, -1.41421, 0, 1.41421, 4.95
 slot_data = SubResource("Resource_h4h8f")
 
 [node name="PickUp_pickaxe" parent="." instance=ExtResource("5_xk4ef")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1.77811, 0.0204106, -0.29149)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.84682, -0.217879, -0.220108)
 slot_data = SubResource("Resource_rh1uv")
 
 [node name="Player" parent="." instance=ExtResource("4_6w6rx")]
@@ -129,6 +129,7 @@ offset_bottom = -89.0
 
 [node name="Chest" parent="." instance=ExtResource("11_x4340")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.5077, -0.280866, 0.0869755)
+visible = false
 collision_mask = 0
 inventory_data = SubResource("Resource_t2b5b")
 
