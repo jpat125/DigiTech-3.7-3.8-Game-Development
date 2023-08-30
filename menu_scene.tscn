@@ -23,4 +23,18 @@ text = "Start
 "
 icon_alignment = 1
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 122.0
+offset_right = 483.0
+offset_bottom = 151.0
+scale = Vector2(3.74656, 3.19914)
+tooltip_text = "Title"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Tunnel Vision"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

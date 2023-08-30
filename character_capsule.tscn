@@ -18,11 +18,11 @@ script = ExtResource("1_tjq66")
 transform = Transform3D(1, 0, -1.64863e-14, 0, 1, 0, 1.42109e-14, 0, 1.16012, 0, 0, 0)
 
 [node name="capsule_hitbox" type="CollisionShape3D" parent="capsule_hitbox_a3d"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000665784, 0.532426, -0.0617756)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0212296, 0.694808, -0.0533684)
 shape = SubResource("CapsuleShape3D_2txfy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.689692, -0.129722)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, -0.13)
 shape = SubResource("CapsuleShape3D_vw84e")
 
 [node name="soldier" parent="." instance=ExtResource("2_2efh2")]
