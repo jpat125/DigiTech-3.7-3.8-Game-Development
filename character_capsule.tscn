@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0o7tufesfmq7"]
+[gd_scene load_steps=6 format=3 uid="uid://d0o7tufesfmq7"]
 
 [ext_resource type="Script" path="res://CharacterBody3Dscript.gd" id="1_tjq66"]
 [ext_resource type="PackedScene" uid="uid://dowijgvy0m68m" path="res://assets/solideranimations_v1.glb" id="2_2efh2"]
+[ext_resource type="Script" path="res://Camera3d.gd" id="3_g0jkf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2txfy"]
 radius = 0.263323
@@ -34,6 +35,7 @@ transform = Transform3D(1, 0, -2.84217e-14, 0, 1, 0, 2.84217e-14, 0, 1, 0, 0, 0)
 [node name="Camera3d" type="Camera3D" parent="Neck"]
 transform = Transform3D(-0.79653, -0.253601, 0.548842, 0, 0.907777, 0.419453, -0.6046, 0.334106, -0.723071, 2.44963, 0.790693, -2.84626)
 fov = 75.2306
+script = ExtResource("3_g0jkf")
 
 [node name="InteractRay" type="RayCast3D" parent="Neck/Camera3d"]
 transform = Transform3D(0.882948, 0, 0.469472, 0, 1, 0, -0.469472, 0, 0.882948, 0.312655, 2.07897, -3.03575)
