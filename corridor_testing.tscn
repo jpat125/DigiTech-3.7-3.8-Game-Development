@@ -2013,7 +2013,7 @@ spot_range = 2.0
 spot_angle = 60.0
 
 [node name="WallLamp25" parent="CSGMesh3D13" instance=ExtResource("6_ih2tt")]
-transform = Transform3D(-0.1, 0, 5.83532e-09, 0, 0.1, 0, -8.7457e-09, 0, -0.0666667, 1.66539, 0.0861791, -0.414196)
+transform = Transform3D(-0.1, 0, 5.83532e-09, 0, 0.1, 0, -8.7457e-09, 0, -0.0666667, 1.66538, 0.0861791, -0.414196)
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="CSGMesh3D13/WallLamp25"]
 transform = Transform3D(-2.63564e-07, 10, 8.98726e-07, 5.97555, -5.6311e-07, 8.01828, 8.01828, 1.17347e-07, -5.97555, -0.405319, 3.36208, -5.0537)

@@ -50,10 +50,13 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 		$soldier/AnimationPlayer.play("forward_walk")
+		$walking.play()
 	else:
+		#idle movements and sounds
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		$soldier/AnimationPlayer.play("idle")
+		$idle_breathing.play()
 	
 	move_and_slide()
 
