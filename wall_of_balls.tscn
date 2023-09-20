@@ -1,7 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://kdbcw130eych"]
+[gd_scene load_steps=18 format=3 uid="uid://kdbcw130eych"]
 
 [ext_resource type="Script" path="res://Wall of balls.gd" id="1_b3x33"]
-[ext_resource type="Texture2D" uid="uid://dowijgvy0m68m" path="res://assets/Rock_LOD0 (1)_stone_granite_xs_001_LOD0_albedo.png" id="2_l44a3"]
 [ext_resource type="Texture2D" uid="uid://bdmgjr7dnnbqd" path="res://assets/Rock_LOD0 (1)_stone_granite_xs_001_LOD0_roughness.png" id="3_m8aj7"]
 [ext_resource type="Texture2D" uid="uid://c7qt5w5ww6xjc" path="res://assets/Rock_LOD0 (1)_stone_granite_xs_001_LOD0_normal.png" id="4_16cql"]
 
@@ -48,6 +47,33 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3bjvi")
 
+[sub_resource type="Animation" id="Animation_41g3v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area3D/stone_granite_xs_001_LOD1:mesh")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("ArrayMesh_eisns")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area3D/stone_granite_xs_001_LOD4:mesh")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("ArrayMesh_eisns")]
+}
+
 [sub_resource type="Animation" id="Animation_5wuhy"]
 resource_name = "rockfall"
 loop_mode = 1
@@ -83,33 +109,6 @@ tracks/2/keys = {
 "values": [SubResource("ArrayMesh_eisns"), SubResource("ArrayMesh_eisns")]
 }
 
-[sub_resource type="Animation" id="Animation_41g3v"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Area3D/stone_granite_xs_001_LOD1:mesh")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [SubResource("ArrayMesh_eisns")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Area3D/stone_granite_xs_001_LOD4:mesh")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [SubResource("ArrayMesh_eisns")]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qawts"]
 _data = {
 "RESET": SubResource("Animation_41g3v"),
@@ -123,22 +122,16 @@ size = Vector3(2.1939, 1.31386, 1)
 size = Vector3(4, 1.812, 0.739942)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2d8nu"]
-albedo_texture = ExtResource("2_l44a3")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77enx"]
-albedo_texture = ExtResource("2_l44a3")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0k12v"]
-albedo_texture = ExtResource("2_l44a3")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l13ms"]
-albedo_texture = ExtResource("2_l44a3")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d42mn"]
-albedo_texture = ExtResource("2_l44a3")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sny4c"]
-albedo_texture = ExtResource("2_l44a3")
 
 [node name="Wall_of_balls" type="StaticBody3D"]
 script = ExtResource("1_b3x33")
