@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://dv1s4k2voe3et"]
+[gd_scene load_steps=69 format=3 uid="uid://dv1s4k2voe3et"]
 
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="1_fk46q"]
 [ext_resource type="Script" path="res://main.gd" id="1_hc3ky"]
@@ -122,6 +122,10 @@ albedo_texture = ExtResource("20_d55b0")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mx2hw"]
 size = Vector3(2.67734, 0.01273, 1.05322)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jd0j1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a61is"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_t5ygp"]
 
@@ -1294,6 +1298,12 @@ operation = 2
 mesh = SubResource("BoxMesh_bgr2o")
 material = SubResource("StandardMaterial3D_015s0")
 
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGMesh3D8"]
+transform = Transform3D(1.10993, 0, 0, 0, 1, 9.50351e-14, -5.82077e-11, 6.66134e-16, 1.00007, -0.588196, -0.0504523, -0.878824)
+operation = 2
+mesh = SubResource("BoxMesh_jd0j1")
+material = SubResource("StandardMaterial3D_a61is")
+
 [node name="Rock_texture8" type="CSGMesh3D" parent="CSGMesh3D8"]
 transform = Transform3D(0.882565, 0, 0, 0, 0.972678, 0, -2.32831e-10, 0, 0.243216, 2.07684, 0.014759, 0.398455)
 mesh = SubResource("BoxMesh_wcpuc")
@@ -1315,12 +1325,12 @@ mesh = SubResource("BoxMesh_wcpuc")
 material = SubResource("StandardMaterial3D_vvgma")
 
 [node name="Rock_texture17" type="CSGMesh3D" parent="CSGMesh3D8"]
-transform = Transform3D(0.882564, 0, -1.74623e-10, 0, 0.939322, 0, -5.82077e-11, 0, 0.243216, -0.814039, 0.0348934, -0.551532)
+transform = Transform3D(0.882564, 9.09495e-13, -7.27596e-11, 0, 0.939322, -1.66533e-16, -2.91038e-11, 4.55191e-15, 0.243216, -1.57803, 0.0348907, -0.551869)
 mesh = SubResource("BoxMesh_wcpuc")
 material = SubResource("StandardMaterial3D_vvgma")
 
 [node name="Rock_texture19" type="CSGMesh3D" parent="CSGMesh3D8"]
-transform = Transform3D(0.882564, -4.54747e-13, -1.86265e-09, -4.54747e-13, -0.939322, -2.12626e-08, -1.86265e-09, 8.21181e-08, -0.243216, -1.3342, 0.0348934, -0.545044)
+transform = Transform3D(0.882564, -9.09495e-13, -1.9063e-09, -4.54747e-13, -0.939322, -2.12626e-08, -1.89175e-09, 8.21181e-08, -0.243216, -1.57907, 0.0348925, -0.545151)
 mesh = SubResource("BoxMesh_wcpuc")
 material = SubResource("StandardMaterial3D_vvgma")
 
@@ -1340,7 +1350,7 @@ mesh = SubResource("BoxMesh_wcpuc")
 material = SubResource("StandardMaterial3D_vvgma")
 
 [node name="Rock_texture14" type="CSGMesh3D" parent="CSGMesh3D8"]
-transform = Transform3D(0.882565, 9.09495e-13, 1.86265e-09, -9.09495e-13, 0.939322, 3.88578e-16, -5.82077e-11, 2.33147e-15, 0.243216, 0.0685143, 0.0309194, -0.550383)
+transform = Transform3D(0.882565, 2.50111e-12, 2.05182e-09, -9.09495e-13, 0.939322, 3.33067e-16, -2.03727e-10, 5.21805e-15, 0.243216, 0.383332, 0.0309205, -0.550241)
 mesh = SubResource("BoxMesh_wcpuc")
 material = SubResource("StandardMaterial3D_vvgma")
 
@@ -2400,7 +2410,7 @@ spot_range = 2.0
 spot_angle = 60.0
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGMesh3D15"]
-transform = Transform3D(1.143, 0, 1.86847e-08, 0, 1.198, 1.42109e-14, 1.11177e-08, 1.59872e-14, 0.8, -0.466729, 0.156609, -0.0307302)
+transform = Transform3D(1.143, 0, 1.86847e-08, 0, 1.198, 1.42109e-14, 1.11177e-08, 1.59872e-14, 0.8, -0.302477, 0.156609, -0.0307302)
 operation = 2
 mesh = SubResource("BoxMesh_bgr2o")
 material = SubResource("StandardMaterial3D_015s0")
@@ -2442,11 +2452,6 @@ material = SubResource("StandardMaterial3D_vvgma")
 
 [node name="Rock_texture11" type="CSGMesh3D" parent="CSGMesh3D15"]
 transform = Transform3D(0.882564, 4.54747e-13, 1.86265e-09, -4.54747e-13, 0.939322, 3.88578e-16, -1.86265e-09, 2.10942e-15, 0.243216, 2.05861, 0.0309194, -0.541854)
-mesh = SubResource("BoxMesh_wcpuc")
-material = SubResource("StandardMaterial3D_vvgma")
-
-[node name="Rock_texture20" type="CSGMesh3D" parent="CSGMesh3D15"]
-transform = Transform3D(-3.88245e-08, 9.09495e-13, 0.243216, -4.79616e-14, 0.939322, -2.27374e-13, -0.882564, 4.55191e-15, -1.06375e-08, 2.49008, 0.0309209, -0.107093)
 mesh = SubResource("BoxMesh_wcpuc")
 material = SubResource("StandardMaterial3D_vvgma")
 

@@ -1,5 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmcepmu66pfv2"]
+[gd_scene load_steps=3 format=3 uid="uid://cmcepmu66pfv2"]
 
 [ext_resource type="PackedScene" uid="uid://dowijgvy0m68m" path="res://assets/solideranimations_v1.glb" id="1_wdwqf"]
+[ext_resource type="PackedScene" uid="uid://ceag3mcth4pwn" path="res://shovel.tscn" id="2_nn3ic"]
 
 [node name="solideranimations_v1" instance=ExtResource("1_wdwqf")]
+
+[node name="Skeleton3D" parent="metarig" index="0"]
+bones/0/position = Vector3(-1.54144e-09, 1.01251, -0.0552)
+bones/0/rotation = Quaternion(0.125637, 0.0533859, -0.00677078, 0.990616)
+bones/8/rotation = Quaternion(-0.111962, -0.8, 0.588365, 0.0359294)
+bones/9/rotation = Quaternion(0.122143, -0.555991, 0.0362726, 0.821364)
+bones/10/rotation = Quaternion(0.0276864, 0.671527, -0.0264753, 0.739989)
+bones/12/rotation = Quaternion(-0.147977, -0.610984, 0.616189, 0.474461)
+bones/13/rotation = Quaternion(0.569999, 0.448938, 0.204812, 0.656968)
+bones/14/rotation = Quaternion(-0.0908801, -0.548911, 0.00719687, 0.830895)
+bones/17/rotation = Quaternion(0.98187, 0.000311855, 0.0156415, 0.188911)
+bones/18/rotation = Quaternion(0.031455, 7.90261e-05, -0.00365481, 0.999498)
+bones/19/rotation = Quaternion(-0.452225, -0.0203462, 0.0252938, 0.891313)
+bones/20/rotation = Quaternion(0.00919256, -0.908261, 0.418303, 0.00115665)
+bones/22/rotation = Quaternion(0.982589, 9.27354e-08, 1.01521e-07, 0.185794)
+bones/23/rotation = Quaternion(0.0311006, 0.00821655, 0.0110255, 0.999422)
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="metarig/Skeleton3D" index="0"]
+transform = Transform3D(-0.849477, -0.0648273, 0.523628, 0.527488, -0.127093, 0.840002, 0.0120947, 0.98977, 0.142159, -0.328038, 1.30098, 0.341362)
+bone_name = "hand.R"
+bone_idx = 14
+
+[node name="Shovel" parent="metarig/Skeleton3D/BoneAttachment3D" index="0" instance=ExtResource("2_nn3ic")]
+transform = Transform3D(0.00962351, 0.0868632, -0.0486023, -0.0980955, -1.86265e-08, -0.0194234, -0.0168718, 0.0495459, 0.0852089, 0.112265, 0.161343, 0.11134)
