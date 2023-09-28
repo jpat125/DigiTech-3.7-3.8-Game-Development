@@ -6,23 +6,21 @@
 [node name="solideranimations_v1" instance=ExtResource("1_wdwqf")]
 
 [node name="Skeleton3D" parent="metarig" index="0"]
-bones/0/position = Vector3(-1.54144e-09, 1.01251, -0.0552)
-bones/0/rotation = Quaternion(0.125637, 0.0533859, -0.00677078, 0.990616)
-bones/8/rotation = Quaternion(-0.111962, -0.8, 0.588365, 0.0359294)
-bones/9/rotation = Quaternion(0.122143, -0.555991, 0.0362726, 0.821364)
-bones/10/rotation = Quaternion(0.0276864, 0.671527, -0.0264753, 0.739989)
-bones/12/rotation = Quaternion(-0.147977, -0.610984, 0.616189, 0.474461)
-bones/13/rotation = Quaternion(0.569999, 0.448938, 0.204812, 0.656968)
-bones/14/rotation = Quaternion(-0.0908801, -0.548911, 0.00719687, 0.830895)
-bones/17/rotation = Quaternion(0.98187, 0.000311855, 0.0156415, 0.188911)
-bones/18/rotation = Quaternion(0.031455, 7.90261e-05, -0.00365481, 0.999498)
+bones/0/position = Vector3(-2.76307e-11, 1.01251, -0.0552)
+bones/0/rotation = Quaternion(0.000466608, -0.992046, 0.125819, 0.00367908)
+bones/8/rotation = Quaternion(-0.250438, 0.835762, -0.387041, 0.298299)
+bones/9/rotation = Quaternion(0.447278, -0.189238, -0.0639934, 0.871801)
+bones/12/rotation = Quaternion(-0.145653, -0.554409, 0.627341, 0.527124)
+bones/13/rotation = Quaternion(0.315523, 0.17206, 0.121184, 0.925287)
+bones/17/rotation = Quaternion(0.927111, 0.00331819, 0.0152887, 0.37446)
+bones/18/rotation = Quaternion(0.147973, -4.12104e-10, -3.52735e-08, 0.988991)
 bones/19/rotation = Quaternion(-0.452225, -0.0203462, 0.0252938, 0.891313)
-bones/20/rotation = Quaternion(0.00919256, -0.908261, 0.418303, 0.00115665)
-bones/22/rotation = Quaternion(0.982589, 9.27354e-08, 1.01521e-07, 0.185794)
-bones/23/rotation = Quaternion(0.0311006, 0.00821655, 0.0110255, 0.999422)
+bones/20/rotation = Quaternion(0.00919255, -0.908261, 0.418303, 0.00115664)
+bones/22/rotation = Quaternion(0.999812, 7.24892e-08, 1.13211e-07, 0.0194022)
+bones/23/rotation = Quaternion(0.1434, 0.00692329, 0.0118803, 0.989569)
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="metarig/Skeleton3D" index="0"]
-transform = Transform3D(-0.849477, -0.0648273, 0.523628, 0.527488, -0.127093, 0.840002, 0.0120947, 0.98977, 0.142159, -0.328038, 1.30098, 0.341362)
+transform = Transform3D(0.491348, 0.189301, -0.850142, 0.796346, -0.492937, 0.350493, -0.352718, -0.849222, -0.392953, 0.365708, 1.17939, -0.418785)
 bone_name = "hand.R"
 bone_idx = 14
 
