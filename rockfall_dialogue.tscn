@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://6qq3g0vdv5fj"]
+
+[ext_resource type="Script" path="res://rockfall_dialogue.gd" id="1_68fnm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -510.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_68fnm")
+
+[node name="dialouge_1" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 256.0
+offset_bottom = 99.0
+bbcode_enabled = true
+text = "[color=#6499ab]Air Commodore Robins:[color=#00] 
+\"Flight Sergeant, are you alright!?
+We heard rubbling up here\""
+
+[node name="response_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 105.0
+offset_right = 1055.0
+offset_bottom = 137.0
+text = "\"Yes, I've just had some rocks come down behind me, looks like the Security Force teams are going to have their work cut out!\""
+icon_alignment = 1
+
+[node name="dialouge_2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 489.0
+offset_bottom = 137.0
+bbcode_enabled = true
+text = "[color=#6499ab]Air Commodore Robins:[color=#00] 
+\"Alright, I'll let them know, stay safe, Robins out\""
+
+[connection signal="pressed" from="response_button" to="." method="_on_response_button_pressed"]

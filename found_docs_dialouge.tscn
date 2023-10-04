@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfav7we35qnhf"]
+
+[ext_resource type="Script" path="res://found_docs_dialouge.gd" id="1_btgo0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_btgo0")
+
+[node name="player_init_contact" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 429.0
+offset_bottom = 94.0
+bbcode_enabled = true
+text = "[color=#89d1e9]You:
+[color=#00000]\"Air Commodore Robins, this the Flight Sergeant, over\""
+
+[node name="air_com_response" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 468.0
+offset_bottom = 61.0
+bbcode_enabled = true
+text = "[color=#6499ab]Air Commodore Robins:[color=#00]
+\"Flight Sergeant, this is Air Commodore Robins, over\""
+
+[node name="player_message" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_right = 568.0
+offset_bottom = 98.0
+bbcode_enabled = true
+text = "[color=#89d1e9]You:
+[color=#00000]\"Sir, I've found some classified documents, but it seems these guys have been sloppy with handlining. It looks like they've just been left in those thin white filing boxes you use for archiving stuff.\""
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 79.0
+offset_right = 355.0
+offset_bottom = 110.0
+text = "\"Sir, I've found some classified documents...\""
+
+[node name="air_com_response_final" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 399.0
+offset_bottom = 143.0
+bbcode_enabled = true
+text = "[color=#6499ab]Air Commodore Robins:[color=#00]
+\"Roger, that's all copied, I'll let the Millitary Police know as they're running point on the investigation.
+
+Robins Out\"  "
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

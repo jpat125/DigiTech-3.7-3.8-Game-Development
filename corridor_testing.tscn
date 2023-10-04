@@ -1,9 +1,10 @@
-[gd_scene load_steps=70 format=3 uid="uid://dv1s4k2voe3et"]
+[gd_scene load_steps=71 format=3 uid="uid://dv1s4k2voe3et"]
 
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="1_fk46q"]
 [ext_resource type="Script" path="res://main.gd" id="1_hc3ky"]
 [ext_resource type="PackedScene" uid="uid://kdbcw130eych" path="res://wall_of_balls.tscn" id="1_np275"]
 [ext_resource type="PackedScene" uid="uid://ogu5kc2dkpuk" path="res://pick_up/pick_up.tscn" id="2_cedom"]
+[ext_resource type="PackedScene" uid="uid://bkgd3d1upq8wj" path="res://intro_plot_script.tscn" id="2_epss4"]
 [ext_resource type="PackedScene" uid="uid://ceag3mcth4pwn" path="res://shovel.tscn" id="2_ldleg"]
 [ext_resource type="Script" path="res://inventory/Inventory_Interface.gd" id="3_aibsu"]
 [ext_resource type="PackedScene" uid="uid://d0o7tufesfmq7" path="res://character_capsule.tscn" id="4_6w6rx"]
@@ -162,6 +163,12 @@ size = Vector3(0.0175785, 0.971007, 0.912997)
 
 [node name="Mainnode" type="Node3D"]
 script = ExtResource("1_hc3ky")
+
+[node name="Intro_script" parent="." instance=ExtResource("2_epss4")]
+offset_left = 1.0
+offset_top = 439.0
+offset_right = -368.0
+offset_bottom = -4.0
 
 [node name="Pickup" parent="." instance=ExtResource("2_cedom")]
 transform = Transform3D(2.12132, 0, 2.12132, 0, 3, 0, -2.12132, 0, 2.12132, 4.9559, 0.424398, -0.240776)
@@ -617,7 +624,7 @@ mesh = SubResource("BoxMesh_rq5mp")
 transform = Transform3D(6.7821e-08, 0, 0.4, 0, 0.4, 0, -0.216048, 0, 1.25567e-07, 2.18625, -0.421067, -0.22199)
 
 [node name="Rockfall_wall" parent="CSGMesh3D3" instance=ExtResource("20_xqonq")]
-transform = Transform3D(2.70652e-09, 0, 0.2, 0, 0.456377, 0, -0.226964, 0, 2.38498e-09, -2.61587, -0.442987, -0.0793405)
+transform = Transform3D(2.70652e-09, 0, 0.35809, 0, 0.456377, 0, -0.226964, 0, 4.27019e-09, -2.61587, -0.442987, -0.0793405)
 
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGMesh3D3"]
 transform = Transform3D(2.22551e-07, 0, 1.2, 0, 1.198, 0, -0.762, 0, 1.55766e-07, -0.909463, 0.156611, 2.15155)

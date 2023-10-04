@@ -3,7 +3,8 @@ extends StaticBody3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	var dialogue = get_node("Control")
+	dialogue.set_visible(false)
 
 
 func _on_area_entered(StaticBody3D):
@@ -20,6 +21,7 @@ func _on_area_entered(StaticBody3D):
 
 
 func _on_tripcock_a_3d_area_entered(StaticBody3D):
+	
 	if StaticBody3D.name == "capsule_hitbox_a3d" and BootlegGlobalVariable._shovel_status == 1:
 		$AnimationPlayer.play("rockfall_animation")
 		print (BootlegGlobalVariable._shovel_status)
@@ -29,4 +31,8 @@ func _on_tripcock_a_3d_area_entered(StaticBody3D):
 		var _has_shovel =  BootlegGlobalVariable._shovel_status
 		BootlegGlobalVariable._shovel_status = 2
 		print(BootlegGlobalVariable._shovel_status)
+		await get_tree().create_timer(3).timeout 
+		var dialogue = get_node("Control")
+		dialogue.set_visible(true)
+		
 		

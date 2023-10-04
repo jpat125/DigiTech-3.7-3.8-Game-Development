@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkgd3d1upq8wj"]
+
+[ext_resource type="Script" path="res://intro_plot.gd" id="1_kgf2s"]
+
+[sub_resource type="FontFile" id="FontFile_j7iya"]
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -369.0
+offset_bottom = -443.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kgf2s")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 1.0
+offset_right = 772.0
+offset_bottom = 145.0
+theme_override_fonts/bold_font = SubResource("FontFile_j7iya")
+bbcode_enabled = true
+text = "[color=#6499ab]Air Commodore Robins:[color=#00]
+\"Afternoon Flight Sergeant, no doubt you've heard the news of the new volcano emerging in the Waitemata Harbour. This obviously has sent Auckland into a panic, as buildings have collapsed and most utilities have been cut off. 
+However, right now, we have personnel trapped underneath North Head in the mountain’s subterranean intelligence station. 
+Your mission is to clear the way for RNZAF Security Forces to get in and rescue trapped personnel. The reason we’re sending you in alone is that the base still has extremely classified material that we absolutely cannot let fall into enemy hands, nor can we let the public know about this. You’ve been chosen due to work with the NZSIS and GCSB and quite frankly, the less people who come into contact with these documents, the better for all of us. You should find a pickaxe near the entrance and you’ll need to clear cave-in’s and recover each and every document, beware of subsequent rockfall and clear each section. We’ll send people in after you, so don’t worry about being trapped. 
+Stay safe, we’re all counting on you.\""
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 174.0
+offset_right = 424.0
+offset_bottom = 205.0
+text = "Continue
+"
+icon_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

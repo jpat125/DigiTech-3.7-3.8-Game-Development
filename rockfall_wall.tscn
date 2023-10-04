@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://hqoet63owe3a"]
+[gd_scene load_steps=9 format=3 uid="uid://hqoet63owe3a"]
 
 [ext_resource type="Script" path="res://Rockfall_wall.gd" id="1_u0c3x"]
+[ext_resource type="PackedScene" uid="uid://6qq3g0vdv5fj" path="res://rockfall_dialogue.tscn" id="2_q22nm"]
 [ext_resource type="PackedScene" uid="uid://yd35l4c2ut3i" path="res://assets/Rock_LOD0 (1).gltf" id="2_wyddt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_67vqu"]
@@ -71,6 +72,12 @@ _data = {
 
 [node name="Rockfall_wall" type="StaticBody3D"]
 script = ExtResource("1_u0c3x")
+
+[node name="Control" parent="." instance=ExtResource("2_q22nm")]
+offset_left = -1.0
+offset_top = 496.0
+offset_right = -1.0
+offset_bottom = -14.0
 
 [node name="blocking" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.332707, 5.43401, 0.000647552)
