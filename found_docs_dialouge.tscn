@@ -30,21 +30,20 @@ text = "[color=#6499ab]Air Commodore Robins:[color=#00]
 \"Flight Sergeant, this is Air Commodore Robins, over\""
 
 [node name="player_message" type="RichTextLabel" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 2.0
 offset_right = 568.0
 offset_bottom = 98.0
 bbcode_enabled = true
 text = "[color=#89d1e9]You:
-[color=#00000]\"Sir, I've found some classified documents, but it seems these guys have been sloppy with handlining. It looks like they've just been left in those thin white filing boxes you use for archiving stuff.\""
+[color=#00000]\"Sir, I've found some classified documents, but it seems these guys have been sloppy with handling. It looks like they've just been left in those thin white filing boxes you use for archiving stuff.\""
 
-[node name="Button" type="Button" parent="."]
+[node name="resp_button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 79.0
+offset_top = 76.0
 offset_right = 355.0
-offset_bottom = 110.0
+offset_bottom = 107.0
 text = "\"Sir, I've found some classified documents...\""
 
 [node name="air_com_response_final" type="RichTextLabel" parent="."]
@@ -58,4 +57,4 @@ text = "[color=#6499ab]Air Commodore Robins:[color=#00]
 
 Robins Out\"  "
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="resp_button" to="." method="_on_button_pressed"]

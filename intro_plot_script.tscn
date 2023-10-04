@@ -3,6 +3,9 @@
 [ext_resource type="Script" path="res://intro_plot.gd" id="1_kgf2s"]
 
 [sub_resource type="FontFile" id="FontFile_j7iya"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 face_index = null
 embolden = null
 transform = null

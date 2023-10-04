@@ -31,6 +31,7 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [node name="Chest" type="StaticBody3D" groups=["external_inventory"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+visible = false
 collision_layer = 7
 script = ExtResource("1_876o0")
 inventory_data = SubResource("Resource_ennqi")

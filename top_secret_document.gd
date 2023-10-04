@@ -14,6 +14,8 @@ func _process(delta):
 func _on_area_entered(Area3D):
 	if Area3D.name == "capsule_hitbox_a3d": 
 		var dialogue = get_node("Control")
-		dialogue.set_visible(true) 
-		await get_tree().create_timer(18).timeout 
+		print("step before dialouge")
+		dialogue.set_visible(true)
+		await get_tree().create_timer(20).timeout
+		print("123345") 
 		queue_free()

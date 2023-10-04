@@ -207,7 +207,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Chest" parent="." instance=ExtResource("11_x4340")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.5077, -0.280866, 0.0869755)
-visible = false
 collision_mask = 0
 inventory_data = SubResource("Resource_t2b5b")
 
@@ -252,13 +251,7 @@ offset_bottom = 298.0
 visible = false
 
 [node name="top_secret_document" parent="." instance=ExtResource("7_dyjy4")]
-transform = Transform3D(0.0847024, 0, -0.287794, 0, 0.3, 0, 0.287794, 0, 0.0847024, 4.9802, -0.373544, -0.133336)
-
-[node name="top_secret_document2" parent="." instance=ExtResource("7_dyjy4")]
-transform = Transform3D(-0.0847025, 0, 0.287794, 0, 0.3, 0, -0.287794, 0, -0.0847025, 4.89184, -0.387933, -0.123756)
-
-[node name="top_secret_document3" parent="." instance=ExtResource("7_dyjy4")]
-transform = Transform3D(-0.00523571, 0, 0.299954, 0, 0.3, 0, -0.299954, 0, -0.00523571, 5.11859, -0.377528, -0.321876)
+transform = Transform3D(0.0847024, 0, -0.287794, 0, 0.3, 0, 0.287794, 0, 0.0847024, 4.9802, -0.365206, -0.133336)
 
 [node name="shovel" parent="." instance=ExtResource("2_ldleg")]
 transform = Transform3D(-0.05, -1.16871e-09, -6.80671e-09, 1.89105e-09, 0.0450788, -0.021631, 6.64237e-09, -0.021631, -0.0450788, -1.85421, -0.228429, -0.399239)
