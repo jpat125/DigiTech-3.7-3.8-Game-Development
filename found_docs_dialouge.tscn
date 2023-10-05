@@ -53,8 +53,8 @@ offset_right = 399.0
 offset_bottom = 143.0
 bbcode_enabled = true
 text = "[color=#6499ab]Air Commodore Robins:[color=#00]
-\"Roger, that's all copied, I'll let the Millitary Police know as they're running point on the investigation.
+\"Roger, that's all copied, I'll let the Military Police know as they're running point on the investigation.\"
 
-Robins Out\"  "
+\"Robins Out\"  "
 
 [connection signal="pressed" from="resp_button" to="." method="_on_button_pressed"]

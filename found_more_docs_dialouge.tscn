@@ -1,0 +1,124 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpgo7frqxeo68"]
+
+[ext_resource type="Script" path="res://found_docs_dialouge.gd" id="1_hye12"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hye12")
+
+[node name="player_init_contact" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 429.0
+offset_bottom = 94.0
+bbcode_enabled = true
+text = "[color=#89d1e9]You:
+[color=#00000]\"Air Commodore Robins, this the Flight Sergeant, over\""
+
+[node name="79897" type="VScrollBar" parent="player_init_contact"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+step = 1.0
+
+[node name="20289" type="VScrollBar" parent="player_init_contact"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+max_value = 46.0
+step = 1.0
+page = 46.0
+
+[node name="air_com_response" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 468.0
+offset_bottom = 61.0
+bbcode_enabled = true
+text = "[color=#6499ab]Air Commodore Robins:[color=#00]
+\"Flight Sergeant, this is Air Commodore Robins, over\""
+
+[node name="79898" type="VScrollBar" parent="air_com_response"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+step = 1.0
+
+[node name="20290" type="VScrollBar" parent="air_com_response"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+max_value = 46.0
+step = 1.0
+page = 46.0
+
+[node name="player_message" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 568.0
+offset_bottom = 98.0
+bbcode_enabled = true
+text = "[color=#89d1e9]You:
+[color=#00000]\"Sir, I've found more  documents, all of them continue to be redacted versions, which makes the situation slightly better.\""
+
+[node name="79899" type="VScrollBar" parent="player_message"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+step = 1.0
+
+[node name="20291" type="VScrollBar" parent="player_message"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+max_value = 92.0
+step = 1.0
+page = 92.0
+
+[node name="resp_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 76.0
+offset_right = 355.0
+offset_bottom = 107.0
+text = "\"Sir, I've found more documents...\""
+
+[node name="air_com_response_final" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 399.0
+offset_bottom = 143.0
+bbcode_enabled = true
+text = "[color=#6499ab]Air Commodore Robins:[color=#00]
+\"Roger, that's all copied, I'll pass that info onto the MP's.\"
+
+\"Robins Out\"  "
+
+[node name="79900" type="VScrollBar" parent="air_com_response_final"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+step = 1.0
+
+[node name="20292" type="VScrollBar" parent="air_com_response_final"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+max_value = 115.0
+step = 1.0
+page = 115.0
+
+[connection signal="pressed" from="resp_button" to="." method="_on_button_pressed" flags=18]

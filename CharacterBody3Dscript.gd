@@ -56,19 +56,40 @@ func _physics_process(delta: float) -> void:
 		
 	var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
+	
 	if direction:
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
-			$soldier/AnimationPlayer.play("forward_walk")
-			$walking.play()
-			$idle_breathing.stop()
+			if Input.is_action_just_pressed("left"):
+				$soldier/AnimationPlayer.play("left_walk")
+				$walking.play() #sfx
+				$idle_breathing.stop() #sfx
+			elif Input.is_action_just_pressed("forward"):
+				$soldier/AnimationPlayer.play("backwards_walk")
+				$walking.play() #sfx
+				$idle_breathing.stop() #sfx
+			elif Input.is_action_just_pressed("right"):
+				$soldier/AnimationPlayer.play("right_walk")
+				$walking.play() #sfx
+				$idle_breathing.stop() #sfx
+			elif Input.is_action_just_pressed("back"):
+				$soldier/AnimationPlayer.play("forward_walk")
+				$walking.play() #sfx
+				$idle_breathing.stop() #sfx
+			else:
+				print("else event triggered")
+				#$soldier/AnimationPlayer.play("idle")
+				#$walking.stop() #sfx
+				#$idle_breathing.play() #sfx
+
+			#$soldier/AnimationPlayer.play("forward_walk")
 	else:
 			#idle movements and sounds
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 			$soldier/AnimationPlayer.play("idle")
-			$walking.stop()
-			$idle_breathing.play()
+			$walking.stop() #sfx
+			$idle_breathing.play() #sfx
 
 	move_and_slide()
 

@@ -19,8 +19,8 @@ offset_right = 256.0
 offset_bottom = 99.0
 bbcode_enabled = true
 text = "[color=#6499ab]Air Commodore Robins:[color=#00] 
-\"Flight Sergeant, are you alright!?
-We heard rubbling up here\""
+\"Flight Sergeant, are you alright?
+We heard rumbling up here\""
 
 [node name="response_button" type="Button" parent="."]
 layout_mode = 0
