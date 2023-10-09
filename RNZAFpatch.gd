@@ -9,7 +9,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
+	
 func _on_area_entered(Area3D):
 	if Area3D.name == "capsule_hitbox_a3d": 
 		queue_free()

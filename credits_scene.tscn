@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8qt1qny27wu"]
+
+[ext_resource type="Script" path="res://credits_script.gd" id="1_0o85a"]
+[ext_resource type="Texture2D" uid="uid://c1bww1trfpdy5" path="res://assets/675px-North_Head_Tunnel_System_I.jpg" id="2_tg2cb"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0o85a")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.235294)
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 1157.0
+offset_bottom = 649.0
+texture = ExtResource("2_tg2cb")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 109.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 40
+text = "Back"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 2.0
+offset_right = 874.0
+offset_bottom = 112.0
+theme_override_font_sizes/normal_font_size = 80
+theme_override_font_sizes/bold_font_size = 80
+bbcode_enabled = true
+text = "[center][b]Credits"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_top = 126.0
+offset_right = 1152.0
+offset_bottom = 644.0
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/italics_font_size = 30
+bbcode_enabled = true
+text = "[center][b]Story[/b]
+[i]Jaiden P[/i]
+
+[b]Gameplay[/b]
+[i]Jaiden P[/i]
+
+[b]Character model[/b]
+[i]Thunderpwn (Sketchfab user)[/i]
+
+[b]Background Image[/b]
+[i]Ingolfson (wikipedia - now in Public Domain)[/i]
+
+[b]Textures[/b]
+[i]Textures.com (multiple users)[/i]
+"
+scroll_following = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bis3pr0a01ijk"]
+[gd_scene load_steps=3 format=3 uid="uid://bis3pr0a01ijk"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_55t1n"]
+[ext_resource type="Texture2D" uid="uid://c1bww1trfpdy5" path="res://assets/675px-North_Head_Tunnel_System_I.jpg" id="2_cflux"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,12 +12,22 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_55t1n")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.235294)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 1157.0
+offset_bottom = 649.0
+texture = ExtResource("2_cflux")
+expand_mode = 1
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 416.0
-offset_top = 212.0
+offset_top = 154.0
 offset_right = 726.0
-offset_bottom = 398.0
+offset_bottom = 340.0
 theme_override_font_sizes/font_size = 50
 action_mode = 0
 text = "Start
@@ -26,9 +37,9 @@ icon_alignment = 1
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 366.0
-offset_top = 122.0
+offset_top = 39.0
 offset_right = 483.0
-offset_bottom = 151.0
+offset_bottom = 68.0
 scale = Vector2(3.74656, 3.19914)
 tooltip_text = "Title"
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -47,4 +58,15 @@ bbcode_enabled = true
 text = "[center][color=#ff0000]Disclaimer: 
 [color=#]The story,  names, characters, and incidents portrayed in this video game  are fictitious. Any similarity to incidents, past, present and future or persons, living or decased is entirly coincidental. No actions portrayed in this video game should be attempted. No responsibility shall be held by anyone involved with the production of this video game for the actions of it's players, nor for any damage, injury or death that result from playing this game.    "
 
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 379.0
+offset_right = 669.0
+offset_bottom = 467.0
+theme_override_font_sizes/font_size = 30
+text = "Credits
+"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
