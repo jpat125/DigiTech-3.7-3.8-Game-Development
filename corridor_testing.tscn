@@ -617,7 +617,7 @@ mesh = SubResource("BoxMesh_rq5mp")
 transform = Transform3D(6.7821e-08, 0, 0.4, 0, 0.4, 0, -0.216048, 0, 1.25567e-07, 2.18625, -0.421067, -0.22199)
 
 [node name="Rockfall_wall" parent="CSGMesh3D3" instance=ExtResource("20_xqonq")]
-transform = Transform3D(2.70652e-09, 0, 0.35809, 0, 0.456377, 0, -0.226964, 0, 4.27019e-09, -2.61587, -0.442987, -0.0793405)
+transform = Transform3D(2.70652e-09, 0, 0.35809, 0, 0.456377, 0, -0.226964, 0, 4.27019e-09, -2.61587, -0.00327139, -0.0793405)
 
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGMesh3D3"]
 transform = Transform3D(2.22551e-07, 0, 1.2, 0, 1.198, 0, -0.762, 0, 1.55766e-07, -0.909463, 0.156611, 2.15155)

@@ -6,21 +6,21 @@
 [node name="solideranimations_v1" instance=ExtResource("1_wdwqf")]
 
 [node name="Skeleton3D" parent="metarig" index="0"]
-bones/0/position = Vector3(0, 1.01251, -0.0552)
-bones/4/rotation = Quaternion(0.201738, 0, 0, 0.97944)
-bones/8/rotation = Quaternion(-0.195753, 0.796681, -0.465029, 0.332758)
-bones/9/rotation = Quaternion(0.447278, -0.189238, -0.0639933, 0.871801)
-bones/12/rotation = Quaternion(-0.208269, -0.726745, 0.508516, 0.412162)
-bones/13/rotation = Quaternion(0.315523, 0.17206, 0.121184, 0.925286)
-bones/17/rotation = Quaternion(0.98187, 0.000311852, 0.0156415, 0.188911)
-bones/18/rotation = Quaternion(0.031455, 7.90366e-05, -0.00365481, 0.999498)
+bones/0/position = Vector3(-2.76307e-11, 1.01251, -0.0552)
+bones/0/rotation = Quaternion(0.000499845, -0.992045, 0.125819, 0.00394114)
+bones/8/rotation = Quaternion(-0.247389, 0.828172, -0.397542, 0.308042)
+bones/9/rotation = Quaternion(0.447278, -0.189238, -0.0639934, 0.871801)
+bones/12/rotation = Quaternion(-0.153006, -0.575107, 0.616099, 0.516008)
+bones/13/rotation = Quaternion(0.315523, 0.17206, 0.121184, 0.925287)
+bones/17/rotation = Quaternion(0.933394, 0.00305564, 0.0153433, 0.358513)
+bones/18/rotation = Quaternion(0.147973, -4.12104e-10, -3.52735e-08, 0.988991)
 bones/19/rotation = Quaternion(-0.452225, -0.0203462, 0.0252938, 0.891313)
 bones/20/rotation = Quaternion(0.00919255, -0.908261, 0.418303, 0.00115664)
-bones/22/rotation = Quaternion(0.982589, 9.07205e-08, 9.94222e-08, 0.185794)
-bones/23/rotation = Quaternion(0.0311006, 0.00821655, 0.0110255, 0.999422)
+bones/22/rotation = Quaternion(0.999604, 7.14846e-08, 1.13229e-07, 0.0281376)
+bones/23/rotation = Quaternion(0.1434, 0.00692329, 0.0118803, 0.989569)
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="metarig/Skeleton3D" index="0"]
-transform = Transform3D(-0.493951, -0.195593, 0.847205, 0.53491, -0.836523, 0.118745, 0.685481, 0.511833, 0.517826, -0.368394, 1.07045, 0.0720174)
+transform = Transform3D(0.490823, 0.189074, -0.850496, 0.776296, -0.538081, 0.32838, -0.395548, -0.821413, -0.41088, 0.365695, 1.16201, -0.396429)
 bone_name = "hand.R"
 bone_idx = 14
 

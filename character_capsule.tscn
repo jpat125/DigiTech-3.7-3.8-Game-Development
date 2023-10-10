@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://d0o7tufesfmq7"]
 
 [ext_resource type="Script" path="res://CharacterBody3Dscript.gd" id="1_tjq66"]
-[ext_resource type="PackedScene" uid="uid://dowijgvy0m68m" path="res://assets/solideranimations_v1.glb" id="2_2efh2"]
+[ext_resource type="PackedScene" uid="uid://cmcepmu66pfv2" path="res://soldier_scene.tscn" id="2_188u6"]
 [ext_resource type="Script" path="res://Camera3d.gd" id="3_g0jkf"]
 [ext_resource type="AudioStream" uid="uid://dbipxy2pkes2d" path="res://assets/audio/414921__straget__a-walk-with-stop-[oggfile].ogg" id="4_r7ljn"]
 [ext_resource type="AudioStream" uid="uid://cw8cisej4n2c0" path="res://assets/audio/391175__fuchsrodolfo__calm-breathing-[oggfile].ogg" id="5_ips8o"]
@@ -28,8 +28,8 @@ shape = SubResource("CapsuleShape3D_2txfy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, -0.13)
 shape = SubResource("CapsuleShape3D_vw84e")
 
-[node name="soldier" parent="." instance=ExtResource("2_2efh2")]
-transform = Transform3D(0.008, 0, 1.05879e-22, 0, 0.008, 0, -2.64698e-23, 0, 0.008, 0, -0.249347, -0.0987883)
+[node name="soldier" parent="." instance=ExtResource("2_188u6")]
+transform = Transform3D(0.008, 0, 0, 0, 0.008, 0, 0, 0, 0.008, 0.00661957, -0.243213, -0.155135)
 
 [node name="Neck" type="Node3D" parent="."]
 transform = Transform3D(1, 0, -2.84217e-14, 0, 1, 0, 2.84217e-14, 0, 1, 0, 0, 0)

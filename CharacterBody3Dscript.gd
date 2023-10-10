@@ -72,6 +72,11 @@ func _physics_process(delta: float) -> void:
 				$soldier/AnimationPlayer.play("forward_walk")
 				$walking.play() #sfx
 				$idle_breathing.stop() #sfx
+			
+			elif Input.is_action_just_pressed("destroy"):
+					BootlegGlobalVariable._contact_wall == 1 and BootlegGlobalVariable._shovel_status == 1
+					
+					$soldier/AnimationPlayer.play("singlehand_pickaxe")
 			else:
 				print("else event triggered")
 				#$soldier/AnimationPlayer.play("idle")
@@ -79,6 +84,17 @@ func _physics_process(delta: float) -> void:
 				#$idle_breathing.play() #sfx
 
 			#$soldier/AnimationPlayer.play("forward_walk")
+	#elif direction: 
+	#		velocity.x = move_toward(velocity.x, 0, SPEED)
+	#		velocity.z = move_toward(velocity.z, 0, SPEED)
+	#		$walking.stop() #sfx
+	#		if Input.is_action_just_pressed("destroy"):
+	#			BootlegGlobalVariable._contact_wall == 1 and BootlegGlobalVariable._shovel_status == 1
+	#			$soldier/AnimationPlayer.play("singlehand_pickaxe")
+	#		else:
+	#			print()
+					
+					
 	else:
 			#idle movements and sounds
 			velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -88,6 +104,11 @@ func _physics_process(delta: float) -> void:
 			$idle_breathing.play() #sfx
 
 	move_and_slide()
+
+
+	
+	
+
 
 # code for interact ray.
 func interact()-> void:
