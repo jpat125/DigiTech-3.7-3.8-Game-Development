@@ -12,7 +12,7 @@ func _ready():
 func _process(delta):
 	pass
 
-
+# Handles dialouge sequence.
 func _on_response_button_pressed():
 	var dia1 = get_node("dialouge_1")
 	var response_button = get_node("response_button")

@@ -3,6 +3,7 @@ extends Node3D
 @onready var player: CharacterBody3D  = $Player
 @onready var inventory_interface: Control = $UI/InventoryInterface
 
+# code connects inventory to main scene.
 func _ready() -> void:
 	player.toggle_inventory.connect(toggle_inventory_interface)
 	inventory_interface.set_player_inventory_data(player.inventory_data)
@@ -10,6 +11,8 @@ func _ready() -> void:
 	for node in get_tree().get_nodes_in_group("external_inventory"):
 		node.toggle_inventory.connect(toggle_inventory_interface)
 	
+	
+	# code for toggling inventory interface and handeling inputs.
 func toggle_inventory_interface(external_inventory_owner = null) -> void:
 	inventory_interface.visible = not inventory_interface.visible
 	

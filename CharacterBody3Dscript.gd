@@ -29,12 +29,13 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 #			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(0), deg_to_rad(0))
 
 
-	
+	#adds physics and floor
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-		
+	
+	#Legacy code that may need to be removed.
 	if Input.is_action_just_pressed("inventory"):
 		toggle_inventory.emit()
 	if Input.is_action_just_pressed("interact"):
@@ -48,15 +49,10 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	
-	#if velocity.x > 0 and velocity.z > 0:
-	#	$walking.play()
-		
-	#else:
-	#	$idle_breathing.play()
 		
 	var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	
+	# finds key pressed then plays relevant animation for movement direction.
 	if direction:
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
@@ -93,6 +89,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+# code for interact ray.
 func interact()-> void:
 	print("Hey")
 	if interact_ray.is_colliding():

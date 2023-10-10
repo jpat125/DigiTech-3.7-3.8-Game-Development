@@ -10,6 +10,7 @@ func _ready():
 func _process(delta):
 	pass
 	
+# If the character capsule collides with patch, then it dissmisses the queue.
 func _on_area_entered(Area3D):
 	if Area3D.name == "capsule_hitbox_a3d": 
 		queue_free()
