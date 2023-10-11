@@ -9,13 +9,24 @@ signal toggle_inventory()
 func _ready():
 	set_meta("CharacterBody3D", 1)
 	
+	
+func _process(delta):
+	if BootlegGlobalVariable._bunker_camera == 1:
+		$AnimationPlayer.play("bunker_cam")
+		print (BootlegGlobalVariable._bunker_camera)
+		print("bunk cam activated")
+		await get_tree().create_timer(60).timeout
+	else:
+		print("cam animation not triggered")
+	
 const SPEED = 5
-const JUMP_VELOCITY = 3
+const JUMP_VELOCITY = 7
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck: Node3D = $Neck
 @onready var camera: Camera3D = $Neck/Camera3d
 @onready var interact_ray: RayCast3D = $Neck/Camera3d/InteractRay
+
 
 #func _unhandled_input(event: InputEvent) -> void:
 #	if event is InputEventMouseButton:
@@ -34,15 +45,16 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-	
+
 	#Legacy code that may need to be removed.
 	if Input.is_action_just_pressed("inventory"):
 		toggle_inventory.emit()
 	if Input.is_action_just_pressed("interact"):
 		print ("interacted w/ chest")
 		interact()
-		
-		
+	
+	
+	
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -106,8 +118,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-	
-	
+
 
 
 # code for interact ray.

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://rm53mlgfl44c"]
+
+[ext_resource type="PackedScene" uid="uid://bm1pieiusss1s" path="res://ending_dialogue.tscn" id="1_5atx7"]
+[ext_resource type="Script" path="res://bunker_door_scene.gd" id="1_apr6r"]
+[ext_resource type="PackedScene" uid="uid://be3scc3l1u4js" path="res://assets/processed_models/bunker_door.gltf" id="2_a5fca"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0m6ag"]
+size = Vector3(2.57844, 4.85524, 1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_apr6r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="bunker_door" parent="." instance=ExtResource("2_a5fca")]
+
+[node name="Control" parent="." instance=ExtResource("1_5atx7")]
+offset_top = 483.0
+offset_bottom = -1.0
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.841545, 0.329387)
+shape = SubResource("BoxShape3D_0m6ag")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

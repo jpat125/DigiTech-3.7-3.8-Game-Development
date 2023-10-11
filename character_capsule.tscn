@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0o7tufesfmq7"]
+[gd_scene load_steps=10 format=3 uid="uid://d0o7tufesfmq7"]
 
 [ext_resource type="Script" path="res://CharacterBody3Dscript.gd" id="1_tjq66"]
 [ext_resource type="PackedScene" uid="uid://cmcepmu66pfv2" path="res://soldier_scene.tscn" id="2_188u6"]
@@ -11,6 +11,29 @@ radius = 0.263323
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vw84e"]
 radius = 0.286012
+
+[sub_resource type="Animation" id="Animation_bytpd"]
+resource_name = "bunker_cam"
+length = 3.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Neck/Camera3d")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 2.44963, 0.790693, -2.84626, 3, 1, 0.0687804, 1.37523, 1.06621)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Neck/Camera3d")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.068492, 0.925659, 0.20352, 0.311519, 3, 1, -0.214735, 0, 0, 0.976672)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qh5hq"]
+_data = {
+"bunker_cam": SubResource("Animation_bytpd")
+}
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.253122, 0)
@@ -35,7 +58,7 @@ transform = Transform3D(0.008, 0, 0, 0, 0.008, 0, 0, 0, 0.008, 0.00661957, -0.24
 transform = Transform3D(1, 0, -2.84217e-14, 0, 1, 0, 2.84217e-14, 0, 1, 0, 0, 0)
 
 [node name="Camera3d" type="Camera3D" parent="Neck"]
-transform = Transform3D(-0.79653, -0.253601, 0.548842, 0, 0.907777, 0.419453, -0.6046, 0.334106, -0.723071, 2.44963, 0.790693, -2.84626)
+transform = Transform3D(1, 0, 0, 0, 0.907777, 0.419452, 0, -0.419452, 0.907777, 0.0687804, 1.37523, 1.06621)
 fov = 75.2306
 script = ExtResource("3_g0jkf")
 
@@ -71,3 +94,8 @@ stream = ExtResource("4_r7ljn")
 [node name="idle_breathing" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("5_ips8o")
 volume_db = -20.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qh5hq")
+}
