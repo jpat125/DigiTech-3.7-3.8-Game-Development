@@ -1,0 +1,117 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbqw4vo617e6f"]
+
+[ext_resource type="Script" path="res://ending_bad.gd" id="1_6bfug"]
+[ext_resource type="Texture2D" uid="uid://c1bww1trfpdy5" path="res://assets/675px-North_Head_Tunnel_System_I.jpg" id="1_wmong"]
+
+[sub_resource type="Animation" id="Animation_ttv36"]
+resource_name = "transition"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 664)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TextureRect3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(9.1, 11.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-183, 358), Vector2(510, 358)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TextureRect4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(9, 10.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(509, 358), Vector2(1218, 358)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../TextureRect4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 7.9),
+"transitions": PackedFloat32Array(3.605, 1.56917),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lvth6"]
+_data = {
+"transition": SubResource("Animation_ttv36")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6bfug")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1158.0
+offset_bottom = 646.0
+color = Color(1, 0, 0, 0.231373)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 639.0
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "[center][b]Mission Failed![/b]
+
+You have falled to collect all top secret documents, and they have fallen into the public domain. 
+
+You'll now have to answer to an inquiry and have created one massive scandal!
+"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.235294)
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 1157.0
+offset_bottom = 649.0
+texture = ExtResource("1_wmong")
+expand_mode = 1
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 440.149
+offset_right = 1156.0
+offset_bottom = 1086.15
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../ColorRect2")
+libraries = {
+"": SubResource("AnimationLibrary_lvth6")
+}

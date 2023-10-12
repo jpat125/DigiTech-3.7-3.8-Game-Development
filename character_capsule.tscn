@@ -14,21 +14,21 @@ radius = 0.286012
 
 [sub_resource type="Animation" id="Animation_bytpd"]
 resource_name = "bunker_cam"
-length = 3.0
+length = 5.0
 tracks/0/type = "position_3d"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Neck/Camera3d")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 2.44963, 0.790693, -2.84626, 3, 1, 0.0687804, 1.37523, 1.06621)
+tracks/0/keys = PackedFloat32Array(0, 1, 2.44963, 0.790693, -2.84626, 1.9, 1, -0.460615, 1.43569, 0.862586)
 tracks/1/type = "rotation_3d"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Neck/Camera3d")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, -0.068492, 0.925659, 0.20352, 0.311519, 3, 1, -0.214735, 0, 0, 0.976672)
+tracks/1/keys = PackedFloat32Array(0, 1, -0.068492, 0.925659, 0.20352, 0.311519, 1.9, 1, -0.211036, -0.180498, -0.039685, 0.959849)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qh5hq"]
 _data = {
@@ -58,7 +58,7 @@ transform = Transform3D(0.008, 0, 0, 0, 0.008, 0, 0, 0, 0.008, 0.00661957, -0.24
 transform = Transform3D(1, 0, -2.84217e-14, 0, 1, 0, 2.84217e-14, 0, 1, 0, 0, 0)
 
 [node name="Camera3d" type="Camera3D" parent="Neck"]
-transform = Transform3D(1, 0, 0, 0, 0.907777, 0.419452, 0, -0.419452, 0.907777, 0.0687804, 1.37523, 1.06621)
+transform = Transform3D(0.931691, 0.152366, -0.329751, 0, 0.907777, 0.419452, 0.363251, -0.3908, 0.845768, -0.460615, 1.43569, 0.862586)
 fov = 75.2306
 script = ExtResource("3_g0jkf")
 

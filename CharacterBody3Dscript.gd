@@ -15,7 +15,14 @@ func _process(delta):
 		$AnimationPlayer.play("bunker_cam")
 		print (BootlegGlobalVariable._bunker_camera)
 		print("bunk cam activated")
-		await get_tree().create_timer(60).timeout
+		BootlegGlobalVariable._bunker_camera = 2
+		print (BootlegGlobalVariable._bunker_camera)
+		if BootlegGlobalVariable._documents_count == 5:
+			get_tree().change_scene_to_file("")
+			#await get_tree().create_timer(60).timeout
+		else:
+			get_tree().change_scene_to_file("res://ending_bad.tscn")
+			
 	else:
 		print("cam animation not triggered")
 	
@@ -68,24 +75,24 @@ func _physics_process(delta: float) -> void:
 	if direction:
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
-			if Input.is_action_just_pressed("left"):
+			if Input.is_action_just_pressed("left") and BootlegGlobalVariable._bunker_camera==0:
 				$soldier/AnimationPlayer.play("left_walk")
 				$walking.play() #sfx
 				$idle_breathing.stop() #sfx
-			elif Input.is_action_just_pressed("forward"):
+			elif Input.is_action_just_pressed("forward") and BootlegGlobalVariable._bunker_camera==0:
 				$soldier/AnimationPlayer.play("backwards_walk")
 				$walking.play() #sfx
 				$idle_breathing.stop() #sfx
-			elif Input.is_action_just_pressed("right"):
+			elif Input.is_action_just_pressed("right") and BootlegGlobalVariable._bunker_camera==0:
 				$soldier/AnimationPlayer.play("right_walk")
 				$walking.play() #sfx
 				$idle_breathing.stop() #sfx
-			elif Input.is_action_just_pressed("back"):
+			elif Input.is_action_just_pressed("back") and BootlegGlobalVariable._bunker_camera==0:
 				$soldier/AnimationPlayer.play("forward_walk")
 				$walking.play() #sfx
 				$idle_breathing.stop() #sfx
 			
-			elif Input.is_action_just_pressed("destroy"):
+			elif Input.is_action_just_pressed("destroy") and BootlegGlobalVariable._bunker_camera==0:
 					BootlegGlobalVariable._contact_wall == 1 and BootlegGlobalVariable._shovel_status == 1
 					
 					$soldier/AnimationPlayer.play("singlehand_pickaxe")
@@ -105,8 +112,6 @@ func _physics_process(delta: float) -> void:
 	#			$soldier/AnimationPlayer.play("singlehand_pickaxe")
 	#		else:
 	#			print()
-					
-					
 	else:
 			#idle movements and sounds
 			velocity.x = move_toward(velocity.x, 0, SPEED)

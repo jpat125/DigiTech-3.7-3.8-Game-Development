@@ -190,13 +190,13 @@ inventory_data = ExtResource("6_hmifp")
 transform = Transform3D(1, -7.59028e-08, 0, 1.58325e-08, 0.999998, 0, 2.98023e-08, 3.72529e-08, 1, -0.0164825, -1.22787, -0.0798623)
 
 [node name="CollisionShape3D" parent="Player" index="1"]
-transform = Transform3D(1, -1.58325e-08, -2.98023e-08, 1.76951e-08, 1, 2.42144e-08, 1.78814e-07, 1.86265e-08, 1, 0.00266877, -1.25809, -0.132198)
+transform = Transform3D(1, -1.67638e-08, -2.98023e-08, 1.76951e-08, 1, 2.6077e-08, 1.78814e-07, 2.04891e-08, 1, 0.00266877, -1.25809, -0.132198)
 
 [node name="soldier" parent="Player" index="2"]
 transform = Transform3D(-0.00719035, -2.43745e-10, 0.00350697, -5.44333e-10, 0.008, 2.91038e-10, -0.00350697, 1.45519e-11, -0.00719036, -0.0121876, -2.19464, -0.0837268)
 
 [node name="Camera3d" parent="Player/Neck" index="0"]
-transform = Transform3D(-1.59306, -0.666143, 1.00916, 2.14204e-08, 2.3845, 1.57399, -1.2092, 0.877611, -1.32952, 2.15229, 0.775117, -2.25722)
+transform = Transform3D(-0.982321, -0.425849, 0.804956, -2.98023e-08, 1.49031, 0.60145, -0.77301, 0.541157, -1.02292, 1.62581, 1.05349, -2.07497)
 environment = SubResource("Environment_vnybe")
 
 [node name="InteractRay" parent="Player/Neck/Camera3d" index="0"]
@@ -2867,7 +2867,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0.036044, -0.86561, -4
 shape = SubResource("BoxShape3D_sxxyo")
 
 [node name="bunker" parent="CSGMesh3D18" instance=ExtResource("24_3o0o1")]
-transform = Transform3D(-0.08, 0, -1.20797e-08, 0, 0.241, 0, 1.20797e-08, 0, -0.08, 0, -0.479426, 0.331464)
+transform = Transform3D(-0.1, 0, -1.50996e-08, 0, 0.324, 0, 1.50996e-08, 0, -0.0999999, 0, -0.479426, 0.311382)
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="CSGMesh3D18"]
 transform = Transform3D(0.882711, 0, 0, 0, 0.999999, 0, 0, 0, 0.876606, 0, 0.0230319, -0.0208116)
@@ -3022,10 +3022,20 @@ spot_range = 2.0
 spot_angle = 60.0
 
 [node name="WallLamp7" parent="CSGMesh3D18" instance=ExtResource("6_ih2tt")]
-transform = Transform3D(-6.11959e-10, 0, 0.016, 0, 0.05, 0, -0.014, 0, -6.99382e-10, 0.0808709, -0.0580969, 0.369271)
+transform = Transform3D(0.0139999, 0, 0, 0, 0.05, 0, 0, 0, 0.016, 0.0767752, 0.385838, 0.410001)
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="CSGMesh3D18/WallLamp7"]
-transform = Transform3D(-4.22329e-07, 21.7651, 1.3473e-06, 12.0971, -8.20146e-07, 17.0411, 16.2325, 9.51194e-07, -11.523, -0.405334, 3.36208, -7.12168)
+transform = Transform3D(-4.09899e-07, 22.7505, 1.43934e-06, 11.7411, -8.82231e-07, 17.2884, 15.7548, 9.60777e-07, -10.6995, -0.405365, 1.46171, -3.23602)
+light_color = Color(1, 0.768627, 0.482353, 1)
+shadow_enabled = true
+spot_range = 2.0
+spot_angle = 60.0
+
+[node name="WallLamp8" parent="CSGMesh3D18" instance=ExtResource("6_ih2tt")]
+transform = Transform3D(0.0139999, 0, 0, 0, 0.05, 0, 0, 0, 0.016, -0.0707357, 0.385838, 0.410001)
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="CSGMesh3D18/WallLamp8"]
+transform = Transform3D(-4.09899e-07, 22.7505, 1.43934e-06, 11.7411, -8.82231e-07, 17.2884, 15.7548, 9.60777e-07, -10.6995, -0.405363, 1.46171, -3.23602)
 light_color = Color(1, 0.768627, 0.482353, 1)
 shadow_enabled = true
 spot_range = 2.0

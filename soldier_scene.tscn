@@ -20,7 +20,7 @@ bones/22/rotation = Quaternion(0.999812, 7.24892e-08, 1.13211e-07, 0.0194022)
 bones/23/rotation = Quaternion(0.1434, 0.00692329, 0.0118803, 0.989569)
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="metarig/Skeleton3D" index="0"]
-transform = Transform3D(0.491347, 0.189301, -0.850143, 0.796347, -0.492936, 0.350493, -0.352718, -0.849222, -0.392952, 0.365708, 1.17939, -0.418785)
+transform = Transform3D(0.491348, 0.189301, -0.850142, 0.796346, -0.492937, 0.350493, -0.352718, -0.849222, -0.392953, 0.365708, 1.17939, -0.418785)
 bone_name = "hand.R"
 bone_idx = 14
 
