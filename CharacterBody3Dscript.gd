@@ -15,11 +15,12 @@ func _process(delta):
 		$AnimationPlayer.play("bunker_cam")
 		print (BootlegGlobalVariable._bunker_camera)
 		print("bunk cam activated")
+		await get_tree().create_timer(5).timeout
 		BootlegGlobalVariable._bunker_camera = 2
 		print (BootlegGlobalVariable._bunker_camera)
-		if BootlegGlobalVariable._documents_count == 5:
-			get_tree().change_scene_to_file("")
-			#await get_tree().create_timer(60).timeout
+		if BootlegGlobalVariable._documents_count == 4:
+			get_tree().change_scene_to_file("res://ending_good.tscn")
+			
 		else:
 			get_tree().change_scene_to_file("res://ending_bad.tscn")
 			

@@ -196,7 +196,7 @@ transform = Transform3D(1, -1.67638e-08, -2.98023e-08, 1.76951e-08, 1, 2.6077e-0
 transform = Transform3D(-0.00719035, -2.43745e-10, 0.00350697, -5.44333e-10, 0.008, 2.91038e-10, -0.00350697, 1.45519e-11, -0.00719036, -0.0121876, -2.19464, -0.0837268)
 
 [node name="Camera3d" parent="Player/Neck" index="0"]
-transform = Transform3D(-0.982321, -0.425849, 0.804956, -2.98023e-08, 1.49031, 0.60145, -0.77301, 0.541157, -1.02292, 1.62581, 1.05349, -2.07497)
+transform = Transform3D(-0.995661, -0.41634, 0.786981, 2.79397e-07, 1.49031, 0.601451, -0.755749, 0.548508, -1.03681, 2.44963, 0.790693, -2.84626)
 environment = SubResource("Environment_vnybe")
 
 [node name="InteractRay" parent="Player/Neck/Camera3d" index="0"]
@@ -1227,6 +1227,10 @@ shape = SubResource("BoxShape3D_vub8m")
 transform = Transform3D(9.54098e-17, 4.36557e-08, 0.25, 0.05, -4.37114e-08, 0, 2.18557e-09, 1, -1.09285e-08, -0.471452, 0.230937, 8.9349)
 shape = SubResource("BoxShape3D_rd1le")
 
+[node name="SC - wall3" type="CollisionShape3D" parent="CSGMesh3D7/StaticBody3D"]
+transform = Transform3D(0, 4.36557e-08, 0.25, 0.05, -4.37114e-08, 0, 2.18557e-09, 1, -1.09358e-08, -3.01788, 0.230928, 8.93377)
+shape = SubResource("BoxShape3D_rd1le")
+
 [node name="SC - wall2" type="CollisionShape3D" parent="CSGMesh3D7/StaticBody3D"]
 transform = Transform3D(0.124798, 2.4869e-14, 8.47033e-22, -1.04469e-22, -4.37115e-09, -0.1, -8.88178e-16, 0.1, -4.37114e-09, 0.69287, 0.14679, 9.67444)
 shape = SubResource("BoxShape3D_evhoe")
@@ -1395,7 +1399,11 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355
 shape = SubResource("BoxShape3D_vub8m")
 
 [node name="SC - wall" type="CollisionShape3D" parent="CSGMesh3D8/StaticBody3D"]
-transform = Transform3D(9.54098e-17, 4.36557e-08, 0.25, 0.05, -4.37114e-08, 0, 2.18557e-09, 1, -1.09285e-08, -0.471452, 0.230937, 8.9349)
+transform = Transform3D(0, 4.36557e-08, 0.25, 0.05, -4.37114e-08, 0, 2.18557e-09, 1, -1.09358e-08, -4.08747, 0.230924, 8.9333)
+shape = SubResource("BoxShape3D_rd1le")
+
+[node name="SC - wall3" type="CollisionShape3D" parent="CSGMesh3D8/StaticBody3D"]
+transform = Transform3D(0, 4.36557e-08, 0.25, 0.05, -4.37114e-08, 0, 2.18557e-09, 1, -1.09358e-08, -6.88595, 0.230914, 8.93207)
 shape = SubResource("BoxShape3D_rd1le")
 
 [node name="SC - wall2" type="CollisionShape3D" parent="CSGMesh3D8/StaticBody3D"]
@@ -2823,7 +2831,7 @@ material = SubResource("StandardMaterial3D_mcqn0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.402738, -0.115874, -9.41786)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGMesh3D17/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.35545, -0.834198, 9.38596)
+transform = Transform3D(1, 0, 6.35275e-22, 0, -4.37114e-08, -1, -3.55271e-15, 1, -4.37114e-08, -0.355, -0.834, 9.386)
 shape = SubResource("BoxShape3D_vub8m")
 
 [node name="SC - wall" type="CollisionShape3D" parent="CSGMesh3D17/StaticBody3D"]
@@ -2839,11 +2847,11 @@ transform = Transform3D(1, 0, 0, 0, 1, -1.77636e-15, 0, 0, 1, 2.02941, 0.255691,
 shape = SubResource("BoxShape3D_lbvrq")
 
 [node name="SC - wall4" type="CollisionShape3D" parent="CSGMesh3D17/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.03686, 0.18957, 9.65047)
+transform = Transform3D(1, 0, 6.35275e-22, 0, -4.37114e-08, -1, -1.24345e-14, 1, -4.37114e-08, -1.78758, 0.116987, 9.67536)
 shape = SubResource("BoxShape3D_mx2hw")
 
 [node name="CSGMesh3D18" type="CSGMesh3D" parent="."]
-transform = Transform3D(3.13966, 0, 0, 0, 0.957014, 0, 0, 0, 3.28179, -0.558901, 0, 18.3644)
+transform = Transform3D(3.13966, 0, 0, 0, 0.957014, 0, 0, 0, 3.28179, -0.558901, 0.0273696, 18.3644)
 mesh = SubResource("BoxMesh_q5l8x")
 material = SubResource("StandardMaterial3D_03riw")
 
@@ -2863,7 +2871,7 @@ transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, -0.425363, 0.0293983, 
 shape = SubResource("BoxShape3D_wtuig")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="CSGMesh3D18/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0.036044, -0.86561, -4.76837e-07)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999998, 0.036044, -0.89202, -4.76837e-07)
 shape = SubResource("BoxShape3D_sxxyo")
 
 [node name="bunker" parent="CSGMesh3D18" instance=ExtResource("24_3o0o1")]
