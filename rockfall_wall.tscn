@@ -54,14 +54,14 @@ tracks/5/enabled = true
 tracks/5/path = NodePath("blocking")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(2, 1, -0.332707, 5.43401, 0.000647552, 3.4, 1, -0.332707, 0.749737, 0.000647552)
+tracks/5/keys = PackedFloat32Array(0.1, 1, -0.332707, 5.43401, 0.000647552, 0.3, 1, -0.332707, 0.749737, 0.000647552)
 tracks/6/type = "position_3d"
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/path = NodePath("Area3D/CollisionShape3D")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(2, 1, -0.500098, 6.08402, 0.0754254, 3.4, 1, -0.500098, 0.88893, 0.0754254)
+tracks/6/keys = PackedFloat32Array(0.1, 1, -0.500098, 6.08402, 0.0754254, 0.3, 1, -0.500098, 0.88893, 0.0754254)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_74fii"]
 _data = {
@@ -80,30 +80,30 @@ offset_right = -1.0
 offset_bottom = -14.0
 
 [node name="blocking" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.332707, 5.43401, 0.000647552)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.332707, 0.749737, 0.000647552)
 shape = SubResource("BoxShape3D_67vqu")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96046e-08, 1.19209e-07, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1.07744, 0, 0, 0, 1.2889, 0, 0, 0, 1.44199, -0.500098, 6.08402, 0.0754254)
+transform = Transform3D(1.07744, 0, 0, 0, 1.2889, 0, 0, 0, 1.44199, -0.500098, 0.88893, 0.0754254)
 shape = SubResource("BoxShape3D_4vgqq")
 
 [node name="Rock_LOD0 (1)" parent="Area3D" instance=ExtResource("2_wyddt")]
-transform = Transform3D(0.272113, 0.126311, 0, 5.52122e-09, -1.18944e-08, -0.3, -0.126311, 0.272113, -1.31134e-08, 0.534, 5.78375, 0)
+transform = Transform3D(0.272113, 0.126311, 0, 5.52122e-09, -1.18944e-08, -0.3, -0.126311, 0.272113, -1.31134e-08, 0.534147, 0.492847, 0)
 
 [node name="Rock_LOD0 (1)2" parent="Area3D" instance=ExtResource("2_wyddt")]
-transform = Transform3D(0.256729, -0.155211, 0, 0.155211, 0.256729, 0, 0, 0, 0.3, -0.504, 5.78375, 0)
+transform = Transform3D(0.256729, -0.155211, 0, 0.155211, 0.256729, 0, 0, 0, 0.3, -0.503828, 0.492847, 0)
 
 [node name="Rock_LOD0 (1)3" parent="Area3D" instance=ExtResource("2_wyddt")]
-transform = Transform3D(0.241366, 0.178165, 0, 0.000450888, -0.000610832, 0.299999, 0.178164, -0.241365, -0.00075922, -1.65, 5.78375, 0.147)
+transform = Transform3D(0.241366, 0.178165, 0, 0.000450888, -0.000610832, 0.299999, 0.178164, -0.241365, -0.00075922, -1.64967, 0.149965, 0.147352)
 
 [node name="Rock_LOD0 (1)4" parent="Area3D" instance=ExtResource("2_wyddt")]
-transform = Transform3D(0.293242, -0.0633155, 0, 0.0633155, 0.293242, 0, 0, 0, 0.3, -1.07895, 8.86742, 0)
+transform = Transform3D(0.293242, -0.0633155, 0, 0.0633155, 0.293242, 0, 0, 0, 0.3, -1.07857, 0.939335, 0)
 
 [node name="Rock_LOD0 (1)5" parent="Area3D" instance=ExtResource("2_wyddt")]
-transform = Transform3D(0.240157, 0.179791, 0, -0.179791, 0.240157, 0, 0, 0, 0.3, 0.211937, 8.83111, 0)
+transform = Transform3D(0.240157, 0.179791, 0, -0.179791, 0.240157, 0, 0, 0, 0.3, 0.211514, 1.03848, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

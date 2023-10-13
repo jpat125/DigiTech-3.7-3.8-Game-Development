@@ -30,6 +30,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0204571, 0)
 shape = SubResource("SphereShape3D_ltnd2")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
 offset_right = 110.0
 offset_bottom = 40.0
 text = "3/25 gathered"

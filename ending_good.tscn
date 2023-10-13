@@ -89,13 +89,7 @@ offset_bottom = 639.0
 theme_override_font_sizes/normal_font_size = 30
 theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
-text = "[center][b]Mission Successfull![/b]
-
-You have successed in collecting all top secret documents, preventing them falling into enemy or public hands.
-
-For your actions you have been promoted to the rank of Warrent Officer. 
-
-Well done!"
+text = "ssgsdsdggds"
 
 [node name="170002" type="VScrollBar" parent="RichTextLabel"]
 visible = false
