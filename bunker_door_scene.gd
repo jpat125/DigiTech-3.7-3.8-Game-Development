@@ -11,7 +11,7 @@ func _ready():
 func _process(delta):
 	pass
 
-
+#code for colliding w/ bunker door  
 func _on_area_3d_area_entered(Area):
 	if Area.name == "capsule_hitbox_a3d":
 		BootlegGlobalVariable._bunker_camera = 1

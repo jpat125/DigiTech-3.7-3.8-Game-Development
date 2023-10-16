@@ -24,10 +24,10 @@ expand_mode = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 416.0
-offset_top = 154.0
-offset_right = 726.0
-offset_bottom = 340.0
+offset_left = 421.0
+offset_top = 129.0
+offset_right = 731.0
+offset_bottom = 315.0
 theme_override_font_sizes/font_size = 50
 action_mode = 0
 text = "Start
@@ -36,15 +36,15 @@ icon_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 366.0
-offset_top = 39.0
-offset_right = 483.0
-offset_bottom = 68.0
+offset_left = 359.0
+offset_top = 38.0
+offset_right = 476.0
+offset_bottom = 67.0
 scale = Vector2(3.74656, 3.19914)
 tooltip_text = "Title"
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 18
-text = "Tunnel "
+text = "Tunnel runner"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -60,13 +60,22 @@ text = "[center][color=#ff0000]Disclaimer:
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 490.0
-offset_top = 379.0
-offset_right = 669.0
-offset_bottom = 467.0
+offset_left = 487.0
+offset_top = 429.0
+offset_right = 666.0
+offset_bottom = 517.0
 theme_override_font_sizes/font_size = 30
 text = "Credits
 "
 
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 331.0
+offset_right = 668.0
+offset_bottom = 415.0
+text = "Controls / How to play"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

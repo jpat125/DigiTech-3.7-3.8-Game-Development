@@ -89,7 +89,6 @@ offset_bottom = 639.0
 theme_override_font_sizes/normal_font_size = 30
 theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
-text = "ssgsdsdggds"
 
 [node name="170002" type="VScrollBar" parent="RichTextLabel"]
 visible = false
