@@ -95,7 +95,7 @@ func _physics_process(delta: float) -> void:
 			
 			elif Input.is_action_just_pressed("destroy") and BootlegGlobalVariable._bunker_camera==0:
 					BootlegGlobalVariable._contact_wall == 1 and BootlegGlobalVariable._shovel_status == 1
-					
+					BootlegGlobalVariable._destroy_key_reminder == 1
 					$soldier/AnimationPlayer.play("singlehand_pickaxe")
 			else:
 				print("else event triggered")

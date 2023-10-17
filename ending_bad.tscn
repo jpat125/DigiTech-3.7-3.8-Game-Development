@@ -1,63 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbqw4vo617e6f"]
+[gd_scene load_steps=6 format=3 uid="uid://dbqw4vo617e6f"]
 
 [ext_resource type="Script" path="res://ending_bad.gd" id="1_6bfug"]
 [ext_resource type="Texture2D" uid="uid://c1bww1trfpdy5" path="res://assets/675px-North_Head_Tunnel_System_I.jpg" id="1_wmong"]
+[ext_resource type="Texture2D" uid="uid://dlyejrgx51xwa" path="res://assets/fake_news_paper.jpg" id="3_6bud5"]
 
-[sub_resource type="Animation" id="Animation_ttv36"]
-resource_name = "transition"
-length = 15.0
+[sub_resource type="Animation" id="Animation_jdhjw"]
+resource_name = "newspapaer"
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("TextureRect3:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 7.9),
+"times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, 664)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../TextureRect3:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(9.1, 11.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-183, 358), Vector2(510, 358)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../TextureRect4:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(9, 10.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(509, 358), Vector2(1218, 358)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../TextureRect4:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 7.9),
-"transitions": PackedFloat32Array(3.605, 1.56917),
-"update": 1,
-"values": [false, true]
+"values": [Vector2(433, 659), Vector2(433, 266)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_lvth6"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1tadp"]
 _data = {
-"transition": SubResource("Animation_ttv36")
+"newspapaer": SubResource("Animation_jdhjw")
 }
 
 [node name="Control" type="Control"]
@@ -94,25 +59,25 @@ You have falled to collect all top secret documents, and they have fallen into t
 You'll now have to answer to an inquiry and have created one massive scandal!
 "
 
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 433.0
+offset_top = 266.0
+offset_right = 803.0
+offset_bottom = 665.0
+texture = ExtResource("3_6bud5")
+
 [node name="TextureRect2" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.235294)
 layout_mode = 0
-offset_left = 5.0
-offset_top = 4.0
-offset_right = 1157.0
-offset_bottom = 649.0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 1156.0
+offset_bottom = 648.0
 texture = ExtResource("1_wmong")
 expand_mode = 1
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-layout_mode = 0
-offset_top = 440.149
-offset_right = 1156.0
-offset_bottom = 1086.15
-color = Color(0, 0, 0, 1)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../ColorRect2")
 libraries = {
-"": SubResource("AnimationLibrary_lvth6")
+"": SubResource("AnimationLibrary_1tadp")
 }

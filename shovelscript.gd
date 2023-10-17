@@ -14,7 +14,7 @@ func _process(delta):
 	pass 
 
 # clears pickaxe model from tree if collided with by player.
-#(note doesn't clear floating inventory icon).
+# (note doesn't clear floating inventory icon).
 func _on_area_entered(Area):
 	if Area.name == "capsule_hitbox_a3d":
 		BootlegGlobalVariable._shovel_status = 1

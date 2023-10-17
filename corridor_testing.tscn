@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://dv1s4k2voe3et"]
+[gd_scene load_steps=75 format=3 uid="uid://dv1s4k2voe3et"]
 
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="1_fk46q"]
 [ext_resource type="Script" path="res://main.gd" id="1_hc3ky"]
@@ -20,6 +20,7 @@
 [ext_resource type="Script" path="res://inventory/inventory_data.gd" id="12_3u83w"]
 [ext_resource type="Resource" uid="uid://bqt40skmatbp6" path="res://item/items/classified_documents.tres" id="13_pi4kk"]
 [ext_resource type="Script" path="res://inventory/slot_data.gd" id="14_eqms8"]
+[ext_resource type="PackedScene" uid="uid://diu2d82kk205u" path="res://destroy_key_reminder.tscn" id="20_51r1j"]
 [ext_resource type="Texture2D" uid="uid://b8wobdquhsru5" path="res://assets/rock_floor_ripoff.jpg" id="20_d55b0"]
 [ext_resource type="PackedScene" uid="uid://hqoet63owe3a" path="res://rockfall_wall.tscn" id="20_xqonq"]
 [ext_resource type="Texture2D" uid="uid://d333u3vmamnjc" path="res://assets/MUS_crest-small_transparent.png" id="21_5gpd8"]
@@ -621,6 +622,12 @@ shape = SubResource("BoxShape3D_41cum")
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="."]
 transform = Transform3D(-1, 0, -2.26494e-07, 0, 1, 0, 1.50996e-07, 0, -1.5, 4.2802, 0.00115998, 3.32894)
 mesh = SubResource("BoxMesh_rq5mp")
+
+[node name="Control" parent="CSGMesh3D3" instance=ExtResource("20_51r1j")]
+offset_left = 512.0
+offset_top = 131.0
+offset_right = 512.0
+offset_bottom = 131.0
 
 [node name="Wall of balls" parent="CSGMesh3D3" instance=ExtResource("1_np275")]
 transform = Transform3D(6.7821e-08, 0, 0.4, 0, 0.4, 0, -0.216048, 0, 1.25567e-07, 2.18625, -0.421067, -0.22199)

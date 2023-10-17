@@ -41,6 +41,7 @@ offset_bottom = 287.0
 text = "Controls...."
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 9.0
 offset_top = 9.0
 offset_right = 109.0
