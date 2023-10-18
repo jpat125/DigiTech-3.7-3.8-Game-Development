@@ -119,6 +119,7 @@ libraries = {
 }
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1018.0
 offset_top = 614.0
 offset_right = 1149.0

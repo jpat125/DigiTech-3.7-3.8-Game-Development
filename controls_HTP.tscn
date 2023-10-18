@@ -36,8 +36,8 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 372.0
 offset_top = 157.0
-offset_right = 554.0
-offset_bottom = 386.0
+offset_right = 612.0
+offset_bottom = 449.0
 bbcode_enabled = true
 text = "[b]Key controls[/b]:
 
@@ -47,7 +47,7 @@ A - Move Left
 S - Move Backwards
 D - Move Right[/i]
 [u]Other[/u]
-[i]B - Destroy cave-ins "
+[i]B - Destroy cave-ins (walk into rocks while pressing 'B' key)"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 layout_mode = 0
