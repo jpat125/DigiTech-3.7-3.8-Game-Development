@@ -194,7 +194,7 @@ transform = Transform3D(2.12132, 0, 2.12132, 0, 3, 0, -2.12132, 0, 2.12132, 13.3
 slot_data = SubResource("Resource_h4h8f")
 
 [node name="Pickup4" parent="." instance=ExtResource("2_cedom")]
-transform = Transform3D(2.12132, 0, 2.12132, 0, 3, 0, -2.12132, 0, 2.12132, 18.5285, 0.0557804, 15.0391)
+transform = Transform3D(2.12132, 0, 2.12132, 0, 3, 0, -2.12132, 0, 2.12132, 18.2836, 0.0557804, 15.1182)
 slot_data = SubResource("Resource_h4h8f")
 
 [node name="Pickup5" parent="." instance=ExtResource("2_cedom")]
@@ -2240,7 +2240,7 @@ transform = Transform3D(0.124798, 2.4869e-14, 8.47033e-22, -1.04469e-22, -4.3711
 shape = SubResource("BoxShape3D_evhoe")
 
 [node name="SC - wall3" type="CollisionShape3D" parent="CSGMesh3D13/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, -1.77636e-15, 0, 0, 1, -2.95794, -0.641762, 8.30769)
+transform = Transform3D(0.999999, 0, 0, 0, 1, -1.77636e-15, 0, 0, 1, -2.73631, 0.184953, 9.33706)
 shape = SubResource("BoxShape3D_lbvrq")
 
 [node name="SC - wall4" type="CollisionShape3D" parent="CSGMesh3D13/StaticBody3D"]
@@ -2248,7 +2248,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.036
 shape = SubResource("BoxShape3D_mx2hw")
 
 [node name="TS docs rest3" parent="CSGMesh3D13" instance=ExtResource("23_6mjrc")]
-transform = Transform3D(0.00013262, 1.92043e-08, -0.3, -7.1409e-07, 0.2, 2.80856e-08, 0.133333, 4.76052e-07, 0.000132594, -2.12747, -0.362541, 0.0542088)
+transform = Transform3D(0.00013262, 1.92043e-08, -0.3, -7.1409e-07, 0.2, 2.80856e-08, 0.133333, 4.76052e-07, 0.000132594, -1.88259, -0.362541, 0.0014925)
 
 [node name="cave_in_3" parent="CSGMesh3D13" instance=ExtResource("27_6dhmr")]
 transform = Transform3D(-1.31133e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 2.17017, -0.328417, -0.192438)
