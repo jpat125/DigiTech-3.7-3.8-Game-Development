@@ -29,7 +29,7 @@ func _on_tripcock_a_3d_area_entered(StaticBody3D):
 		#blocking_col_block.set_disabled(false)
 		#colobj3d_col_block.set_disabled(false)
 		var _has_shovel =  BootlegGlobalVariable._shovel_status
-		BootlegGlobalVariable._shovel_status = 2
+		BootlegGlobalVariable._shovel_status = 1
 		print(BootlegGlobalVariable._shovel_status)
 		await get_tree().create_timer(3).timeout 
 		var dialogue = get_node("Control")

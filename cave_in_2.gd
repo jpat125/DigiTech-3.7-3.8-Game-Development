@@ -11,6 +11,7 @@ func _process(delta):
 	pass
 
 
+	
 func _on_area_entered(StaticBody3D):
 	if StaticBody3D.name == "capsule_hitbox_a3d" and BootlegGlobalVariable._shovel_status == 1:
 		# wait 2 seconds
@@ -18,8 +19,5 @@ func _on_area_entered(StaticBody3D):
 		await get_tree().create_timer(5).timeout 
 		print(BootlegGlobalVariable._contact_wall)
 		BootlegGlobalVariable._contact_wall = 0
-		print (BootlegGlobalVariable._shovel_status)
 		queue_free()
-
-	
 

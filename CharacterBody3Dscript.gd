@@ -93,12 +93,14 @@ func _physics_process(delta: float) -> void:
 				$walking.play() #sfx
 				$idle_breathing.stop() #sfx
 			
-			elif Input.is_action_just_pressed("destroy") and BootlegGlobalVariable._bunker_camera==0:
-					BootlegGlobalVariable._contact_wall == 1 and BootlegGlobalVariable._shovel_status == 1
-					BootlegGlobalVariable._destroy_key_reminder == 1
+			elif (Input.is_action_just_pressed("destroy") and BootlegGlobalVariable._contact_wall==1
+			and BootlegGlobalVariable._bunker_camera==0):
+					#BootlegGlobalVariable._contact_wall == 1
+					$walking.stop()
 					$soldier/AnimationPlayer.play("singlehand_pickaxe")
+					
 			else:
-				print("else event triggered")
+				print()
 				#$soldier/AnimationPlayer.play("idle")
 				#$walking.stop() #sfx
 				#$idle_breathing.play() #sfx

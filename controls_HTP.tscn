@@ -27,18 +27,37 @@ layout_mode = 2
 offset_left = 405.0
 offset_right = 741.0
 offset_bottom = 45.0
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 35
 text = "Controls & How To Play"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 255.0
-offset_top = 58.0
-offset_right = 1011.0
-offset_bottom = 287.0
-text = "Controls...."
+offset_left = 372.0
+offset_top = 157.0
+offset_right = 554.0
+offset_bottom = 386.0
+bbcode_enabled = true
+text = "[b]Key controls[/b]:
+
+[u]Character movement: [/u]
+[i]W - Move Forwards
+A - Move Left
+S - Move Backwards
+D - Move Right[/i]
+[u]Other[/u]
+[i]B - Destroy cave-ins "
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 158.0
+offset_right = 870.0
+offset_bottom = 401.0
+text = "How to Play:
+
+The aim of the game is to collect all top secret documents and then reach the bunker door. Along the way you will have to clear cave-ins and avoid rockfall. "
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

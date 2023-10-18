@@ -18,8 +18,4 @@ func _on_area_entered(StaticBody3D):
 		await get_tree().create_timer(5).timeout 
 		print(BootlegGlobalVariable._contact_wall)
 		BootlegGlobalVariable._contact_wall = 0
-		print (BootlegGlobalVariable._shovel_status)
 		queue_free()
-
-	
-
