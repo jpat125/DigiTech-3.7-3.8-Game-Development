@@ -73,6 +73,11 @@ albedo_color = Color(0.0823529, 0.501961, 0.772549, 1)
 lightmap_size_hint = Vector2i(17, 9)
 material = SubResource("StandardMaterial3D_y3chw")
 
+[sub_resource type="BoxMesh" id="BoxMesh_h88kl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mcqn0"]
+albedo_texture = ExtResource("20_d55b0")
+
 [sub_resource type="BoxMesh" id="BoxMesh_rq5mp"]
 size = Vector3(5, 1, 1)
 
@@ -121,11 +126,6 @@ size = Vector3(0.001, 1, 0.746705)
 size = Vector3(1.44023, 1, 0.0195307)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21shi"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_h88kl"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mcqn0"]
-albedo_texture = ExtResource("20_d55b0")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mx2hw"]
 size = Vector3(2.67734, 0.01273, 1.05322)
@@ -526,6 +526,31 @@ light_color = Color(1, 0.768627, 0.482353, 1)
 shadow_enabled = true
 spot_range = 2.0
 spot_angle = 60.0
+
+[node name="testing textured floor" type="CSGMesh3D" parent="."]
+transform = Transform3D(2.022, 0, 0, 0, 0.0542843, 0, -3.49246e-10, 0, 1, -2.2221, -0.471822, 0.0202496)
+mesh = SubResource("BoxMesh_h88kl")
+material = SubResource("StandardMaterial3D_mcqn0")
+
+[node name="testing textured floor2" type="CSGMesh3D" parent="."]
+transform = Transform3D(2.022, 0, 0, 0, 0.0542843, 0, -3.49246e-10, 0, 1, -0.210692, -0.471822, 0.0202496)
+mesh = SubResource("BoxMesh_h88kl")
+material = SubResource("StandardMaterial3D_mcqn0")
+
+[node name="testing textured floor3" type="CSGMesh3D" parent="."]
+transform = Transform3D(2.022, 0, 0, 0, 0.0542843, 0, -3.49246e-10, 0, 1, 0.790788, -0.471822, 0.0202496)
+mesh = SubResource("BoxMesh_h88kl")
+material = SubResource("StandardMaterial3D_mcqn0")
+
+[node name="testing textured floor4" type="CSGMesh3D" parent="."]
+transform = Transform3D(-8.83844e-08, 0, 1, 0, 0.0542843, 0, -2.022, 0, -4.37114e-08, 1.36499, -0.471822, 1.51473)
+mesh = SubResource("BoxMesh_h88kl")
+material = SubResource("StandardMaterial3D_mcqn0")
+
+[node name="testing textured floor5" type="CSGMesh3D" parent="."]
+transform = Transform3D(-8.83844e-08, 0, 1, 0, 0.0542843, 0, -2.022, 0, -4.37114e-08, 1.36499, -0.471822, 3.51067)
+mesh = SubResource("BoxMesh_h88kl")
+material = SubResource("StandardMaterial3D_mcqn0")
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.714277, 5.96046e-07, 0.0186549)
@@ -1736,6 +1761,7 @@ material = SubResource("StandardMaterial3D_015s0")
 
 [node name="patch" type="CSGMesh3D" parent="CSGMesh3D11"]
 transform = Transform3D(0.436539, 0, 3.55271e-15, 0, 0.027, 0, 0, 0, 0.0999999, -1.47453, -0.451351, -0.10945)
+visible = false
 mesh = SubResource("PlaneMesh_06eio")
 material = SubResource("StandardMaterial3D_sf6ab")
 
