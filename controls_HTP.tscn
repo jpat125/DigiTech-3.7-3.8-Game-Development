@@ -57,7 +57,7 @@ offset_right = 870.0
 offset_bottom = 401.0
 text = "How to Play:
 
-The aim of the game is to collect all top secret documents and then reach the bunker door. Along the way you will have to clear cave-ins and avoid rockfall. "
+The aim of the game is to collect all top secret documents and then reach the bunker door. Along the way you will have to clear cave-ins and avoid rockfall which will be unclearable, leaving you 'locked in'. "
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

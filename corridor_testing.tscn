@@ -1263,12 +1263,15 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.036
 shape = SubResource("BoxShape3D_mx2hw")
 
 [node name="CSGMesh3D8" type="CSGMesh3D" parent="."]
-transform = Transform3D(-0.000663189, -9.60221e-08, 1.5, -3.57045e-06, 1, 1.40428e-07, -0.999999, -3.57039e-06, -0.000994583, 10.02, -0.041055, 11.7725)
+transform = Transform3D(-0.000663189, -9.60221e-08, 1.5, -3.57045e-06, 1, 1.40428e-07, -0.999999, -3.57039e-06, -0.000994583, 10.02, 0, 11.773)
 mesh = SubResource("BoxMesh_rq5mp")
 material = SubResource("StandardMaterial3D_21shi")
 
 [node name="cave_in_1" parent="CSGMesh3D8" instance=ExtResource("23_jxqoq")]
-transform = Transform3D(0.3429, 0, 5.63159e-09, 0, 0.3594, 7.77156e-15, 3.33239e-09, -6.83342e-14, 0.24, -0.331441, -0.424937, -0.563893)
+transform = Transform3D(0.3429, 0, 5.64614e-09, 0, 0.3594, 1.13798e-14, 3.33239e-09, -6.83342e-14, 0.24, -0.331442, -0.424937, -0.563892)
+
+[node name="Rockfall_wall2" parent="CSGMesh3D8" instance=ExtResource("20_xqonq")]
+transform = Transform3D(0.340446, 1.36424e-12, 1.45519e-10, 0, 0.456377, 1.43774e-14, -1.01863e-10, 1.11022e-15, 0.238727, -0.372247, -0.143767, -2.08278)
 
 [node name="WallLamp22" parent="CSGMesh3D8" instance=ExtResource("6_ih2tt")]
 transform = Transform3D(0.1, 0, -6.35732e-09, 0, 0.1, 0, 4.23821e-09, 0, 0.0666667, 1.66423, 0.0861791, 0.252447)
@@ -1441,7 +1444,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.036
 shape = SubResource("BoxShape3D_mx2hw")
 
 [node name="CSGMesh3D9" type="CSGMesh3D" parent="."]
-transform = Transform3D(-0.000663189, -9.60221e-08, 1.5, -3.57045e-06, 1, 1.40428e-07, -0.999999, -3.57039e-06, -0.000994583, 10.02, -0.041055, 16.8747)
+transform = Transform3D(-0.000663189, -9.60221e-08, 1.5, -3.57045e-06, 1, 1.40428e-07, -0.999999, -3.57039e-06, -0.000994583, 10.02, 0, 16.875)
 mesh = SubResource("BoxMesh_rq5mp")
 material = SubResource("StandardMaterial3D_21shi")
 
@@ -1613,7 +1616,7 @@ shape = SubResource("BoxShape3D_mx2hw")
 transform = Transform3D(0.2, 0, 8.73115e-11, 0, 0.2, 2.09277e-14, -2.18279e-11, 1.60982e-15, 0.2, -1.90735e-06, -0.400959, 0)
 
 [node name="CSGMesh3D10" type="CSGMesh3D" parent="."]
-transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1.5, 11.7136, -0.041055, 20.2058)
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1.5, 11.714, 0, 20.206)
 mesh = SubResource("BoxMesh_rq5mp")
 material = SubResource("StandardMaterial3D_21shi")
 
@@ -1722,7 +1725,7 @@ shape = SubResource("BoxShape3D_mx2hw")
 transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 2.18472, -0.315368, -0.127583)
 
 [node name="CSGMesh3D11" type="CSGMesh3D" parent="."]
-transform = Transform3D(-1, 0, 3.47591e-07, 0, 1, 0, -8.74228e-08, 0, -3.97598, 16.7592, 0.016895, 18.9263)
+transform = Transform3D(-1, 0, 3.47591e-07, 0, 1, 0, -8.74228e-08, 0, -3.97598, 16.759, 0, 18.926)
 mesh = SubResource("BoxMesh_rq5mp")
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGMesh3D11"]
@@ -1844,7 +1847,7 @@ shape = SubResource("BoxShape3D_lbvrq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54972e-06, 0, 9.03645)
 
 [node name="CSGMesh3D12" type="CSGMesh3D" parent="."]
-transform = Transform3D(1.19249e-08, 0, -1.5, 0, 1, 0, 0.999999, 0, 1.78873e-08, 13.2115, -0.041055, 16.8747)
+transform = Transform3D(1.19249e-08, 0, -1.5, 0, 1, 0, 0.999999, 0, 1.78873e-08, 13.212, 0, 16.875)
 mesh = SubResource("BoxMesh_rq5mp")
 material = SubResource("StandardMaterial3D_21shi")
 
@@ -1990,7 +1993,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.036
 shape = SubResource("BoxShape3D_mx2hw")
 
 [node name="CSGMesh3D13" type="CSGMesh3D" parent="."]
-transform = Transform3D(-0.999999, 0, -1.31134e-07, 0, 1, 0, 8.74227e-08, 0, -1.5, 16.4042, -0.041055, 15.1009)
+transform = Transform3D(-0.999999, 0, -1.31134e-07, 0, 1, 0, 8.74227e-08, 0, -1.5, 16.404, 0, 15.101)
 mesh = SubResource("BoxMesh_rq5mp")
 material = SubResource("StandardMaterial3D_21shi")
 
@@ -2170,7 +2173,7 @@ transform = Transform3D(0.00013262, 1.92043e-08, -0.3, -7.1409e-07, 0.2, 2.80856
 transform = Transform3D(-1.31133e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 2.17017, -0.328417, -0.192438)
 
 [node name="CSGMesh3D14" type="CSGMesh3D" parent="."]
-transform = Transform3D(-0.000663189, -9.60221e-08, 1.5, -3.57045e-06, 1, 1.40428e-07, -0.999999, -3.57039e-06, -0.000994583, 13.4784, -0.0216154, 11.7041)
+transform = Transform3D(-0.000663189, -9.60221e-08, 1.5, -3.57045e-06, 1, 1.40428e-07, -0.999999, -3.57039e-06, -0.000994583, 13.478, 0, 11.704)
 mesh = SubResource("BoxMesh_rq5mp")
 material = SubResource("StandardMaterial3D_21shi")
 
@@ -2347,7 +2350,7 @@ shape = SubResource("BoxShape3D_mx2hw")
 transform = Transform3D(-0.000132638, -1.92044e-08, 0.3, -7.1409e-07, 0.2, 2.80856e-08, -0.2, -7.14078e-07, -0.000198917, 13.2942, -0.403596, 9.92107)
 
 [node name="CSGMesh3D15" type="CSGMesh3D" parent="."]
-transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1.5, 6.68692, -0.0216154, 12.4832)
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1.5, 6.687, 0, 12.483)
 mesh = SubResource("BoxMesh_rq5mp")
 material = SubResource("StandardMaterial3D_21shi")
 
@@ -2525,7 +2528,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.036
 shape = SubResource("BoxShape3D_mx2hw")
 
 [node name="CSGMesh3D16" type="CSGMesh3D" parent="."]
-transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1.5, 1.69344, -0.0216154, 12.4832)
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1.5, 1.693, 0, 12.483)
 mesh = SubResource("BoxMesh_rq5mp")
 material = SubResource("StandardMaterial3D_21shi")
 
@@ -2696,7 +2699,7 @@ shape = SubResource("BoxShape3D_mx2hw")
 transform = Transform3D(-0.000132638, -1.92044e-08, 0.3, -7.1409e-07, 0.2, 2.80856e-08, -0.2, -7.14078e-07, -0.000198917, -0.740966, -0.403596, 12.351)
 
 [node name="CSGMesh3D17" type="CSGMesh3D" parent="."]
-transform = Transform3D(-4.37113e-08, 0, 1.5, 0, 1, 0, -0.999999, 0, -6.55671e-08, -0.38822, -0.0247898, 14.0943)
+transform = Transform3D(-4.37113e-08, 0, 1.5, 0, 1, 0, -0.999999, 0, -6.55671e-08, -0.388, 0, 14.094)
 mesh = SubResource("BoxMesh_rq5mp")
 material = SubResource("StandardMaterial3D_21shi")
 
@@ -2856,7 +2859,7 @@ transform = Transform3D(1, 0, 6.35275e-22, 0, -4.37114e-08, -1, -1.24345e-14, 1,
 shape = SubResource("BoxShape3D_mx2hw")
 
 [node name="CSGMesh3D18" type="CSGMesh3D" parent="."]
-transform = Transform3D(3.13966, 0, 0, 0, 0.957014, 0, 0, 0, 3.28179, -0.558901, -0.00529363, 18.3644)
+transform = Transform3D(3.13966, 0, 0, 0, 0.957014, 0, 0, 0, 3.28179, -0.559, 0, 18.364)
 mesh = SubResource("BoxMesh_q5l8x")
 material = SubResource("StandardMaterial3D_03riw")
 

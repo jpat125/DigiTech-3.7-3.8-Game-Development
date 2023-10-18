@@ -69,6 +69,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k8c62"]
+size = Vector3(2.00055, 1, 1)
 
 [node name="Rockfall_wall" type="StaticBody3D"]
 script = ExtResource("1_u0c3x")
