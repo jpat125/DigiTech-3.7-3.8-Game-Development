@@ -7,20 +7,20 @@
 
 [node name="Skeleton3D" parent="metarig" index="0"]
 bones/0/position = Vector3(-2.76307e-11, 1.01251, -0.0552)
-bones/0/rotation = Quaternion(0.000466608, -0.992046, 0.125819, 0.00367908)
-bones/8/rotation = Quaternion(-0.250438, 0.835762, -0.387041, 0.298299)
+bones/0/rotation = Quaternion(0.000510392, -0.992045, 0.125819, 0.0040243)
+bones/8/rotation = Quaternion(-0.242557, 0.816031, -0.413517, 0.322897)
 bones/9/rotation = Quaternion(0.447278, -0.189238, -0.0639934, 0.871801)
-bones/12/rotation = Quaternion(-0.145653, -0.554409, 0.627341, 0.527124)
+bones/12/rotation = Quaternion(-0.164275, -0.606618, 0.59762, 0.497873)
 bones/13/rotation = Quaternion(0.315523, 0.17206, 0.121184, 0.925287)
-bones/17/rotation = Quaternion(0.927111, 0.00331819, 0.0152887, 0.37446)
+bones/17/rotation = Quaternion(0.942546, 0.00264891, 0.0154187, 0.33371)
 bones/18/rotation = Quaternion(0.147973, -4.12104e-10, -3.52735e-08, 0.988991)
 bones/19/rotation = Quaternion(-0.452225, -0.0203462, 0.0252938, 0.891313)
 bones/20/rotation = Quaternion(0.00919255, -0.908261, 0.418303, 0.00115664)
-bones/22/rotation = Quaternion(0.999812, 7.24892e-08, 1.13211e-07, 0.0194022)
+bones/22/rotation = Quaternion(0.999137, 1.194e-07, 9.20723e-08, 0.0415284)
 bones/23/rotation = Quaternion(0.1434, 0.00692329, 0.0118803, 0.989569)
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="metarig/Skeleton3D" index="0"]
-transform = Transform3D(0.491348, 0.189301, -0.850142, 0.796346, -0.492937, 0.350493, -0.352718, -0.849222, -0.392953, 0.365708, 1.17939, -0.418785)
+transform = Transform3D(0.490235, 0.189329, -0.850778, 0.740412, -0.605461, 0.291903, -0.459847, -0.773028, -0.437, 0.365938, 1.13734, -0.359441)
 bone_name = "hand.R"
 bone_idx = 14
 

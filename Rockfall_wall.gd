@@ -7,17 +7,6 @@ func _ready():
 	dialogue.set_visible(false)
 
 
-func _on_area_entered(StaticBody3D):
-	if StaticBody3D.name == "capsule_hitbox_a3d" and BootlegGlobalVariable._shovel_status == 1:
-		#var blocking_col_block = get_node("blocking")
-		#blocking_col_block.set_disabled(true)
-		#print(blocking_col_block.is_disabled())
-		#var colobj3d_col_block = get_node("Area3D/CollisionShape3D")
-		#colobj3d_col_block.set_disabled(true)
-		#print(colobj3d_col_block.is_disabled())
-		pass
-		
-
 
 # code for tripcock collision object, triggers animaion and triggers dialouge.
 func _on_tripcock_a_3d_area_entered(StaticBody3D):
@@ -34,5 +23,6 @@ func _on_tripcock_a_3d_area_entered(StaticBody3D):
 		await get_tree().create_timer(3).timeout 
 		var dialogue = get_node("Control")
 		dialogue.set_visible(true)
+		$tripcock_a3d. queue_free() 
 		
 		

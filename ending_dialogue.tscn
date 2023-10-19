@@ -15,9 +15,9 @@ script = ExtResource("1_8u6ks")
 [node name="player_init_contact" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 3.0
+offset_top = 495.0
 offset_right = 435.0
-offset_bottom = 67.0
+offset_bottom = 559.0
 bbcode_enabled = true
 text = "[color=#89d1e9]You:
 [color=#00000]\"Air Commodore Robins, this the Flight Sergeant, over\""
@@ -25,9 +25,9 @@ text = "[color=#89d1e9]You:
 [node name="air_com_response" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 3.0
+offset_top = 495.0
 offset_right = 480.0
-offset_bottom = 52.0
+offset_bottom = 544.0
 bbcode_enabled = true
 text = "[color=#6499ab]Air Commodore Robins:[color=#00]
 \"Flight Sergeant, this is Air Commodore Robins, over\""
@@ -35,17 +35,17 @@ text = "[color=#6499ab]Air Commodore Robins:[color=#00]
 [node name="resp_button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 4.0
-offset_top = 116.0
+offset_top = 608.0
 offset_right = 390.0
-offset_bottom = 147.0
+offset_bottom = 639.0
 text = "\"Sir, I belive I've collected all rogue documents...\""
 
 [node name="player_message" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 3.0
+offset_top = 495.0
 offset_right = 664.0
-offset_bottom = 77.0
+offset_bottom = 569.0
 bbcode_enabled = true
 text = "[color=#89d1e9]You:
 [color=#00000]\"Sir, I belive I've collected all rogue documents and I've cleared a path to the bunker. Should I attempt to gain entry?\""
@@ -53,9 +53,9 @@ text = "[color=#89d1e9]You:
 [node name="air_com_response_final" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 3.0
+offset_top = 495.0
 offset_right = 686.0
-offset_bottom = 98.0
+offset_bottom = 590.0
 bbcode_enabled = true
 text = "[color=#6499ab]Air Commodore Robins:[color=#00]
 \"Roger, that's all copied, I'll pass that info onto the MP's.\"

@@ -46,16 +46,16 @@ scroll_active = false
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_top = 126.0
+offset_top = 135.0
 offset_right = 1152.0
 offset_bottom = 644.0
 theme_override_font_sizes/bold_font_size = 40
 theme_override_font_sizes/italics_font_size = 30
 bbcode_enabled = true
-text = "[center][b]Story[/b]
+text = "[center][b]Developer[/b]
 [i]Jaiden P[/i]
 
-[b]Gameplay[/b]
+[b]Gameplay & Story[/b]
 [i]Jaiden P[/i]
 
 [b]Character model[/b]
@@ -67,6 +67,5 @@ text = "[center][b]Story[/b]
 [b]Textures[/b]
 [i]Textures.com (multiple users)[/i]
 "
-scroll_following = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

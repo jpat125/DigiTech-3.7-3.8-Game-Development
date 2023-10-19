@@ -8,9 +8,12 @@ signal toggle_inventory()
 
 func _ready():
 	set_meta("CharacterBody3D", 1)
+	print(global_position)
+	print($soldier/metarig/Skeleton3D/BoneAttachment3D.global_position)
 	
 	
 func _process(delta):
+	print($soldier/metarig/Skeleton3D/BoneAttachment3D/Shovel.visible)
 	if BootlegGlobalVariable._bunker_camera == 1:
 		$AnimationPlayer.play("bunker_cam")
 		print (BootlegGlobalVariable._bunker_camera)
@@ -100,9 +103,8 @@ func _physics_process(delta: float) -> void:
 					$soldier/AnimationPlayer.play("singlehand_pickaxe")
 					
 			else:
-				print()
-				#$soldier/AnimationPlayer.play("idle")
-				#$walking.stop() #sfx
+				$soldier/AnimationPlayer.play("idle")
+				$walking.stop() #sfx
 				#$idle_breathing.play() #sfx
 
 			#$soldier/AnimationPlayer.play("forward_walk")

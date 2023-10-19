@@ -14,8 +14,9 @@ script = ExtResource("1_hye12")
 [node name="player_init_contact" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 4.0
+offset_top = 506.0
 offset_right = 429.0
-offset_bottom = 94.0
+offset_bottom = 600.0
 bbcode_enabled = true
 text = "[color=#89d1e9]You:
 [color=#00000]\"Air Commodore Robins, this the Flight Sergeant, over\""
@@ -39,8 +40,9 @@ page = 46.0
 [node name="air_com_response" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 2.0
+offset_top = 506.0
 offset_right = 468.0
-offset_bottom = 61.0
+offset_bottom = 567.0
 bbcode_enabled = true
 text = "[color=#6499ab]Air Commodore Robins:[color=#00]
 \"Flight Sergeant, this is Air Commodore Robins, over\""
@@ -64,8 +66,9 @@ page = 46.0
 [node name="player_message" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 2.0
+offset_top = 506.0
 offset_right = 568.0
-offset_bottom = 98.0
+offset_bottom = 604.0
 bbcode_enabled = true
 text = "[color=#89d1e9]You:
 [color=#00000]\"Sir, I've found more  documents, all of them continue to be redacted versions, which makes the situation slightly better.\""
@@ -89,16 +92,17 @@ page = 92.0
 [node name="resp_button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 76.0
+offset_top = 582.0
 offset_right = 355.0
-offset_bottom = 107.0
+offset_bottom = 613.0
 text = "\"Sir, I've found more documents...\""
 
 [node name="air_com_response_final" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 2.0
+offset_top = 506.0
 offset_right = 399.0
-offset_bottom = 143.0
+offset_bottom = 649.0
 bbcode_enabled = true
 text = "[color=#6499ab]Air Commodore Robins:[color=#00]
 \"Roger, that's all copied, I'll pass that info onto the MP's.\"
@@ -121,4 +125,10 @@ max_value = 115.0
 step = 1.0
 page = 115.0
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
 [connection signal="pressed" from="resp_button" to="." method="_on_button_pressed" flags=18]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
