@@ -36,7 +36,7 @@ offset_right = 568.0
 offset_bottom = 98.0
 bbcode_enabled = true
 text = "[color=#89d1e9]You:
-[color=#00000]\"Sir, I've found some classified documents, but it seems these guys have been sloppy with handling. It looks like they've just been left in those thin white filing boxes you use for archiving stuff.\""
+[color=#00000]\"Sir, I've found some classified documents, but it seems these guys have been sloppy with handling. I've found them in one of the empty rooms.\""
 
 [node name="resp_button" type="Button" parent="."]
 layout_mode = 0

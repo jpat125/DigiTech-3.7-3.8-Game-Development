@@ -11,17 +11,17 @@ func _ready():
 	print(global_position)
 	print($soldier/metarig/Skeleton3D/BoneAttachment3D.global_position)
 	
-	
+# code to be run once player finishes game
 func _process(delta):
 	print($soldier/metarig/Skeleton3D/BoneAttachment3D/Shovel.visible)
 	if BootlegGlobalVariable._bunker_camera == 1:
 		$AnimationPlayer.play("bunker_cam")
 		print (BootlegGlobalVariable._bunker_camera)
 		print("bunk cam activated")
-		await get_tree().create_timer(5).timeout
+		await get_tree().create_timer(0.5).timeout
 		BootlegGlobalVariable._bunker_camera = 2
 		print (BootlegGlobalVariable._bunker_camera)
-		if BootlegGlobalVariable._documents_count == 4:
+		if BootlegGlobalVariable._documents_count >= 4:
 			get_tree().change_scene_to_file("res://ending_good.tscn")
 			
 		else:
@@ -39,25 +39,13 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var interact_ray: RayCast3D = $Neck/Camera3d/InteractRay
 
 
-#func _unhandled_input(event: InputEvent) -> void:
-#	if event is InputEventMouseButton:
-#		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-#	elif event.is_action_pressed("ui_cancel"):
-#		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-#	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-#		if event is InputEventMouseMotion:
-#			neck.rotate_y(-event.relative.x * 0.00)
-#			camera.rotate_x(-event.relative.y * 0.00)
-#			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(0), deg_to_rad(0))
-
-
-	#adds physics and floor
+# adds physics and floor
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	#Legacy code that may need to be removed.
+# Legacy code that may need to be removed.
 	if Input.is_action_just_pressed("inventory"):
 		toggle_inventory.emit()
 	if Input.is_action_just_pressed("interact"):
@@ -103,20 +91,8 @@ func _physics_process(delta: float) -> void:
 					$soldier/AnimationPlayer.play("singlehand_pickaxe")
 					
 			else:
-				$soldier/AnimationPlayer.play("idle")
-				$walking.stop() #sfx
-				#$idle_breathing.play() #sfx
+				print("else event")
 
-			#$soldier/AnimationPlayer.play("forward_walk")
-	#elif direction: 
-	#		velocity.x = move_toward(velocity.x, 0, SPEED)
-	#		velocity.z = move_toward(velocity.z, 0, SPEED)
-	#		$walking.stop() #sfx
-	#		if Input.is_action_just_pressed("destroy"):
-	#			BootlegGlobalVariable._contact_wall == 1 and BootlegGlobalVariable._shovel_status == 1
-	#			$soldier/AnimationPlayer.play("singlehand_pickaxe")
-	#		else:
-	#			print()
 	else:
 			#idle movements and sounds
 			velocity.x = move_toward(velocity.x, 0, SPEED)

@@ -43,11 +43,12 @@ func _on_button_pressed():
 	dia2.set_visible(false)
 	dia3.set_visible(true)
 	resp_button.set_visible(false)
-	await get_tree().create_timer(6).timeout
+	await get_tree().create_timer(5).timeout
 	dia3.set_visible(false)
 	dia4.set_visible(true)
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(2).timeout
 
 
-func _on_timer_timeout():
-	queue_free()
+#func _on_timer_timeout():
+#	var control_node = get_node("Control")
+#	control_node.set_visible(false)

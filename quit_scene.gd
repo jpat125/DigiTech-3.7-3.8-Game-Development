@@ -13,3 +13,4 @@ func _process(delta):
 
 func _on_button_pressed():
 	print("quit hit")
+	get_tree().quit()

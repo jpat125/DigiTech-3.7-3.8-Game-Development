@@ -17,7 +17,7 @@ func _on_area_entered(Area3D):
 		BootlegGlobalVariable._documents_count += 1
 		print(BootlegGlobalVariable._documents_count)
 		print("step before dialouge")
-		dialogue.set_visible(true)
+		get_node("Control").set_visible(true)
 		await get_tree().create_timer(20).timeout
 		print("123345") 
 		queue_free()

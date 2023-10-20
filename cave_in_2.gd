@@ -10,7 +10,6 @@ func _ready():
 func _process(delta):
 	pass
 
-
 	
 func _on_area_entered(StaticBody3D):
 	if StaticBody3D.name == "capsule_hitbox_a3d" and BootlegGlobalVariable._shovel_status == 1:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://dv1s4k2voe3et"]
+[gd_scene load_steps=79 format=3 uid="uid://dv1s4k2voe3et"]
 
 [ext_resource type="PackedScene" uid="uid://cguipij426wgf" path="res://inventory.tscn" id="1_fk46q"]
 [ext_resource type="Script" path="res://main.gd" id="1_hc3ky"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://rm53mlgfl44c" path="res://bunker_door_scene.tscn" id="24_3o0o1"]
 [ext_resource type="PackedScene" uid="uid://dqlkyqpi374dn" path="res://cave_in_2.tscn" id="25_gjwx8"]
 [ext_resource type="PackedScene" uid="uid://coycr0qv17ndf" path="res://cave_in_3.tscn" id="27_6dhmr"]
+[ext_resource type="PackedScene" uid="uid://dk2if236a61e6" path="res://quit_to_menu.tscn" id="29_0naly"]
 
 [sub_resource type="Resource" id="Resource_h4h8f"]
 script = ExtResource("14_eqms8")
@@ -3142,5 +3143,11 @@ spot_angle = 60.0
 transform = Transform3D(1.14015, 0, 0, 0, 0.0542843, 0, 0, 0, 0.999999, 0.0281488, -0.4824, -0.0340452)
 mesh = SubResource("BoxMesh_h88kl")
 material = SubResource("StandardMaterial3D_mcqn0")
+
+[node name="Control" parent="." instance=ExtResource("29_0naly")]
+offset_left = 1038.0
+offset_top = 3.0
+offset_right = 1038.0
+offset_bottom = 3.0
 
 [editable path="Player"]
