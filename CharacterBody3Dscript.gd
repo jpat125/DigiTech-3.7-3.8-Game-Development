@@ -31,7 +31,7 @@ func _process(delta):
 		print("cam animation not triggered")
 	
 const SPEED = 5
-const JUMP_VELOCITY = 7
+const JUMP_VELOCITY = 2
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck: Node3D = $Neck

@@ -1,5 +1,6 @@
 extends Node3D
 
+# global varibles used through out game
 var _shovel_status = 0
 var _contact_wall = 0
 var _bunker_camera = 0

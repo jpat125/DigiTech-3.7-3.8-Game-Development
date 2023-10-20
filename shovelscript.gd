@@ -13,6 +13,7 @@ func _ready():
 func _process(delta):
 	pass 
 
+
 # clears pickaxe model from tree if collided with by player.
 # (note doesn't clear floating inventory icon).
 func _on_area_entered(Area):

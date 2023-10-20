@@ -13,7 +13,7 @@ func _process(delta):
 	
 	
 
-
+# Handels button being pressed and closing dialogue 
 func _on_button_pressed():
 	var intro_text = get_node("RichTextLabel")
 	var continue_button = get_node("Button")

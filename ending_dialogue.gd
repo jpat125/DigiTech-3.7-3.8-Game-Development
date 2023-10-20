@@ -1,5 +1,6 @@
 extends Control
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var dia1 = get_node("player_init_contact")
@@ -19,12 +20,6 @@ func _ready():
 	await get_tree().create_timer(5).timeout
 	resp_button.set_visible(true)
 	
-	#var dia1 = get_node("player_init_contact")
-	#var dia2 = get_node("air_com_response")
-	#var dia3 = get_node("player_message")
-	#var resp_button = get_node("Button")
-	#var dia4 = get_node("air_com_response_final")
-
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

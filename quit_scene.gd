@@ -10,7 +10,7 @@ func _ready():
 func _process(delta):
 	pass
 
-
+# Handels button being pressed and quitting the game entirely
 func _on_button_pressed():
 	print("quit hit")
 	get_tree().quit()

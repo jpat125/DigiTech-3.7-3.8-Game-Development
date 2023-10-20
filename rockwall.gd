@@ -11,7 +11,7 @@ func _process(delta):
 	pass
 	
 
-
+# Code for colliding with rock wall
 func _on_area_entered(StaticBody3D):
 	if StaticBody3D.name == "capsule_hitbox_a3d" and BootlegGlobalVariable._shovel_status == 1:
 		print (BootlegGlobalVariable._shovel_status)

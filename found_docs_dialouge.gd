@@ -31,7 +31,7 @@ func _ready():
 func _process(delta):
 	pass
 
-
+# Handels button being pressed and running and closing out dialouge
 func _on_button_pressed():
 	var dia1 = get_node("player_init_contact")
 	var dia2 = get_node("air_com_response")

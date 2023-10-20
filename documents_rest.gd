@@ -10,6 +10,7 @@ func _ready():
 func _process(delta):
 	pass
 
+# Handels documents being picked up and runs dialogue 
 func _on_area_entered(Area3D):
 	if Area3D.name == "capsule_hitbox_a3d": 
 		#var dialogue = get_node("Control")

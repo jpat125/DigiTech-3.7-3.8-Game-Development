@@ -1309,7 +1309,11 @@ material = SubResource("StandardMaterial3D_mcqn0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.402738, -0.115874, -9.41786)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGMesh3D7/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355449, -0.834198, 9.38596)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -7.29674, -0.834223, 9.38289)
+shape = SubResource("BoxShape3D_vub8m")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CSGMesh3D7/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355448, -0.834198, 9.38596)
 shape = SubResource("BoxShape3D_vub8m")
 
 [node name="SC - wall" type="CollisionShape3D" parent="CSGMesh3D7/StaticBody3D"]
@@ -1337,7 +1341,7 @@ material = SubResource("StandardMaterial3D_21shi")
 transform = Transform3D(0.3429, 0, 5.64614e-09, 0, 0.3594, 1.13798e-14, 3.33239e-09, -6.83342e-14, 0.24, -0.331442, -0.424937, -0.563892)
 
 [node name="Rockfall_wall2" parent="CSGMesh3D8" instance=ExtResource("20_xqonq")]
-transform = Transform3D(0.340446, 1.36424e-12, 1.45519e-10, 0, 0.456377, 1.43774e-14, -1.01863e-10, 1.11022e-15, 0.238727, -0.372247, -0.143767, -2.08278)
+transform = Transform3D(0.340446, 2.72848e-12, 3.0559e-10, 0, 0.456377, 1.58207e-14, -1.89175e-10, 1.41553e-14, 0.238727, -0.398843, -0.208195, -2.08279)
 
 [node name="WallLamp22" parent="CSGMesh3D8" instance=ExtResource("6_ih2tt")]
 transform = Transform3D(0.1, 0, -6.35732e-09, 0, 0.1, 0, 4.23821e-09, 0, 0.0666667, 1.66423, 0.0861791, 0.252447)
@@ -1472,12 +1476,12 @@ mesh = SubResource("BoxMesh_wcpuc")
 material = SubResource("StandardMaterial3D_vvgma")
 
 [node name="testing textured floor" type="CSGMesh3D" parent="CSGMesh3D8"]
-transform = Transform3D(2.022, 0, 0, -9.09495e-13, 0.025, -1.77636e-15, -5.23869e-10, 2.01228e-16, 1, -1.62228, -0.45211, -0.10998)
+transform = Transform3D(2.022, 0, 0, -1.81899e-12, 0.025, -1.77636e-15, -6.98492e-10, 2.01228e-16, 1, -1.62228, -0.45211, -0.10998)
 mesh = SubResource("BoxMesh_h88kl")
 material = SubResource("StandardMaterial3D_mcqn0")
 
 [node name="testing textured floor2" type="CSGMesh3D" parent="CSGMesh3D8"]
-transform = Transform3D(2.022, 0, 0, -1.81899e-12, 0.025, -1.77636e-15, -6.98492e-10, 2.01228e-16, 1, 0.0278063, -0.449332, -0.108751)
+transform = Transform3D(2.022, 0, 0, -3.18323e-12, 0.025, -1.77636e-15, -9.31323e-10, 2.01228e-16, 1, 0.0278091, -0.45447, -0.108751)
 mesh = SubResource("BoxMesh_h88kl")
 material = SubResource("StandardMaterial3D_mcqn0")
 
@@ -1490,7 +1494,12 @@ material = SubResource("StandardMaterial3D_mcqn0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.402738, -0.115874, -9.41786)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGMesh3D8/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355449, -0.834198, 9.38596)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355, -0.878508, 9.386)
+visible = false
+shape = SubResource("BoxShape3D_vub8m")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CSGMesh3D8/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355449, -0.877821, 9.38596)
 shape = SubResource("BoxShape3D_vub8m")
 
 [node name="SC - wall" type="CollisionShape3D" parent="CSGMesh3D8/StaticBody3D"]
@@ -1659,7 +1668,7 @@ material = SubResource("StandardMaterial3D_mcqn0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.402738, -0.115874, -9.41786)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGMesh3D9/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.35545, -0.834198, 9.38596)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355, -0.834, 9.386)
 shape = SubResource("BoxShape3D_vub8m")
 
 [node name="SC - wall" type="CollisionShape3D" parent="CSGMesh3D9/StaticBody3D"]
@@ -2409,7 +2418,7 @@ material = SubResource("StandardMaterial3D_mcqn0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.402738, -0.115874, -9.41786)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGMesh3D14/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.35545, -0.834198, 9.38596)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.355451, -0.834198, 9.38596)
 shape = SubResource("BoxShape3D_vub8m")
 
 [node name="SC - wall" type="CollisionShape3D" parent="CSGMesh3D14/StaticBody3D"]
